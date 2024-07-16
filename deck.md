@@ -3,5 +3,8 @@ layout: default
 title: Deck
 permalink: /deck
 ---
-
-<iframe src="{{ site.baseurl }}/assets/EventHorizon_Presentation_LP.pdf" style="width: 100%; height: 90vh;"></iframe>
+<div class="container mt-4">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{ site.baseurl }}/assets/EventHorizon_Presentation_LP.pdf"></iframe>
+  </div>
+</div>

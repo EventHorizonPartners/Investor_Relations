@@ -1,12 +1,26 @@
-<!-- possible to insert something here todo with utm url parameters
-     as this navbar will reset the url-->
-<header>
-    <nav>
-      <ul>
-        <li><a href="{{ site.baseurl }}/">Home</a></li>
-        <li><a href="{{ site.baseurl }}/deck">Deck</a></li>
-        <li><a href="{{ site.baseurl }}/faq">FAQ</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- UTM handeled by Script.js-->
+<!-- header.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    EHP
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/deck">Deck</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ site.baseurl }}/faq">FAQ</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
   

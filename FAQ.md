@@ -4,12 +4,12 @@ title: FAQ
 permalink: /faq
 ---
 
-<div class="faq-container">
-  <h1>Frequently Asked Questions</h1>
+<div class="container faq-container mt-4">
+  <h1 class="text-center" style="color: rgb(233,107,5);">Frequently Asked Questions</h1>
 
-  <h2>Quant Fund FAQ</h2>
+  <h2 style="color: rgb(233,107,5);">Quant Fund FAQ</h2>
 
-  <h3>What does your quant fund do?</h3>
+  <h3 style="color: rgb(233,107,5);">What does your quant fund do?</h3>
   <p>We specialize in finding market signals that allow us to profit from both upward and downward market movements. Our approach involves:</p>
   <ol>
     <li>Identifying and implementing strategies that generalize well across various market conditions.</li>
@@ -17,10 +17,10 @@ permalink: /faq
     <li>Continuously monitoring and optimizing our strategies through our proprietary quant factory.</li>
   </ol>
 
-  <h3>How long have you been operating?</h3>
+  <h3 style="color: rgb(233,107,5);">How long have you been operating?</h3>
   <p>We've been trading with 100% automation for over five years, continuously improving our quant factory throughout this period.</p>
 
-  <h3>What sets your fund apart from others?</h3>
+  <h3 style="color: rgb(233,107,5);">What sets your fund apart from others?</h3>
   <p>Our key differentiators include:</p>
   <ul>
     <li>A fully automated quant factory that makes all trading decisions and manages operations.</li>
@@ -28,7 +28,7 @@ permalink: /faq
     <li>A tech-first approach, treating our fund as a technology company that applies cutting-edge data science and engineering to financial markets.</li>
   </ul>
 
-  <h3>How do you find systems that work in both bullish and bearish markets?</h3>
+  <h3 style="color: rgb(233,107,5);">How do you find systems that work in both bullish and bearish markets?</h3>
   <p>Our success in finding versatile trading systems stems from:</p>
   <ul>
     <li>Industrialized Data Science: We've built a machine that trains algorithms to identify profitable opportunities in various market conditions.</li>
@@ -36,10 +36,10 @@ permalink: /faq
     <li>Innovative Technology: Our proprietary quant factory continuously evolves, allowing us to stay at the forefront of market analysis and strategy development.</li>
   </ul>
 
-  <h3>What is your performance track record?</h3>
+  <h3 style="color: rgb(233,107,5);">What is your performance track record?</h3>
   <p><em>[Note: Please insert your specific performance metrics here. It's crucial to provide accurate and up-to-date information, and to comply with all relevant financial regulations regarding performance reporting.]</em></p>
 
-  <h3>Why did you start this quant fund?</h3>
+  <h3 style="color: rgb(233,107,5);">Why did you start this quant fund?</h3>
   <p>Our journey into quantitative trading is driven by several factors:</p>
   <ul>
     <li>Natural Progression: Given our deep expertise in data and financial markets, creating a quant fund was a logical next step in our trading obsession.</li>
@@ -48,7 +48,7 @@ permalink: /faq
     <li>Technological Challenge: Building and refining our quant factory is an ongoing project that satisfies our desire to create and improve automated business machines.</li>
   </ul>
 
-  <h3>How do you approach risk management?</h3>
+  <h3 style="color: rgb(233,107,5);">How do you approach risk management?</h3>
   <p>Risk management is integral to our strategy:</p>
   <ul>
     <li>Diversification: We assemble strategies that offset each other over time, reducing overall volatility.</li>
@@ -56,7 +56,7 @@ permalink: /faq
     <li>Rigorous Testing: All strategies undergo extensive backtesting and out-of-sample testing before implementation.</li>
   </ul>
 
-  <h3>What makes your team qualified to run a quant fund?</h3>
+  <h3 style="color: rgb(233,107,5);">What makes your team qualified to run a quant fund?</h3>
   <p>Our team brings a unique blend of skills and experience:</p>
   <ul>
     <li>Extensive Financial Expertise: We have worked on data projects across 10 different financial businesses.</li>
@@ -65,7 +65,7 @@ permalink: /faq
     <li>Proven Track Record: Our experience includes successfully testifying in a class action lawsuit, demonstrating our deep understanding of financial markets and data analysis.</li>
   </ul>
 
-  <h3>How do you stay competitive in the ever-changing financial markets?</h3>
+  <h3 style="color: rgb(233,107,5);">How do you stay competitive in the ever-changing financial markets?</h3>
   <p>We maintain our competitive edge through:</p>
   <ul>
     <li>Continuous Learning: Our quant factory is designed to adapt and learn from new market conditions.</li>
@@ -73,7 +73,7 @@ permalink: /faq
     <li>Focus on Automation: By automating our processes, we can quickly adapt to market changes and scale our operations efficiently.</li>
   </ul>
 
-  <h3>What is your long-term vision for the fund?</h3>
+  <h3 style="color: rgb(233,107,5);">What is your long-term vision for the fund?</h3>
   <p>Our goal is to continue pushing the boundaries of quantitative trading by:</p>
   <ul>
     <li>Expanding our quant factory's capabilities.</li>

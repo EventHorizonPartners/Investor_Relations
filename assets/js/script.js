@@ -2,15 +2,15 @@
 // https://eventhorizonpartners.github.io/PitchDeck_FAQ/deck?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email={{contact.email}}&contact_external_ID={{contact.external_id}}&deal_ID={{deal.id}}&contact_internal_ID={{contact.id}}&contact_name={{contact.full_name}}&contact_phone={{contact.mobile_number}}&deal_ID={{deal.id}}
 
         // SAMPLE URL
-        // https://eventhorizonpartners.github.io/PitchDeck_FAQ/deck?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
+        //
 // FAQ url
 // https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email={{contact.email}}&contact_external_ID={{contact.external_id}}&deal_ID={{deal.id}}&contact_internal_ID={{contact.id}}&contact_name={{contact.full_name}}&contact_phone={{contact.mobile_number}}&deal_ID={{deal.id}}
 
  // SAMPLE URL
-// https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
+//  https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
 
 
-// 
+// This current flow is working lets make sure we can do it more securely before we actually link to live email template and deployment
 // 
 // 
 document.addEventListener('DOMContentLoaded', (event) => {
