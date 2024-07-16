@@ -83,4 +83,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
       link.href += `${separator}${utmString}`;
     }
   });
+
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Downscroll code
+      navbar.style.top = '-60px'; // Adjust this value based on the navbar height
+    } else {
+      // Upscroll code
+      navbar.style.top = '0';
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  });
+
+
+
+
+
+  // end of DOMContentLoaded
 });
