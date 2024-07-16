@@ -3,7 +3,7 @@ layout: default
 ---
 <!-- Welcome Banner -->
 <div style="text-align: center;">
-  <img src="_assets/Ehp_logo.png" alt="EHP Logo" style="width: 200px; height: 300px;">
+  <img src="_assets/images/Ehp_logo.png" alt="EHP Logo" style="width: 200px; height: 300px;">
   <p>Welcome to our site! We're glad you're here.</p>
 </div>
 

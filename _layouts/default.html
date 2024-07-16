@@ -1,2 +1,20 @@
-{% include head.html %}
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>&copy; 2024 EHP Investor Relations</p>
+  </footer>
+  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+</body>
+</html>
