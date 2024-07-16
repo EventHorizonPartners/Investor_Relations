@@ -13,4 +13,4 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
-google_analytics: UA-XXXXXX-X  # Update with your actual Google Analytics ID
+# google_analytics: UA-XXXXXX-X  # Update with your actual Google Analytics ID
