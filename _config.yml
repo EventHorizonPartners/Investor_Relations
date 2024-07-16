@@ -33,7 +33,6 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
-.0
 google_analytics: ENV['G-2HYX0T804J']
 
 # Exclude from processing.
