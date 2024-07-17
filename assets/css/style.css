@@ -172,7 +172,6 @@ img {
   border-radius: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 .btn-custom:hover {
