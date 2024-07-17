@@ -81,7 +81,7 @@ footer img.footer-logo  {
 }
 @media (min-width: 768px) { /* Targets screens larger than 768px, typically tablets and above */
   .welcome-banner img {
-    height: 400px; /* Adjust this value as needed */
+    height: 200px; /* Adjust this value as needed */
     width: auto; /* Ensures the width adjusts to maintain the aspect ratio */
   }
 }
