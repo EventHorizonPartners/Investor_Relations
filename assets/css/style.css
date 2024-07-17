@@ -61,6 +61,7 @@ footer img.footer-logo  {
   display: flex;
   align-items: center; /* This ensures vertical alignment is centered */
   gap: 10px; /* Adjusts the space between the telephone number and email */
+  margin-right: 2rem;
 }
 /* Welcome Banner */
 .welcome-banner {

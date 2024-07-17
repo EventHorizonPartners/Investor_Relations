@@ -5,7 +5,7 @@ title: Home
 <!-- Welcome Banner -->
 <div class="container mt-4">
   <div class="welcome-banner">
-      <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" alt="EHP Logo" class="img-fluid">
+      <img src="{{ site.baseurl }}/assets/images/EventHorizon_white_textOnly.png" alt="EHP Logo" class="img-fluid">
       <p class="lead mt-3">Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
     </div>
   <div class="row">
