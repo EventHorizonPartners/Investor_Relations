@@ -136,16 +136,17 @@ img {
 }
 
 /* Card Styles */
+/* Card Styles */
 .card {
   background-size: cover; /* Ensure the image fills the card */
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
+  color: white; /* Keeps the original text color */
   height: 500px;
 }
 
 .card-body {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
   padding: 20px;
   display: flex;
   align-items: center;
@@ -153,28 +154,31 @@ img {
 }
 
 .card-img-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7); /* Increase the opacity for better text contrast */
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Stronger shadow to enhance text legibility */
 }
 
 .btn-custom {
-  background-color: rgb(233, 107, 5); /* Button color */
-  color: #2b2b2b; /* Button text color */
+  background-color: rgb(233, 107, 5); /* Maintains original button color */
+  color: #2b2b2b; /* Keeps the original button text color */
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
   text-transform: uppercase;
   font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
 .btn-custom:hover {
-  background-color: #e07b00; /* Darker shade for hover effect */
+  background-color: #e07b00; /* Darker shade for hover effect while keeping the same color scheme */
 }
+
 
 
 .faq-container {
