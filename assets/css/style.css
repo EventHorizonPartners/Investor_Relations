@@ -38,11 +38,9 @@ footer .container {
   max-width: 100%;
 }
 
-footer img {
-  margin-top: -5px; /* Adjusts the top margin to pull the image closer */
-  margin-left: -5px; /* Optional: Adjusts the left margin if needed */
-  margin-right: -5px;
-  width: 250px; /* 100% increase in size */
+footer img.footer-logo  {
+  width: auto; /* Adjust based on actual needs, could use percentages or vw units for responsiveness */
+  max-width: 300px; /* Ensures the image does not exceed this width but can scale down on smaller screens */
   height: auto;
 }
 

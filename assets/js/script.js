@@ -84,26 +84,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-  let lastScrollTop = 0;
-  const navbar = document.querySelector('.navbar');
-
-  window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-      // Downscroll code
-      navbar.style.top = '-60px'; // Adjust this value based on the navbar height
-    } else {
-      // Upscroll code
-      navbar.style.top = '0';
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-  });
-
-
-
-
 
   // end of DOMContentLoaded
+});
+
+let lastScrollTop = 0;
+let isScrolling;
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Clear our timeout throughout the scroll
+  window.clearTimeout(isScrolling);
+
+  if (scrollTop > lastScrollTop) {
+    // Downscroll
+    navbar.style.top = '-60px'; // Adjust based on navbar height
+  } else {
+    // Upscroll
+    navbar.style.top = '0';
+  }
+
+  // Set a timeout to run after scrolling ends
+  isScrolling = setTimeout(function() {
+    // Run the onScrollStop function
+    if (scrollTop > lastScrollTop) {
+      navbar.style.top = '-60px'; // Adjust based on navbar height
+    } else {
+      navbar.style.top = '0';
+    }
+  }, 150); // Adjust time as needed
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
 });
