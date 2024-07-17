@@ -7,7 +7,6 @@ permalink: /faq
 <div class="container faq-container mt-4">
   <h1 class="text-center" style="color: rgb(233,107,5);">Frequently Asked Questions</h1>
 
-  <h2 style="color: rgb(233,107,5);">Quant Fund FAQ</h2>
 
   <h3 style="color: rgb(233,107,5);">What does your quant fund do?</h3>
   <p>We specialize in finding market signals that allow us to profit from both upward and downward market movements. Our approach involves:</p>

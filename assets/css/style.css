@@ -48,6 +48,29 @@ footer img.footer-logo  {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  header img {
+    height: 40px; /* Adjust according to your preference */
+  }
+}
+@media (max-width: 768px) {
+  .navbar-text {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 10px; /* Reduce gap */
+    margin-right: 0; /* Adjust or remove margin */
+  }
+}
+@media (max-width: 768px) {
+  .nav-link, .navbar-text a {
+    padding: 10px; /* Larger tap targets */
+    font-size: larger; /* Larger font size for better readability */
+  }
+}
+/* Temporary debugging styles */
+.nav-item, .navbar-text a {
+  border: 1px solid red; /* See the boundaries of each element */
+}
+
 /* Navbar Links */
 .nav-link {
   color: white !important;
