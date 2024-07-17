@@ -57,7 +57,11 @@ footer img.footer-logo  {
   color: #ccc !important; /* Lighter shade of white on hover for better UI */
 }
 
-
+.navbar-text {
+  display: flex;
+  align-items: center; /* This ensures vertical alignment is centered */
+  gap: 10px; /* Adjusts the space between the telephone number and email */
+}
 /* Welcome Banner */
 .welcome-banner {
   margin: 20px auto;
