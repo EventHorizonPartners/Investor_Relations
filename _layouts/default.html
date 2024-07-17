@@ -8,7 +8,11 @@
 </head>
 <body>
   {% include header.html %}
-  <main>
+  <main class="flex-grow-1">
+    <div class="welcome-banner">
+      <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" alt="EHP Logo" class="img-fluid">
+      <p class="lead mt-3">Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
+    </div>
     {{ content }}
   </main>
   <footer class="bg-dark text-white py-4" style="background-color: #3a3a3a;">
@@ -18,7 +22,7 @@
         <li><a href="mailto:contact@ehp.com" class="text-white">InvestorRelations@ehp.dev</a></li>
         <li><a href="https://linkedin.com/company/ehp" class="text-white">LinkedIn</a></li>
       </ul>
-      <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" width="60" height="60" class="d-inline-block align-top mb-2 mt-2" alt="EHP Logo">
+      <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" width="120" height="120" class="d-inline-block align-top mb-2 mt-2" alt="EHP Logo">
     </div>
   </footer>
 

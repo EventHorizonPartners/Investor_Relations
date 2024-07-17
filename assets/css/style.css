@@ -5,6 +5,9 @@ body {
   color: #f5f5f5;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header, footer {
@@ -13,19 +16,13 @@ header, footer {
   padding: 0.5em 0; /* Reduced padding */
 }
 
-/* Navbar and Footer */
-.navbar, .footer {
-  background-color: #3a3a3a; /* Consistent color */
-  height: 60px; /* Adjusted height */
-  line-height: 60px; /* Center text vertically */
-  width: 100%;
-}
 /* Footer Styles */
 footer {
   padding: 1rem 0;
   background: #3a3a3a;
   color: white;
   text-align: center;
+  margin-top: auto;
 }
 
 footer .container {
@@ -34,14 +31,25 @@ footer .container {
 
 footer img {
   margin-top: 1rem;
+  width: 120px; /* 100% increase in size */
+  height: auto;
 }
-
 
 /* Navbar Links */
 .nav-link {
   color: white !important;
 }
 
+/* Navbar Logo */
+header img {
+  height: 90px; /* 50% larger */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Welcome Banner */
 .welcome-banner {
   margin: 20px auto;
   max-width: 900px;
@@ -49,6 +57,18 @@ footer img {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
+}
+
+.welcome-banner img {
+  width: 300px; /* 200% larger */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.welcome-banner p {
+  margin-top: 10px; /* Closer to the logo */
+  font-size: 1.2em;
 }
 
 h1 {
@@ -78,8 +98,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  height: 300px; /* Adjust height as needed */
+  height: 400px; /* Increased height */
 }
 
 .card-body {
@@ -138,4 +157,3 @@ img {
 .faq-container li {
   margin-bottom: 10px;
 }
-
