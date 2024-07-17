@@ -4,10 +4,10 @@ title: Home
 ---
 <!-- Welcome Banner -->
 <div class="container mt-4">
-  <div class="text-center">
-    <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" alt="EHP Logo" class="img-fluid" style="width: 150px;"> 
-    <p class="lead mt-3">Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
-  </div>
+  <div class="welcome-banner">
+      <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" alt="EHP Logo" class="img-fluid">
+      <p class="lead mt-3">Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
+    </div>
   <div class="row">
     <div class="col-md-6">
       <div class="card mb-4 text-white" style="background-image: url('{{ site.baseurl }}/assets/images/deck_preview_7-16-24.png'); height: 300px; background-size: cover; background-position: center;">

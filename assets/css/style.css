@@ -19,7 +19,7 @@ header, footer {
 /* Footer Styles */
 footer {
   padding: 1rem 0;
-  background: #3a3a3a;
+  background: #3a3a3a !important;
   color: white;
   text-align: center;
   margin-top: auto;
@@ -30,7 +30,7 @@ footer .container {
 }
 
 footer img {
-  margin-top: 1rem;
+  margin-top: 0.25rem;
   width: 120px; /* 100% increase in size */
   height: auto;
 }
