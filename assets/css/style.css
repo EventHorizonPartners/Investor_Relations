@@ -9,6 +9,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+main {
+  min-height: 70vh; /* Adjusts the minimum height of the content area */
+  margin-bottom: 5rem; /* Adds space at the bottom of the content area */
+}
 
 header {
   background: #3a3a3a; /* Consistent color */
@@ -49,6 +53,9 @@ footer img.footer-logo  {
   color: white !important;
 }
 
+.navbar-link a:hover {
+  color: #ccc !important; /* Lighter shade of white on hover for better UI */
+}
 
 
 /* Welcome Banner */
