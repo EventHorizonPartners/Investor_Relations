@@ -30,7 +30,7 @@ title: Home
           <h5 class="card-title text-center">FAQ</h5>
           <p class="card-text text-center">Find answers to common questions about our fund.</p>
           <div class="text-center">
-            <a href="{{ site.baseurl }}/faq" class="btn btn-custom">Go to FAQ</a>
+            <a href="{{ site.baseurl }}/faq" class="btn btn-custom card-link">Go to FAQ</a>
           </div>
         </div>
       </div>
