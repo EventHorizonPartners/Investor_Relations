@@ -53,7 +53,7 @@ footer img.footer-logo  {
   color: white !important;
 }
 
-.navbar-link a:hover {
+.nav-link:hover {
   color: #ccc !important; /* Lighter shade of white on hover for better UI */
 }
 
