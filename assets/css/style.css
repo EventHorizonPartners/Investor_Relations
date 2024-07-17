@@ -65,9 +65,7 @@ header img {
   width: 300px; /* 200% larger */
   height: auto;
   display: block;
-  margin-top: -5px; /* Adjusts the top margin to pull the image closer */
-  margin-left: -5px; /* Optional: Adjusts the left margin if needed */
-  margin-right: -5px;
+  margin: 0 auto;
 }
 
 .welcome-banner p {
@@ -102,7 +100,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   color: white;
-  height: 400px; /* Increased height */
 }
 
 .card-body {
