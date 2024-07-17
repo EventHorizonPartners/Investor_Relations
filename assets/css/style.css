@@ -8,16 +8,17 @@ body {
 }
 
 header, footer {
-  background: #3a3a3a; /* Slightly lighter than the body color */
+  background: #3a3a3a; /* Consistent color */
   color: white;
   padding: 0.5em 0; /* Reduced padding */
 }
 
 /* Navbar and Footer */
 .navbar, .footer {
-  background-color: #3a3a3a; /* Slightly lighter than body */
+  background-color: #3a3a3a; /* Consistent color */
   height: 60px; /* Adjusted height */
   line-height: 60px; /* Center text vertically */
+  width: 100%;
 }
 
 /* Navbar Links */
@@ -48,8 +49,8 @@ iframe {
 }
 
 img {
-  width: 200px;
-  height: auto;
+  height: 60px; /* Adjust height to fit within navbar */
+  width: auto;
   display: block;
   margin: 0 auto;
   border-radius: 10px;
@@ -57,7 +58,8 @@ img {
 
 /* Card Styles */
 .card {
-  background-size: cover;
+  background-size: contain; /* Ensure the image fits within the card */
+  background-repeat: no-repeat;
   background-position: center;
   color: white;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
@@ -71,7 +73,6 @@ img {
   align-items: center;
   justify-content: center;
 }
-
 
 .faq-container {
   background: #333;

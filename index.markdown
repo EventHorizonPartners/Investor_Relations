@@ -19,7 +19,7 @@ title: Home
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card mb-4" style="background-image: url('{{ site.baseurl }}/assets/images/faq_preview.png_7-16-24'); height: 300px;">
+      <div class="card mb-4" style="background-image: url('{{ site.baseurl }}/assets/images/FAQ_preview_7-16-24.png'); height: 300px;">
         <div class="card-body text-center">
           <h5 class="card-title">FAQ</h5>
           <p class="card-text">Find answers to common questions about our fund.</p>
