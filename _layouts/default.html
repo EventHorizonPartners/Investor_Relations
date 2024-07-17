@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
-  {% include head.html %}
-</head>
-<body>
-  {% include header.html %}
-  <main class="flex-grow-1">
-    {{ content }}
-  </main>
-  <footer class="text-white py-4">
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-auto">
-          <div>
-            <a href="mailto:roger.parkinson@ehp.dev" class="text-white">Contact@ehp.dev</a> 
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    <main class="flex-grow-1">
+      {{ content }}
+    </main>
+    <footer class="text-white py-4">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto">
+            <div>
+              <a href="mailto:roger.parkinson@ehp.dev" class="text-white">Contact@ehp.dev</a> 
+            </div>
+            <div><a href="https://www.linkedin.com/company/event-horizon-partners/about/" class="text-white">LinkedIn</a></div>
+            <p class="mb-0">&copy; 2024 Event Horizon Partners</p> <!-- Moved &copy; text here -->
           </div>
-          <div><a href="https://www.linkedin.com/company/event-horizon-partners/about/" class="text-white">LinkedIn</a></div>
-          <p class="mb-0">&copy; 2024 Event Horizon Partners</p> <!-- Moved &copy; text here -->
         </div>
       </div>
-    </div>
-  </footer>
-  <!-- Ensure this is correctly linked at the end of your HTML before the closing body tag -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
-</body>
-</html>
+    </footer>
+    <!-- Ensure this is correctly linked at the end of your HTML before the closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+  </body>
+  </html>
