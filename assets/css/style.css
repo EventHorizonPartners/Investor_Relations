@@ -30,7 +30,9 @@ footer .container {
 }
 
 footer img {
-  margin-top: 0.25rem;
+  margin-top: -5px; /* Adjusts the top margin to pull the image closer */
+  margin-left: -5px; /* Optional: Adjusts the left margin if needed */
+  margin-right: -5px;
   width: 250px; /* 100% increase in size */
   height: auto;
 }
@@ -56,18 +58,20 @@ header img {
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .welcome-banner img {
   width: 300px; /* 200% larger */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin-top: -5px; /* Adjusts the top margin to pull the image closer */
+  margin-left: -5px; /* Optional: Adjusts the left margin if needed */
+  margin-right: -5px;
 }
 
 .welcome-banner p {
-  margin-top: 10px; /* Closer to the logo */
+  margin-top: 1px; /* Closer to the logo */
   font-size: 1.2em;
 }
 
