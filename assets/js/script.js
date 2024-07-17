@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // Simplify UTM parameters handling for links
-  const utmParams = ['utm_source', 'utm_medium', 'utm_campaign'];
+  const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'contact_internal_ID'];
   let utmString = utmParams.map(param => {
     const value = getParameterByName(param);
     return value ? `${param}=${value}` : '';
