@@ -5,25 +5,29 @@ title: Home
 <!-- Welcome Banner -->
 <div class="container mt-4">
   <div class="text-center">
-    <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" alt="EHP Logo" class="img-fluid">
+    <img src="{{ site.baseurl }}/assets/images/Earth_Horizon_transparent_white_text.png" alt="EHP Logo" class="img-fluid" style="width: 150px;"> 
     <p class="lead mt-3">Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <div class="card mb-4" style="background-image: url('{{ site.baseurl }}/assets/images/deck_preview_7-16-24.png'); height: 300px;">
-        <div class="card-body text-center">
-          <h5 class="card-title">Deck</h5>
-          <p class="card-text">View our presentation deck for detailed information.</p>
-          <a href="{{ site.baseurl }}/deck" class="btn btn-primary">Go to Deck</a>
+      <div class="card mb-4 text-white" style="background-image: url('{{ site.baseurl }}/assets/images/deck_preview_7-16-24.png'); height: 300px; background-size: cover; background-position: center;">
+        <div class="card-img-overlay d-flex flex-column justify-content-center">
+          <h5 class="card-title text-center">Deck</h5>
+          <p class="card-text text-center">View our presentation deck for detailed information.</p>
+          <div class="text-center">
+            <a href="{{ site.baseurl }}/deck" class="btn btn-custom">Go to Deck</a>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card mb-4" style="background-image: url('{{ site.baseurl }}/assets/images/FAQ_preview_7-16-24.png'); height: 300px;">
-        <div class="card-body text-center">
-          <h5 class="card-title">FAQ</h5>
-          <p class="card-text">Find answers to common questions about our fund.</p>
-          <a href="{{ site.baseurl }}/faq" class="btn btn-primary">Go to FAQ</a>
+      <div class="card mb-4 text-white" style="background-image: url('{{ site.baseurl }}/assets/images/FAQ_preview_7-16-24.png'); height: 300px; background-size: cover; background-position: center;">
+        <div class="card-img-overlay d-flex flex-column justify-content-center">
+          <h5 class="card-title text-center">FAQ</h5>
+          <p class="card-text text-center">Find answers to common questions about our fund.</p>
+          <div class="text-center">
+            <a href="{{ site.baseurl }}/faq" class="btn btn-custom">Go to FAQ</a>
+          </div>
         </div>
       </div>
     </div>
