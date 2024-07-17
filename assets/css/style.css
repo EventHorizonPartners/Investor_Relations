@@ -10,15 +10,24 @@ body {
   min-height: 100vh;
 }
 
-header, footer {
+header {
   background: #3a3a3a; /* Consistent color */
   color: white;
   padding: 0.5em 0; /* Reduced padding */
 }
+/* Navbar Logo */
+header img {
+  height: 90px; /* 50% larger */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
 
 /* Footer Styles */
 footer {
-  padding: 1rem 0;
+  padding: 2rem 0;
   background: #3a3a3a !important;
   color: white;
   text-align: center;
@@ -42,15 +51,7 @@ footer img {
   color: white !important;
 }
 
-/* Navbar Logo */
-header img {
-  height: 90px; /* 50% larger */
-  width: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-  object-fit: contain;
-}
+
 
 /* Welcome Banner */
 .welcome-banner {
@@ -101,6 +102,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   color: white;
+  height: 500px;
 }
 
 .card-body {
