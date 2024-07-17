@@ -175,11 +175,6 @@ img {
 .btn-custom:hover {
   background-color: #e07b00; /* Darker shade for hover effect */
 }
-.calendly-caption {
-  margin-top: -5px; /* Pulls the text closer to the button */
-  font-size: 0.8em; /* Reduces the size of the font */
-  color: #6c757d; /* Sets the color to a standard Bootstrap muted text color */
-}
 
 
 .faq-container {
