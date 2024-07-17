@@ -1,12 +1,13 @@
 // deck url
-// https://eventhorizonpartners.github.io/PitchDeck_FAQ/deck?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email={{contact.email}}&contact_external_ID={{contact.external_id}}&deal_ID={{deal.id}}&contact_internal_ID={{contact.id}}&contact_name={{contact.full_name}}&contact_phone={{contact.mobile_number}}&deal_ID={{deal.id}}
+// https://eventhorizonpartners.github.io/PitchDeck_FAQ/deck?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
 
-        // SAMPLE URL
-        //
+
+// home URL
+// https://eventhorizonpartners.github.io/PitchDeck_FAQ/?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
 // FAQ url
-// https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email={{contact.email}}&contact_external_ID={{contact.external_id}}&deal_ID={{deal.id}}&contact_internal_ID={{contact.id}}&contact_name={{contact.full_name}}&contact_phone={{contact.mobile_number}}&deal_ID={{deal.id}}
+// https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
 
- // SAMPLE URL
+// SAMPLE URL
 //  https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
 
 
@@ -18,62 +19,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
   function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
     const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-          results = regex.exec(url);
+      results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
 
-  // Get UTM parameters directly from the URL
+  // Get UTM parameters and check if they are available
   const utm_source = getParameterByName('utm_source');
   const utm_medium = getParameterByName('utm_medium');
   const utm_campaign = getParameterByName('utm_campaign');
-  // Get sensitive data from URL parameters for testing
-  const sensitiveData = {
-    email: getParameterByName('email'), // Assuming 'email' is passed as a URL parameter
-    contact_external_ID: getParameterByName('contact_external_ID'), // Assuming 'contact_external_ID' is passed as a URL parameter
-    contact_internal_ID: getParameterByName('contact_internal_ID'), // Assuming 'contact_internal_ID' is passed as a URL parameter
-    contact_name: getParameterByName('contact_name'), // Assuming 'contact_name' is passed as a URL parameter
-    contact_phone: getParameterByName('contact_phone'), // Assuming 'contact_phone' is passed as a URL parameter
-    deal_ID: getParameterByName('deal_ID') // Assuming 'deal_ID' is passed as a URL parameter
-  };
+  const contactInternalID = getParameterByName('contact_internal_ID');
 
-  // Send data to Google Analytics (ensure GA_TRACKING_ID is replaced with your actual tracking ID)
-  if (utm_source && utm_medium && utm_campaign) {
+  // Send data to Google Analytics if UTM parameters are present
+  if (utm_source && utm_medium && utm_campaign && contactInternalID) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
     gtag('config', 'G-2HYX0T804J', {
-      'custom_map': {
-        'dimension1': 'contact_email',
-        'dimension2': 'contact_external_ID',
-        'dimension3': 'contact_internal_ID',
-        'dimension4': 'contact_name',
-        'dimension5': 'contact_phone',
-        'dimension6': 'deal_ID'
-      }
+      'custom_map': { 'dimension3': 'contact_internal_ID' }
     });
 
     gtag('event', 'page_view', {
-      'contact_email': sensitiveData.email,
-      'contact_external_ID': sensitiveData.contact_external_ID,
-      'contact_internal_ID': sensitiveData.contact_internal_ID,
-      'contact_name': sensitiveData.contact_name,
-      'contact_phone': sensitiveData.contact_phone,
-      'deal_ID': sensitiveData.deal_ID
+      'contact_internal_ID': contactInternalID
     });
   }
 
-  // Get UTM parameters directly from the URL
-  const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'email', 'contact_external_ID', 'contact_internal_ID', 'contact_name', 'contact_phone', 'deal_ID'];
-  let utmString = '';
-
-  utmParams.forEach(param => {
+  // Simplify UTM parameters handling for links
+  const utmParams = ['utm_source', 'utm_medium', 'utm_campaign'];
+  let utmString = utmParams.map(param => {
     const value = getParameterByName(param);
-    if (value) {
-      utmString += `${param}=${value}&`;
-    }
-  });
-
-  // Remove the last '&' if it exists
-  utmString = utmString.slice(0, -1);
+    return value ? `${param}=${value}` : '';
+  }).filter(Boolean).join('&');
 
   // Append UTM parameters to navbar links
   const navLinks = document.querySelectorAll('nav ul li a');
@@ -84,7 +62,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-
   // end of DOMContentLoaded
 });
 
@@ -93,7 +70,7 @@ let isScrolling;
 
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
   // Clear our timeout throughout the scroll
@@ -108,7 +85,7 @@ window.addEventListener('scroll', function() {
   }
 
   // Set a timeout to run after scrolling ends
-  isScrolling = setTimeout(function() {
+  isScrolling = setTimeout(function () {
     // Run the onScrollStop function
     if (scrollTop > lastScrollTop) {
       navbar.style.top = '-60px'; // Adjust based on navbar height
