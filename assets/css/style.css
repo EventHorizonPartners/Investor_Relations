@@ -49,6 +49,7 @@ header img {
   display: block;
   margin: 0 auto;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 /* Welcome Banner */
@@ -125,7 +126,7 @@ img {
   color: #2b2b2b; /* Button text color */
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   text-transform: uppercase;
   font-weight: bold;
 }
