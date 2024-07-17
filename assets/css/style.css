@@ -70,6 +70,9 @@ footer img.footer-logo  {
 .nav-item, .navbar-text a {
   border: 1px solid red; /* See the boundaries of each element */
 }
+.custom-navbar-color {
+  background-color: #3a3a3a !important; /* Ensures override of Bootstrap's default styling */
+}
 
 /* Navbar Links */
 .nav-link {
