@@ -19,7 +19,7 @@ title: Home
           <h5 class="card-title text-center">Deck</h5>
           <p class="card-text text-center">View our presentation deck for detailed information.</p>
           <div class="text-center">
-            <a href="{{ site.baseurl }}/deck" class="btn btn-custom">Go to Deck</a>
+            <a href="{{ site.baseurl }}/deck" class="btn btn-custom card-link">Go to Deck</a>
           </div>
         </div>
       </div>

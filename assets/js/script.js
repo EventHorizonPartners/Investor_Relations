@@ -47,21 +47,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // Simplify UTM parameters handling for links
+  // Simplify UTM parameters handling for links
   const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'contact_internal_ID'];
   let utmString = utmParams.map(param => {
     const value = getParameterByName(param);
     return value ? `${param}=${value}` : '';
   }).filter(Boolean).join('&');
 
-  // Append UTM parameters to navbar links
-  const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => {
-    if (utmString) {
-      const separator = link.href.includes('?') ? '&' : '?';
-      link.href += `${separator}${utmString}`;
-    }
-  });
+  // Function to append UTM parameters to links
+  function appendUtmParameters(selector) {
+    const links = document.querySelectorAll(selector);
+    links.forEach(link => {
+      if (utmString) {
+        const separator = link.href.includes('?') ? '&' : '?';
+        link.href += `${separator}${utmString}`;
+      }
+    });
+  }
 
+  // Append UTM parameters to navbar links
+  appendUtmParameters('nav ul li a');
+
+  // Append UTM parameters to cards on the homepage
+  appendUtmParameters('.card-link');
+
+  // Append UTM parameters to the navbar icon with logo
+  appendUtmParameters('.navbar-brand');
   // end of DOMContentLoaded
 });
 
