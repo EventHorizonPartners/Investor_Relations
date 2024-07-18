@@ -125,7 +125,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
             'contact_phone': userPhone,
             'external_internal': externalInternal
           });
-
+          
+          // Call Freshsales identify method to create a new contact
+          var new_contact = {
+            'First name': 'External', // Replace with actual data if available
+            'Last name': 'FormContact', // Replace with actual data if available
+            'Email': userEmail,
+            'Alternate contact number': userPhone,
+            'company': {
+              'Name': 'Example.com', // Replace with actual data if available
+              'Website': window.location.hostname
+            }
+          };
+          var identifier = userEmail;
+          fwcrm.identify(identifier, new_contact);
           // Hide the modal
           const modalElement = document.getElementById('userInfoModal');
           const modal = bootstrap.Modal.getInstance(modalElement);
