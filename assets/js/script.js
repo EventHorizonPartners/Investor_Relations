@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           });
           const modal = bootstrap.Modal.getInstance(document.getElementById('userInfoModal'));
           modal.hide();
+          location.reload();
         } else {
           alert('You must enter your email and phone to proceed.');
         }
