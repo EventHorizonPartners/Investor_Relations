@@ -82,9 +82,21 @@ footer img.footer-logo  {
 
 .navbar-text {
   display: flex;
-  align-items: center; /* This ensures vertical alignment is centered */
-  /*gap: 30px; /* Adjusts the space between the telephone number and email */
+  align-items: center; /* Ensures vertical alignment */
+  gap: 20px; /* Adjusts the space between links */
   margin-right: 2rem;
+}
+
+.navbar-text .nav-link {
+  padding: 0.25rem 0.5rem; /* Adds padding around the links for better spacing */
+  display: flex;
+  align-items: center; /* Aligns text and icons vertically */
+}
+
+.navbar-text .nav-link img {
+  height: 20px; /* Adjusts the LinkedIn icon size */
+  width: auto;
+  margin-right: 5px; /* Adds a small space between the icon and the text, if text is added next to the icon */
 }
 /* Welcome Banner */
 .welcome-banner {
