@@ -113,7 +113,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             'contact_phone': userPhone,
             'external_internal': externalInternal
           });
-          userInfoModal.hide();
+          const modal = bootstrap.Modal.getInstance(document.getElementById('userInfoModal'));
+          modal.hide();
         } else {
           alert('You must enter your email and phone to proceed.');
         }
