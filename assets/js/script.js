@@ -108,6 +108,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
           localStorage.setItem('userEmail', userEmail);
           localStorage.setItem('userPhone', userPhone);
           window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+
+          gtag('config', 'G-2HYX0T804J', {
+            'custom_map': {
+              'dimension4': 'contact_email',
+              'dimension5': 'contact_phone',
+              'dimension7': 'external_internal'
+            }
+          });
+
           gtag('event', 'user_info', {
             'contact_email': userEmail,
             'contact_phone': userPhone,
