@@ -83,7 +83,7 @@ footer img.footer-logo  {
 .navbar-text {
   display: flex;
   align-items: center; /* This ensures vertical alignment is centered */
-  gap: 30px; /* Adjusts the space between the telephone number and email */
+  /*gap: 30px; /* Adjusts the space between the telephone number and email */
   margin-right: 2rem;
 }
 /* Welcome Banner */
@@ -97,7 +97,7 @@ footer img.footer-logo  {
 }
 
 .welcome-banner img {
-  width: 300px; /* 200% larger */
+  width: 200px; 
   height: auto;
   display: block;
   margin: 0 auto;
