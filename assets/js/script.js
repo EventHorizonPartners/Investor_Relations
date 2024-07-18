@@ -14,6 +14,10 @@
 // This current flow is working lets make sure we can do it more securely before we actually link to live email template and deployment
 // 
 // 
+
+// add some stuff here about having to add email/name and phone number without contact id utm parameters
+// would have to change logic about how google tags are send out
+  // different tags for contact vs no contact
 document.addEventListener('DOMContentLoaded', (event) => {
   // Function to get URL parameters
   function getParameterByName(name, url = window.location.href) {
