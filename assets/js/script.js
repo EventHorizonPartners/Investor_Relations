@@ -17,8 +17,9 @@
 
 // add some stuff here about having to add email/name and phone number without contact id utm parameters
 // would have to change logic about how google tags are send out
-  // different tags for contact vs no contact
+// different tags for contact vs no contact
 document.addEventListener('DOMContentLoaded', (event) => {
+  // Function to get URL parameters
   // Function to get URL parameters
   function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const utm_medium = getParameterByName('utm_medium');
   const utm_campaign = getParameterByName('utm_campaign');
   const contactInternalID = getParameterByName('contact_internal_ID');
+  let externalInternal = !contactInternalID;
 
   // Send data to Google Analytics if UTM parameters are present
   if (utm_source && utm_medium && utm_campaign && contactInternalID) {
@@ -42,15 +44,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     gtag('js', new Date());
 
     gtag('config', 'G-2HYX0T804J', {
-      'custom_map': { 'dimension3': 'contact_internal_ID' }
+      'custom_map': {
+        'dimension3': 'contact_internal_ID',
+        'dimension4': 'contact_email',
+        'dimension5': 'contact_phone',
+        'dimension7': 'external_internal'
+      }
     });
 
     gtag('event', 'page_view', {
-      'contact_internal_ID': contactInternalID
+      'contact_internal_ID': contactInternalID,
+      'external_internal': externalInternal
     });
   }
 
-  // Simplify UTM parameters handling for links
   // Simplify UTM parameters handling for links
   const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'contact_internal_ID'];
   let utmString = utmParams.map(param => {
@@ -78,6 +85,45 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Append UTM parameters to the navbar icon with logo
   appendUtmParameters('.navbar-brand');
   // end of DOMContentLoaded
+
+
+  // Ensure user inputs email and phone before accessing the site
+  function requireEmailAndPhone() {
+    const email = localStorage.getItem('userEmail');
+    const phone = localStorage.getItem('userPhone');
+
+    if (!contactInternalID && (!email || !phone)) {
+      const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
+        backdrop: 'static',
+        keyboard: false
+      });
+      userInfoModal.show();
+
+      document.getElementById('userInfoForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const userEmail = document.getElementById('userEmail').value;
+        const userPhone = document.getElementById('userPhone').value;
+        
+        if (userEmail && userPhone) {
+          localStorage.setItem('userEmail', userEmail);
+          localStorage.setItem('userPhone', userPhone);
+          window.dataLayer = window.dataLayer || [];
+          gtag('event', 'user_info', {
+            'contact_email': userEmail,
+            'contact_phone': userPhone,
+            'external_internal': externalInternal
+          });
+          userInfoModal.hide();
+        } else {
+          alert('You must enter your email and phone to proceed.');
+        }
+      });
+    }
+  }
+
+  // Check if the user needs to input email and phone
+  requireEmailAndPhone();
+
 });
 
 let lastScrollTop = 0;

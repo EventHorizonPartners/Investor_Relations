@@ -20,6 +20,30 @@
         </div>
       </div>
     </footer>
+    <div class="modal fade" id="userInfoModal" tabindex="-1" aria-labelledby="userInfoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userInfoModalLabel">Enter Your Information to view</h5>
+          </div>
+          <div class="modal-body">
+            <form id="userInfoForm">
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                <small>Valid email address.</small>
+              </div>
+              <div class="mb-3">
+                <label for="userPhone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="userPhone" name="userPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <small>Format: 123-456-7890</small>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Ensure this is correctly linked at the end of your HTML before the closing body tag -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/script.js"></script>
