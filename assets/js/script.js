@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   // Ensure user inputs email and phone before accessing the site
+  // Ensure user inputs email and phone before accessing the site if contact_internal_ID is not present
   function requireEmailAndPhone() {
     const email = localStorage.getItem('userEmail');
     const phone = localStorage.getItem('userPhone');
@@ -103,25 +104,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
         e.preventDefault();
         const userEmail = document.getElementById('userEmail').value;
         const userPhone = document.getElementById('userPhone').value;
-        
+
         if (userEmail && userPhone) {
           localStorage.setItem('userEmail', userEmail);
           localStorage.setItem('userPhone', userPhone);
           window.dataLayer = window.dataLayer || [];
-          
-          // gtag('config', 'G-2HYX0T804J', {
-          //   'custom_map': {
-          //     'dimension4': 'contact_email',
-          //     'dimension5': 'contact_phone',
-          //     'dimension7': 'external_internal'
-          //   }
-          // });
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+
+          gtag('config', 'G-2HYX0T804J', {
+            'custom_map': {
+              'dimension4': 'contact_email',
+              'dimension5': 'contact_phone',
+              'dimension7': 'external_internal'
+            }
+          });
 
           gtag('event', 'user_info', {
             'contact_email': userEmail,
             'contact_phone': userPhone,
             'external_internal': externalInternal
           });
+
+          // Hide the modal
           const modalElement = document.getElementById('userInfoModal');
           const modal = bootstrap.Modal.getInstance(modalElement);
           modal.hide();
