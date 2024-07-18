@@ -94,7 +94,7 @@ footer img.footer-logo  {
 }
 
 .navbar-text .nav-link img {
-  height: 20px; /* Adjusts the LinkedIn icon size */
+  height: 40px; /* Adjusts the LinkedIn icon size */
   width: auto;
   margin-right: 5px; /* Adds a small space between the icon and the text, if text is added next to the icon */
 }
