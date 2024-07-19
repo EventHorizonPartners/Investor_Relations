@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   function requireEmailAndPhone() {
     const email = localStorage.getItem('userEmail');
     const phone = localStorage.getItem('userPhone');
+    const contact_status_id = localStorage.getItem('contact_status_id');
 
     if (!contactInternalID && (!email || !phone)) {
       const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
@@ -122,10 +123,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         e.preventDefault();
         const userEmail = document.getElementById('userEmail').value;
         const userPhone = document.getElementById('userPhone').value;
+        const contact_status_id = document.getElementById('contact_status_id').value;
 
         if (userEmail && userPhone) {
           localStorage.setItem('userEmail', userEmail);
           localStorage.setItem('userPhone', userPhone);
+          localStorage.setItem('contact_status_id', contact_status_id);
           window.dataLayer = window.dataLayer || [];
           function gtag() { dataLayer.push(arguments); }
           gtag('js', new Date());
