@@ -156,17 +156,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
           // Optionally, refresh the page
           location.reload();
-        } else {
-          alert('You must enter your email and phone to proceed.');
-        }
-      });
-    }
-  }
 
-  // Check if the user needs to input email and phone
-  requireEmailAndPhone();
-  
-  const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22kz61e/';
+          setTimeout(() => {
+            // Code to execute after the delay
+          }, 1000);
+          const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22kz61e/';
           fetch(zapierCreateUrl + '?email=' + userEmail + '&phone=' + userPhone, {
             method: 'GET' // Using GET just to trigger the webhook
           })
@@ -180,6 +174,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
               // location.reload();
             })
             .catch(error => console.error('Error creating contact:', error));
+        } else {
+          alert('You must enter your email and phone to proceed.');
+        }
+      });
+    }
+  }
+
+  // Check if the user needs to input email and phone
+  requireEmailAndPhone();
+  
+ 
 
 
 });
