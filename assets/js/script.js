@@ -58,6 +58,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
+
+  function updateContactViaZapier(contactId) {
+    const zapierUpdateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22ktw5k/';
+    fetch(zapierUpdateUrl + '?contact_internal_ID=' + contactId, {
+      method: 'GET' // Using GET just to trigger the webhook
+    })
+    .then(response => response.json())
+    .then(data => console.log('Contact updated:', data))
+    .catch(error => console.error('Error updating contact:', error));
+  }
+  
+  // Usage
+  if (contactInternalID) {
+    updateContactViaZapier(contactInternalID);
+  }
+  
+
+
   // Simplify UTM parameters handling for links
   const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'contact_internal_ID'];
   let utmString = utmParams.map(param => {
@@ -125,20 +143,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
             'contact_phone': userPhone,
             'external_internal': externalInternal
           });
-          
-          // Call Freshsales identify method to create a new contact
-          var new_contact = {
-            'First name': 'External', // Replace with actual data if available
-            'Last name': 'FormContact', // Replace with actual data if available
-            'Email': userEmail,
-            'Alternate contact number': userPhone,
-            'company': {
-              'Name': 'Example.com', // Replace with actual data if available
-              'Website': window.location.hostname
-            }
-          };
-          var identifier = userEmail;
-          fwcrm.identify(identifier, new_contact);
+
+          // login zap flow uncomment when ready
+          // const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/your_unique_id/create_contact/';
+          // fetch(zapierCreateUrl + '?email=' + userEmail + '&phone=' + userPhone, {
+          //   method: 'GET' // Using GET just to trigger the webhook
+          // })
+          // .then(response => response.json())
+          // .then(data => {
+          //   console.log('New contact created:', data);
+          //   // Proceed to hide modal and potentially refresh the page
+          //   const modalElement = document.getElementById('userInfoModal');
+          //   const modal = bootstrap.Modal.getInstance(modalElement);
+          //   modal.hide();
+          //   location.reload();
+          // })
+          // .catch(error => console.error('Error creating contact:', error));
           // Hide the modal
           const modalElement = document.getElementById('userInfoModal');
           const modal = bootstrap.Modal.getInstance(modalElement);
