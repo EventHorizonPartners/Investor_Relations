@@ -148,20 +148,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
           // https://domain.myfreshworks.com/crm/sales/api/filtered_search/contact -d '{ "filter_rule" : [{"attribute" : "contact_email.email", "operator":"is_in", "value":"janesampleton@gmail.com"}] }'
-          const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22kz61e/';
-          fetch(zapierCreateUrl + '?email=' + userEmail + '&phone=' + userPhone, {
-            method: 'GET' // Using GET just to trigger the webhook
-          })
-            .then(response => response.json())
-            .then(data => {
-              console.log('New contact created:', data);
-              // Proceed to hide modal and potentially refresh the page
-              // const modalElement = document.getElementById('userInfoModal');
-              // const modal = bootstrap.Modal.getInstance(modalElement);
-              // modal.hide();
-              // location.reload();
-            })
-            .catch(error => console.error('Error creating contact:', error));
+          
           // Hide the modal
           const modalElement = document.getElementById('userInfoModal');
           const modal = bootstrap.Modal.getInstance(modalElement);
@@ -178,6 +165,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Check if the user needs to input email and phone
   requireEmailAndPhone();
+  
+  const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22kz61e/';
+          fetch(zapierCreateUrl + '?email=' + userEmail + '&phone=' + userPhone, {
+            method: 'GET' // Using GET just to trigger the webhook
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log('New contact created:', data);
+              // Proceed to hide modal and potentially refresh the page
+              // const modalElement = document.getElementById('userInfoModal');
+              // const modal = bootstrap.Modal.getInstance(modalElement);
+              // modal.hide();
+              // location.reload();
+            })
+            .catch(error => console.error('Error creating contact:', error));
+
 
 });
 
