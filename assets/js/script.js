@@ -64,16 +64,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     fetch(zapierUpdateUrl + '?contact_internal_ID=' + contactId, {
       method: 'GET' // Using GET just to trigger the webhook
     })
-    .then(response => response.json())
-    .then(data => console.log('Contact updated:', data))
-    .catch(error => console.error('Error updating contact:', error));
+      .then(response => response.json())
+      .then(data => console.log('Contact updated:', data))
+      .catch(error => console.error('Error updating contact:', error));
   }
-  
+
   // Usage
   if (contactInternalID) {
     updateContactViaZapier(contactInternalID);
   }
-  
+
 
 
   // Simplify UTM parameters handling for links
@@ -145,20 +145,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
           });
 
           // login zap flow uncomment when ready
-          // const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/your_unique_id/create_contact/';
-          // fetch(zapierCreateUrl + '?email=' + userEmail + '&phone=' + userPhone, {
-          //   method: 'GET' // Using GET just to trigger the webhook
-          // })
-          // .then(response => response.json())
-          // .then(data => {
-          //   console.log('New contact created:', data);
-          //   // Proceed to hide modal and potentially refresh the page
-          //   const modalElement = document.getElementById('userInfoModal');
-          //   const modal = bootstrap.Modal.getInstance(modalElement);
-          //   modal.hide();
-          //   location.reload();
-          // })
-          // .catch(error => console.error('Error creating contact:', error));
+          const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22kz61e/';
+          fetch(zapierCreateUrl + '?email=' + userEmail + '&phone=' + userPhone, {
+            method: 'GET' // Using GET just to trigger the webhook
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log('New contact created:', data);
+              // Proceed to hide modal and potentially refresh the page
+              const modalElement = document.getElementById('userInfoModal');
+              const modal = bootstrap.Modal.getInstance(modalElement);
+              modal.hide();
+              location.reload();
+            })
+            .catch(error => console.error('Error creating contact:', error));
           // Hide the modal
           const modalElement = document.getElementById('userInfoModal');
           const modal = bootstrap.Modal.getInstance(modalElement);
