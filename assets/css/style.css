@@ -206,19 +206,20 @@ img {
   max-width: 900px;
   margin: 20px auto;
 }
-
 .faq-container h1, .faq-container h2, .faq-container h3 {
   color: rgb(233, 107, 5);
 }
-
-.faq-container p, .faq-container ul, .faq-container ol {
-  color: #f5f5f5;
+.faq-section {
+  margin-bottom: 15px;
+}
+.faq-answer {
+  padding-left: 20px; /* Indent the text */
+}
+.btn-link {
+  color: rgb(233, 107, 5);
+  text-decoration: none;
+}
+.btn-link:hover {
+  text-decoration: underline;
 }
 
-.faq-container ul, .faq-container ol {
-  padding-left: 20px;
-}
-
-.faq-container li {
-  margin-bottom: 10px;
-}
