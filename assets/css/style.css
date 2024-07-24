@@ -134,16 +134,15 @@ h1 {
 }
 
 .deck-container {
-  overflow-y: auto;
-  max-height: 90vh;
+  overflow-y: scroll;
+  max-height: 90vh; /* Adjust this based on your desired viewport height */
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 0; /* Remove padding to ensure full-width images */
 }
 .deck-image {
   width: 100%;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom margin from images */
 }
 
 img {
