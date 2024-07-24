@@ -4,10 +4,21 @@ title: Deck
 permalink: /deck
 ---
 <div class="container mt-4">
-  <div style="position: relative; height: 90vh;"> <!-- Full viewport height -->
-    <iframe src="{{ site.baseurl }}/assets/EventHorizon_Presentation_LP.pdf#toolbar=0"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-            allowfullscreen webkitallowfullscreen></iframe>
+  <div class="deck-container" id="deck-container"> 
+  <!-- Full viewport height -->
   </div>
 </div>
 
+<script>
+  // Total number of pages/images
+  const totalPages = 12; // Replace with the actual number of images
+  const container = document.getElementById('deck-container');
+
+  for (let i = 0; i <= totalPages; i++) {
+    const img = document.createElement('img');
+    img.src = `assets/deck/compressed/EventHorizon_Presentation_LP-images-${i}.jpg`;
+    img.alt = `Page ${i}`;
+    img.className = 'deck-image';
+    container.appendChild(img);
+  }
+</script>

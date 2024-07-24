@@ -133,10 +133,17 @@ h1 {
   letter-spacing: -1px;
 }
 
-iframe {
-  border: none;
+.deck-container {
+  overflow-y: auto;
+  max-height: 90vh;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+.deck-image {
   width: 100%;
-  height: 90vh;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 img {

@@ -159,7 +159,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
           // Optionally, refresh the page
           location.reload();
-
+          
+          // don't think this actually works becasue of freshsuite form connection. workaround with a freshsuite workflow
           setTimeout(() => {
             // Code to execute after the delay
           }, 1000);
