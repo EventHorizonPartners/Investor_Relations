@@ -136,7 +136,6 @@ h1 {
 .deck-container {
   overflow-y: scroll;
   max-height: 90vh; /* Adjust this based on your desired viewport height */
-  border: 1px solid #ddd;
   padding: 0; /* Remove padding to ensure full-width images */
 }
 .deck-image {

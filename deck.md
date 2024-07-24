@@ -10,6 +10,7 @@ permalink: /deck
 </div>
 
 <script>
+  document.addEventListener('contextmenu', event => event.preventDefault()); //prevent rightclicks
   // Total number of pages/images
   const totalPages = 12; // Replace with the actual number of images
   const container = document.getElementById('deck-container');
