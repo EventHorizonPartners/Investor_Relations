@@ -13,7 +13,7 @@ permalink: /faq
         What does your quant fund do?
       </button>
     </h3>
-    <div id="faq1" class="collapse">
+    <div id="faq1">
       <div class="faq-answer">
         <p>We specialize in finding market signals that allow us to profit from both upward and downward market movements. Our approach involves:</p>
         <ol>
@@ -31,7 +31,7 @@ permalink: /faq
         How long have you been operating?
       </button>
     </h3>
-    <div id="faq2" class="collapse">
+    <div id="faq2">
       <div class="faq-answer">
         <p>We've been trading with 100% automation for over five years, continuously improving our quant factory throughout this period.</p>
       </div>
@@ -44,7 +44,7 @@ permalink: /faq
         What sets your fund apart from others?
       </button>
     </h3>
-    <div id="faq3" class="collapse">
+    <div id="faq3">
       <div class="faq-answer">
         <p>Our key differentiators include:</p>
         <ul>
@@ -62,7 +62,7 @@ permalink: /faq
         How do you find systems that work in both bullish and bearish markets?
       </button>
     </h3>
-    <div id="faq4" class="collapse">
+    <div id="faq4">
       <div class="faq-answer">
         <p>Our success in finding versatile trading systems stems from:</p>
         <ul>
@@ -80,7 +80,7 @@ permalink: /faq
         What is your performance track record?
       </button>
     </h3>
-    <div id="faq5" class="collapse">
+    <div id="faq5">
       <div class="faq-answer">
         <p><em>[Note: Please insert your specific performance metrics here. It's crucial to provide accurate and up-to-date information, and to comply with all relevant financial regulations regarding performance reporting.]</em></p>
       </div>
@@ -93,7 +93,7 @@ permalink: /faq
         Why did you start this quant fund?
       </button>
     </h3>
-    <div id="faq6" class="collapse">
+    <div id="faq6">
       <div class="faq-answer">
         <p>Our journey into quantitative trading is driven by several factors:</p>
         <ul>
@@ -112,7 +112,7 @@ permalink: /faq
         How do you approach risk management?
       </button>
     </h3>
-    <div id="faq7" class="collapse">
+    <div id="faq7">
       <div class="faq-answer">
         <p>Risk management is integral to our strategy:</p>
         <ul>
@@ -130,7 +130,7 @@ permalink: /faq
         What makes your team qualified to run a quant fund?
       </button>
     </h3>
-    <div id="faq8" class="collapse">
+    <div id="faq8">
       <div class="faq-answer">
         <p>Our team brings a unique blend of skills and experience:</p>
         <ul>
@@ -149,7 +149,7 @@ permalink: /faq
         How do you stay competitive in the ever-changing financial markets?
       </button>
     </h3>
-    <div id="faq9" class="collapse">
+    <div id="faq9">
       <div class="faq-answer">
         <p>We maintain our competitive edge through:</p>
         <ul>
@@ -167,7 +167,7 @@ permalink: /faq
         What is your long-term vision for the fund?
       </button>
     </h3>
-    <div id="faq10" class="collapse">
+    <div id="faq10">
       <div class="faq-answer">
         <p>Our goal is to continue pushing the boundaries of quantitative trading by:</p>
         <ul>
