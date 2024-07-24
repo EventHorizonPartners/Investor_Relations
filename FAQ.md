@@ -27,7 +27,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
         How long have you been operating?
       </button>
     </h3>
@@ -40,7 +40,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="true" aria-controls="faq3">
         What sets your fund apart from others?
       </button>
     </h3>
@@ -58,7 +58,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="true" aria-controls="faq4">
         How do you find systems that work in both bullish and bearish markets?
       </button>
     </h3>
@@ -76,7 +76,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="true" aria-controls="faq5">
         What is your performance track record?
       </button>
     </h3>
@@ -89,7 +89,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="true" aria-controls="faq6">
         Why did you start this quant fund?
       </button>
     </h3>
@@ -108,7 +108,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="true" aria-controls="faq7">
         How do you approach risk management?
       </button>
     </h3>
@@ -126,7 +126,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="true" aria-controls="faq8">
         What makes your team qualified to run a quant fund?
       </button>
     </h3>
@@ -145,7 +145,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="true" aria-controls="faq9">
         How do you stay competitive in the ever-changing financial markets?
       </button>
     </h3>
@@ -163,7 +163,7 @@ permalink: /faq
 
   <div class="faq-section">
     <h3>
-      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="true" aria-controls="faq10">
         What is your long-term vision for the fund?
       </button>
     </h3>
