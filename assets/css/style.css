@@ -143,6 +143,7 @@ h1 {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove bottom margin from images */
+  margin-bottom: 10px;
 }
 
 img {
