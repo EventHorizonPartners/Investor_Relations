@@ -206,20 +206,26 @@ img {
   max-width: 900px;
   margin: 20px auto;
 }
-.faq-container h1, .faq-container h2, .faq-container h3 {
+.faq-container h1, .accordion-button {
   color: rgb(233, 107, 5);
 }
-.faq-section {
-  margin-bottom: 15px;
+.accordion-button {
+  background-color: #333; /* Same as container background */
+  color: rgb(233, 107, 5); /* Custom color for text */
 }
-.faq-answer {
-  padding-left: 20px; /* Indent the text */
+.accordion-button:focus {
+  box-shadow: none; /* Remove default focus shadow */
 }
-.btn-link {
-  color: rgb(233, 107, 5);
-  text-decoration: none;
+.accordion-button:not(.collapsed) {
+  background-color: #444; /* Darker background for open state */
+  color: #f5f5f5; /* Light text for open state */
 }
-.btn-link:hover {
+.accordion-button:hover {
+  color: #ff8c00; /* Slightly brighter color on hover */
   text-decoration: underline;
 }
-
+.accordion-body {
+  padding-left: 20px; /* Indent the text */
+  color: #f5f5f5; /* Ensure body text is light for readability */
+  background-color: #333; /* Match container background */
+}
