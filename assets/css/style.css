@@ -209,23 +209,29 @@ img {
 .faq-container h1, .accordion-button {
   color: rgb(233, 107, 5);
 }
+
 .accordion-button {
-  background-color: rgb(233, 107, 5); /* Same as container background */
-  color: rgb(233, 107, 5); /* Custom color for text */
+  background-color: #444; /* Slightly darker grey for the button background */
+  color: rgb(233, 107, 5); /* Orange color for the text */
 }
+
 .accordion-button:focus {
   box-shadow: none; /* Remove default focus shadow */
 }
+
 .accordion-button:not(.collapsed) {
-  background-color: rgb(233, 107, 5); /* Darker background for open state */
-  color: #f5f5f5; /* Light text for open state */
+  background-color: rgb(233, 107, 5); /* Orange color for expanded state */
+  color: #333; /* Darker text color for better contrast in expanded state */
 }
+
 .accordion-button:hover {
-  color: #ff8c00; /* Slightly brighter color on hover */
-  text-decoration: underline;
+  background-color: #ff8c00; /* Brighter orange on hover */
+  color: #fff; /* White text on hover for better visibility */
 }
+
 .accordion-body {
   padding-left: 20px; /* Indent the text */
   color: #f5f5f5; /* Ensure body text is light for readability */
   background-color: #333; /* Match container background */
 }
+
