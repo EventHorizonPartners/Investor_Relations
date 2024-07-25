@@ -225,7 +225,7 @@ img {
 }
 
 .accordion-button:hover {
-  background-color: #ff8c00; /* Brighter orange on hover */
+  background-color: #e67e22; /* Brighter orange on hover */
   color: #fff; /* White text on hover for better visibility */
 }
 
