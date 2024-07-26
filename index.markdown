@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: EHP
 ---
 <!-- Welcome Banner -->
 <div class="container mt-4">
