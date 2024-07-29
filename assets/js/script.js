@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   function updateContactViaZapier(contactId) {
-    const zapierUpdateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22ktw5k/';
+    const zapierUpdateUrl = 'https://3ox859w713.execute-api.us-east-2.amazonaws.com/Prod/update-contact/';
     fetch(zapierUpdateUrl + '?contact_internal_ID=' + contactId, {
       method: 'GET' // Using GET just to trigger the webhook
     })
