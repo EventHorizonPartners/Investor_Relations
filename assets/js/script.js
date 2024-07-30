@@ -1,35 +1,49 @@
 // deck url
-// https://eventhorizonpartners.github.io/PitchDeck_FAQ/deck?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
+// https://ehp.dev/deck?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
 
 
 // home URL
-// https://eventhorizonpartners.github.io/PitchDeck_FAQ/?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
+// https://ehp.dev/?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
 // FAQ url
-// https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
+// https://ehp.dev/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&contact_internal_ID={{contact.id}}
 
 // SAMPLE URL
-//  https://eventhorizonpartners.github.io/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
+//  https://ehp.dev/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
 
+// Function to get URL parameters
+function getParameterByName(name, url = window.location.href) {
+  name = name.replace(/[\[\]]/g, '\\$&');
+  const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
 
-// This current flow is working lets make sure we can do it more securely before we actually link to live email template and deployment
-// 
-// 
-
-// add some stuff here about having to add email/name and phone number without contact id utm parameters
-// would have to change logic about how google tags are send out
-// different tags for contact vs no contact
-document.addEventListener('DOMContentLoaded', (event) => {
-  // Function to get URL parameters
-  // Function to get URL parameters
-  function getParameterByName(name, url = window.location.href) {
-    name = name.replace(/[\[\]]/g, '\\$&');
-    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-      results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+// Function to update contact via Zapier
+function updateContactViaLambda(contactId) {
+  // Check if update has already been performed in this session
+  if (sessionStorage.getItem('contactUpdated') === 'true') {
+    console.log('Contact already updated in this session');
+    return;
   }
 
+  const lambdaUpdateUrl = 'https://3ox859w713.execute-api.us-east-2.amazonaws.com/Prod/update-contact/';
+  fetch(lambdaUpdateUrl + '?contact_internal_ID=' + contactId, {
+    method: 'GET' // Using GET just to trigger the webhook
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Contact updated:', data);
+      // Set flag in sessionStorage to indicate update has been performed
+      sessionStorage.setItem('contactUpdated', 'true');
+    })
+    .catch(error => console.error('Error updating contact:', error));
+}
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
   // Get UTM parameters and check if they are available
   const utm_source = getParameterByName('utm_source');
   const utm_medium = getParameterByName('utm_medium');
@@ -58,20 +72,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   }
 
-
-  function updateContactViaZapier(contactId) {
-    const zapierUpdateUrl = 'https://3ox859w713.execute-api.us-east-2.amazonaws.com/Prod/update-contact/';
-    fetch(zapierUpdateUrl + '?contact_internal_ID=' + contactId, {
-      method: 'GET' // Using GET just to trigger the webhook
-    })
-      .then(response => response.json())
-      .then(data => console.log('Contact updated:', data))
-      .catch(error => console.error('Error updating contact:', error));
-  }
-
   // Usage
   if (contactInternalID) {
-    updateContactViaZapier(contactInternalID);
+    updateContactViaLambda(contactInternalID);
   }
 
 
@@ -146,9 +149,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             'contact_phone': userPhone,
             'external_internal': externalInternal
           });
-
-          // login zap flow uncomment when ready
-
 
           // https://domain.myfreshworks.com/crm/sales/api/filtered_search/contact -d '{ "filter_rule" : [{"attribute" : "contact_email.email", "operator":"is_in", "value":"janesampleton@gmail.com"}] }'
           
