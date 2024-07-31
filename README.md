@@ -1,3 +1,3 @@
-# PitchDeck_FAQ
+# Investor Relations
 Investor Relations Site
 www.ehp.dev
