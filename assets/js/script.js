@@ -78,7 +78,7 @@ async function handleFormSubmission(email, phone) {
   try {
     const response = await fetch(`${config.apiEndpoint}/form-contact`, {
       method: 'POST',
-      mode: 'no-cors', // Add this line
+      mode: 'no-cors', // Reverted back to 'no-cors'
       headers: {
         'Content-Type': 'application/json',
       },
@@ -87,6 +87,9 @@ async function handleFormSubmission(email, phone) {
 
     // Note: With 'no-cors', we can't access the response content
     console.log('Request sent successfully');
+    
+    // Log the response object for debugging purposes
+    console.log('Response:', response);
 
     // Since we can't read the response, we'll just return a placeholder
     return { status: 'sent', message: 'Request sent, but response not readable due to CORS restrictions' };
@@ -95,6 +98,7 @@ async function handleFormSubmission(email, phone) {
     throw error;
   }
 }
+
 
 // Main execution
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -149,7 +153,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     backdrop: 'static',
     keyboard: false
   });
-
+  
   document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const userEmail = document.getElementById('userEmail').value;
@@ -159,17 +163,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
       try {
         const result = await handleFormSubmission(userEmail, userPhone);
         console.log('Form submission result:', result);
-        alert('Form submitted successfully!');
-        // You may want to hide the modal or perform other actions here
+        alert(result.message);
+        userInfoModal.hide(); // Hide modal on success
       } catch (error) {
         console.error('Error handling form submission:', error);
         alert('An error occurred. Please try again.');
+        // userInfoModal.hide(); // Hide modal on failure
       }
     } else {
       alert('You must enter your email and phone to proceed.');
     }
   });
-
   // Check if the user needs to input email and phone
   if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
     userInfoModal.show();
