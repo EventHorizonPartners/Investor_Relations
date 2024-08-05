@@ -36,6 +36,7 @@ async function updateContactViaApiGateway(contactId) {
   try {
     const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}`, {
       method: 'GET',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         // Add any necessary API key or authorization header here
