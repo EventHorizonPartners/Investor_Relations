@@ -9,6 +9,7 @@ title: EHP
       <p class="lead mt-3">Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
       <!-- Schedule Meeting Button and Via Calendly Text -->
       <div class="text-center mt-4">
+      <!-- add part here to track some metrics on calendly clicking -->
         <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
       </div>
     </div>
@@ -25,6 +26,7 @@ title: EHP
       </div>
     </div>
     <div class="col-md-6">
+    <!-- move some of this out of inline css -->
       <div class="card mb-4 text-white" style="background-image: url('{{ site.baseurl }}/assets/images/FAQ_preview.png'); height: 500px; background-size: cover; background-position: center;">
         <div class="card-img-overlay d-flex flex-column justify-content-center">
           <h5 class="card-title text-center">FAQ</h5>

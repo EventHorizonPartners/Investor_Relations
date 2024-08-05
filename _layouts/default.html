@@ -20,6 +20,7 @@
         </div>
       </div>
     </footer>
+    <!-- refactor modal form so we have more control over contact creation -->
     <div class="modal fade" id="userInfoModal" tabindex="-1" aria-labelledby="userInfoModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content bg-dark text-white">
@@ -31,14 +32,11 @@
               <div class="mb-3">
                 <label for="userEmail" class="form-label">Email</label>
                 <input type="email" class="form-control" id="userEmail" name="userEmail" required>
-                <small>Valid email address.</small>
               </div>
               <div class="mb-3">
                 <label for="userPhone" class="form-label">Phone</label>
-                <input type="tel" class="form-control" id="userPhone" name="userPhone"  required>
-                <small>Format: 123-456-7890</small>
+                <input type="tel" class="form-control" id="userPhone" name="userPhone" required>
               </div>
-              <input type="hidden" id="contact_status_id" name="contact_status_id" value="27000849231">
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>

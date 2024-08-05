@@ -10,6 +10,12 @@
 // SAMPLE URL
 //  https://ehp.dev/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
 
+// Configuration
+const config = {
+  apiEndpoint: 'https://3ox859w713.execute-api.us-east-2.amazonaws.com/Prod', // Your API Gateway URL
+  gaTrackingId: 'G-2HYX0T804J', // Your Google Analytics tracking ID
+};
+
 // Function to get URL parameters
 function getParameterByName(name, url = window.location.href) {
   name = name.replace(/[\[\]]/g, '\\$&');
@@ -20,44 +26,115 @@ function getParameterByName(name, url = window.location.href) {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-// Function to update contact via Zapier
-function updateContactViaLambda(contactId) {
-  // Check if update has already been performed in this session
+// Function to update contact via API Gateway
+async function updateContactViaApiGateway(contactId) {
   if (sessionStorage.getItem('contactUpdated') === 'true') {
     console.log('Contact already updated in this session');
     return;
   }
 
-  const lambdaUpdateUrl = 'https://3ox859w713.execute-api.us-east-2.amazonaws.com/Prod/update-contact/';
-  fetch(lambdaUpdateUrl + '?contact_internal_ID=' + contactId, {
-    method: 'GET' // Using GET just to trigger the webhook
-  })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Contact updated:', data);
-      // Set flag in sessionStorage to indicate update has been performed
-      sessionStorage.setItem('contactUpdated', 'true');
-    })
-    .catch(error => console.error('Error updating contact:', error));
+  try {
+    const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        // Add any necessary API key or authorization header here
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Contact updated:', data);
+    sessionStorage.setItem('contactUpdated', 'true');
+
+    // Send custom event to Google Analytics
+    sendCustomEvent('Contact_Updated', {
+      contact_id: contactId,
+      update_status: 'success',
+    });
+  } catch (error) {
+    console.error('Error updating contact:', error);
+    sendCustomEvent('Contact_Updated', {
+      contact_id: contactId,
+      update_status: 'error',
+      error_message: error.message,
+    });
+  }
 }
 
+// Function to send custom events to Google Analytics
+function sendCustomEvent(eventName, eventParams) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, eventParams);
+  } else {
+    console.error('Google Analytics not loaded');
+  }
+}
 
+async function handleFormSubmission(email, phone) {
+  try {
+    const response = await fetch(`${config.apiEndpoint}/form-contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, phone }),
+    });
 
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Contact managed:', data);
+
+    // Send custom event to Google Analytics
+    sendCustomEvent('Contact_Managed', {
+      contact_id: data.contact_id,
+      status: data.status,
+    });
+
+    // Store contact info in localStorage
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userPhone', phone);
+
+    // Update URL with contact ID
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set('contact_internal_ID', data.contact_id);
+    window.history.replaceState({}, '', currentUrl);
+
+    // Trigger the existing contact workflow
+    updateContactViaApiGateway(data.contact_id);
+
+    return data;
+  } catch (error) {
+    console.error('Error managing contact:', error);
+    throw error;
+  }
+}
+
+// Main execution
 document.addEventListener('DOMContentLoaded', (event) => {
-  // Get UTM parameters and check if they are available
-  const utm_source = getParameterByName('utm_source');
-  const utm_medium = getParameterByName('utm_medium');
-  const utm_campaign = getParameterByName('utm_campaign');
-  const contactInternalID = getParameterByName('contact_internal_ID');
-  let externalInternal = !contactInternalID;
+  const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'contact_internal_ID'];
+  const utmValues = {};
 
-  // Send data to Google Analytics if UTM parameters are present
-  if (utm_source && utm_medium && utm_campaign && contactInternalID) {
+  utmParams.forEach(param => {
+    const value = getParameterByName(param);
+    if (value) {
+      utmValues[param] = value;
+    }
+  });
+
+  if (Object.keys(utmValues).length > 0) {
+    // Initialize Google Analytics
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'G-2HYX0T804J', {
+    gtag('config', config.gaTrackingId, {
       'custom_map': {
         'dimension3': 'contact_internal_ID',
         'dimension4': 'contact_email',
@@ -66,132 +143,113 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
     });
 
+    // Send page view event with custom dimensions
     gtag('event', 'page_view', {
-      'contact_internal_ID': contactInternalID,
-      'external_internal': externalInternal
+      ...utmValues,
+      'external_internal': utmValues.contact_internal_ID ? false : true
     });
-  }
 
-  // Usage
-  if (contactInternalID) {
-    updateContactViaLambda(contactInternalID);
-  }
-
-
-
-  // Simplify UTM parameters handling for links
-  const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'contact_internal_ID'];
-  let utmString = utmParams.map(param => {
-    const value = getParameterByName(param);
-    return value ? `${param}=${value}` : '';
-  }).filter(Boolean).join('&');
-
-  // Function to append UTM parameters to links
-  function appendUtmParameters(selector) {
-    const links = document.querySelectorAll(selector);
-    links.forEach(link => {
-      if (utmString) {
-        const separator = link.href.includes('?') ? '&' : '?';
-        link.href += `${separator}${utmString}`;
-      }
-    });
-  }
-
-  // Append UTM parameters to navbar links
-  appendUtmParameters('nav ul li a');
-
-  // Append UTM parameters to cards on the homepage
-  appendUtmParameters('.card-link');
-
-  // Append UTM parameters to the navbar icon with logo
-  appendUtmParameters('.navbar-brand');
-  // end of DOMContentLoaded
-
-
-  // Ensure user inputs email and phone before accessing the site
-  // Ensure user inputs email and phone before accessing the site if contact_internal_ID is not present
-  function requireEmailAndPhone() {
-    const email = localStorage.getItem('userEmail');
-    const phone = localStorage.getItem('userPhone');
-    const contact_status_id = localStorage.getItem('contact_status_id');
-
-    if (!contactInternalID && (!email || !phone)) {
-      const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
-        backdrop: 'static',
-        keyboard: false
-      });
-      userInfoModal.show();
-
-      document.getElementById('userInfoForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const userEmail = document.getElementById('userEmail').value;
-        const userPhone = document.getElementById('userPhone').value;
-        const contact_status_id = document.getElementById('contact_status_id').value;
-
-        if (userEmail && userPhone) {
-          localStorage.setItem('userEmail', userEmail);
-          localStorage.setItem('userPhone', userPhone);
-          localStorage.setItem('contact_status_id', contact_status_id);
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
-
-          gtag('config', 'G-2HYX0T804J', {
-            'custom_map': {
-              'dimension4': 'contact_email',
-              'dimension5': 'contact_phone',
-              'dimension7': 'external_internal'
-            }
-          });
-
-          gtag('event', 'user_info', {
-            'contact_email': userEmail,
-            'contact_phone': userPhone,
-            'external_internal': externalInternal
-          });
-
-          // https://domain.myfreshworks.com/crm/sales/api/filtered_search/contact -d '{ "filter_rule" : [{"attribute" : "contact_email.email", "operator":"is_in", "value":"janesampleton@gmail.com"}] }'
-          
-          // Hide the modal
-          const modalElement = document.getElementById('userInfoModal');
-          const modal = bootstrap.Modal.getInstance(modalElement);
-          modal.hide();
-
-          // Optionally, refresh the page
-          location.reload();
-          
-          // don't think this actually works becasue of freshsuite form connection. workaround with a freshsuite workflow
-          setTimeout(() => {
-            // Code to execute after the delay
-          }, 1000);
-          const zapierCreateUrl = 'https://hooks.zapier.com/hooks/catch/19436022/22kz61e/';
-          fetch(zapierCreateUrl + '?email=' + userEmail + '&phone=' + userPhone, {
-            method: 'GET' // Using GET just to trigger the webhook
-          })
-            .then(response => response.json())
-            .then(data => {
-              console.log('New contact created:', data);
-              // Proceed to hide modal and potentially refresh the page
-              // const modalElement = document.getElementById('userInfoModal');
-              // const modal = bootstrap.Modal.getInstance(modalElement);
-              // modal.hide();
-              // location.reload();
-            })
-            .catch(error => console.error('Error creating contact:', error));
-        } else {
-          alert('You must enter your email and phone to proceed.');
-        }
-      });
+    // Update contact if ID is present
+    if (utmValues.contact_internal_ID) {
+      updateContactViaApiGateway(utmValues.contact_internal_ID);
     }
   }
 
+  // Append UTM parameters to links
+  const utmString = new URLSearchParams(utmValues).toString();
+  document.querySelectorAll('a').forEach(link => {
+    if (utmString) {
+      const separator = link.href.includes('?') ? '&' : '?';
+      link.href += `${separator}${utmString}`;
+    }
+  });
+
+  // Handle user information modal
+  const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
+    backdrop: 'static',
+    keyboard: false
+  });
+
+  document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const userEmail = document.getElementById('userEmail').value;
+    const userPhone = document.getElementById('userPhone').value;
+
+    if (userEmail && userPhone) {
+      try {
+        const result = await handleFormSubmission(userEmail, userPhone);
+        userInfoModal.hide();
+        location.reload();
+      } catch (error) {
+        console.error('Error handling form submission:', error);
+        alert('An error occurred. Please try again.');
+      }
+    } else {
+      alert('You must enter your email and phone to proceed.');
+    }
+  });
+
   // Check if the user needs to input email and phone
-  requireEmailAndPhone();
-  
- 
+  if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
+    userInfoModal.show();
+  }
+  // adjust to work with lambda function while still keeping modal functionality
+  // const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
+  //   backdrop: 'static',
+  //   keyboard: false
+  // });
 
+  // document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
+  //   e.preventDefault();
+  //   const userEmail = document.getElementById('userEmail').value;
+  //   const userPhone = document.getElementById('userPhone').value;
 
+  //   if (userEmail && userPhone) {
+  //     try {
+  //       const response = await fetch(`${config.apiEndpoint}/create-contact`, {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //           // Add any necessary API key or authorization header here
+  //         },
+  //         body: JSON.stringify({ email: userEmail, phone: userPhone }),
+  //       });
+
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! status: ${response.status}`);
+  //       }
+
+  //       const data = await response.json();
+  //       console.log('New contact created:', data);
+
+  //       // Send custom event to Google Analytics
+  //       sendCustomEvent('Contact_Created', {
+  //         contact_email: userEmail,
+  //         contact_phone: userPhone,
+  //       });
+
+  //       // Hide the modal
+  //       userInfoModal.hide();
+
+  //       // Optionally, refresh the page
+  //       location.reload();
+  //     } catch (error) {
+  //       console.error('Error creating contact:', error);
+  //       alert('An error occurred. Please try again.');
+  //     }
+  //   } else {
+  //     alert('You must enter your email and phone to proceed.');
+  //   }
+  // });
+
+  // // Check if the user needs to input email and phone
+  // if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
+  //   userInfoModal.show();
+  // }
 });
+
+// Navbar scroll behavior (unchanged)
+// ... (keep the existing navbar scroll code here)
 
 let lastScrollTop = 0;
 let isScrolling;
