@@ -99,7 +99,7 @@ async function handleFormSubmission(email, phone) {
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userPhone', phone);
 
-    if (data.contact_internal_ID) {
+    if (data.contact_ID) {
       // Call updateContactViaApiGateway with the returned contact ID
       await updateContactViaApiGateway(data.contact_ID);
     }
