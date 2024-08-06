@@ -95,17 +95,21 @@ async function handleFormSubmission(email, phone) {
     const data = await response.json();
     console.log('Form submission result:', data);
 
-    // Save user information to localStorage
-    localStorage.setItem('userEmail', email);
-    localStorage.setItem('userPhone', phone);
-    console.log ('Contact ID:', data.contact_ID);
-    if (data.contact_ID) {
-      // Call updateContactViaApiGateway with the returned contact ID
-      console.log ('Contact ID:', data.contact_ID);
-      await updateContactViaApiGateway(data.contact_ID);
-    }
+    // Check if contact_id is present in the response
+    if (data && data.contact_id) {
+      console.log('Contact ID:', data.contact_id);
+      // Save user information to localStorage
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPhone', phone);
 
-    return { status: 'sent', message: 'Request sent successfully' };
+      // Call updateContactViaApiGateway with the returned contact ID
+      await updateContactViaApiGateway(data.contact_id);
+
+      return { status: 'sent', message: 'Request sent successfully' };
+    } else {
+      console.error('Contact ID is undefined or missing in the response:', data);
+      throw new Error('Contact ID is undefined or missing in the response');
+    }
   } catch (error) {
     console.error('Error managing contact:', error);
     throw error;
