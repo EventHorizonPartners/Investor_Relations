@@ -12,7 +12,7 @@
 
 // Configuration
 const config = {
-  apiEndpoint: 'https://3ox859w713.execute-api.us-east-2.amazonaws.com/Prod', // Your API Gateway URL
+  apiEndpoint: 'https://bo74vxe3f3.execute-api.us-east-2.amazonaws.com/Prod', // Your API Gateway URL
   gaTrackingId: 'G-2HYX0T804J', // Your Google Analytics tracking ID
 };
 
