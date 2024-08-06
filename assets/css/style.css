@@ -153,47 +153,91 @@ img {
   border-radius: 10px;
 }
 
-/* Card Styles */
-/* Card Styles */
+
+/* Improved Card Styles */
 .card {
-  background-size: cover; /* Ensure the image fills the card */
-  background-repeat: no-repeat;
+  height: 100%; /* Make cards fill their container */
+  background-size: cover;
   background-position: center;
-  color: white; /* Keeps the original text color */
-  height: 500px;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
-.card-body {
-  background: rgba(0, 0, 0, 0.7); /* Darker background for better readability */
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card-img-overlay {
-  background: rgba(0, 0, 0, 0.7); /* Increase the opacity for better text contrast */
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
- 
+  padding: 2rem;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .btn-custom {
-  background-color: rgb(233, 107, 5); /* Maintains original button color */
-  color: #2b2b2b; /* Keeps the original button text color */
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
-  background-color: #e07b00; /* Darker shade for hover effect while keeping the same color scheme */
+  background-color: #e07b00;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  .card {
+    height: 600px;
+  }
+  
+  .card-title {
+    font-size: 2.5rem;
+  }
+  
+  .card-text {
+    font-size: 1.3rem;
+  }
+  
+  .btn-custom {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .card {
+    height: 800px;
+  }
+  
+  .card-title {
+    font-size: 3rem;
+  }
+  
+  .card-text {
+    font-size: 1.5rem;
+  }
+  
+  .btn-custom {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
 }
 
 
