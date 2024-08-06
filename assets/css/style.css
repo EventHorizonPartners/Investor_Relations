@@ -283,11 +283,17 @@ img {
   border-color: rgb(233, 107, 5); /* Orange border on focus */
   box-shadow: none; /* Remove default focus shadow */
 }
+
 .progress {
   height: 20px;
-  background-color: #444; /* Darker background for the progress bar container */
+  background-color: #444;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
 }
+
 .progress-bar {
-  background-color: rgb(233, 107, 5); /* Orange color for the progress bar */
-  color: #fff; /* White text color */
+  background-color: rgb(233, 107, 5);
+  color: #fff;
+  transition: width 0.5s ease;
 }

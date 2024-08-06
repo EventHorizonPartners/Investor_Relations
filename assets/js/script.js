@@ -177,49 +177,52 @@ document.addEventListener('DOMContentLoaded', (event) => {
     return;
   }
 
+  const progressBar = document.querySelector('#formProgress .progress-bar');
+  const progressContainer = document.getElementById('formProgress');
+  const thankYouMessage = document.getElementById('thankYouMessage');
+
   userInfoForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     console.log('Form submitted');
-  
+
     const userEmail = document.getElementById('userEmail').value;
-  const userPhone = document.getElementById('userPhone').value;
+    const userPhone = document.getElementById('userPhone').value;
 
-  console.log('Email:', userEmail);
-  console.log('Phone:', userPhone);
+    if (userEmail && userPhone) {
+      progressContainer.style.display = 'block';
+      userInfoForm.style.display = 'none';
+      progressBar.style.width = '0%';
+      progressBar.setAttribute('aria-valuenow', 0);
 
-  if (userEmail && userPhone) {
-    const progressBar = document.querySelector('#formProgress .progress-bar');
-    const progressContainer = document.getElementById('formProgress');
-    progressContainer.style.display = 'block';
-    progressBar.style.width = '0%';
-    progressBar.setAttribute('aria-valuenow', 0);
+      try {
+        // Simulate progress
+        for (let i = 0; i <= 100; i += 10) {
+          await new Promise(resolve => setTimeout(resolve, 100));
+          progressBar.style.width = `${i}%`;
+          progressBar.setAttribute('aria-valuenow', i);
+        }
 
-    try {
-      // Simulate progress
-      for (let i = 0; i <= 100; i += 10) {
-        await new Promise(resolve => setTimeout(resolve, 100)); // Simulate delay
-        progressBar.style.width = `${i}%`;
-        progressBar.setAttribute('aria-valuenow', i);
+        const result = await handleFormSubmission(userEmail, userPhone);
+        console.log('Form submission result:', result);
+
+        // Show thank you message
+        thankYouMessage.style.display = 'block';
+        progressContainer.style.display = 'none';
+
+        // Close modal after 3 seconds
+        setTimeout(() => {
+          const modalElement = document.getElementById('userInfoModal');
+          const modalInstance = bootstrap.Modal.getInstance(modalElement);
+          modalInstance.hide();
+        }, 3000);
+      } catch (error) {
+        console.error('Error handling form submission:', error);
+        alert('An error occurred. Please try again.');
       }
-
-      const result = await handleFormSubmission(userEmail, userPhone);
-      console.log('Form submission result:', result);
-      alert(result.message);
-
-      // Hide modal on success using Bootstrap 5
-      const modalElement = document.getElementById('userInfoModal');
-      const modalInstance = bootstrap.Modal.getInstance(modalElement);
-      modalInstance.hide();
-    } catch (error) {
-      console.error('Error handling form submission:', error);
-      alert('An error occurred. Please try again.');
-    } finally {
-      progressContainer.style.display = 'none';
+    } else {
+      alert('You must enter your email and phone to proceed.');
     }
-  } else {
-    alert('You must enter your email and phone to proceed.');
-  }
-});
+  });
 
   // Check if the user needs to input email and phone
   if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
