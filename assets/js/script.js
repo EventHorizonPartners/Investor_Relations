@@ -196,8 +196,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
       try {
         // Simulate progress
-        for (let i = 0; i <= 100; i += 10) {
-          await new Promise(resolve => setTimeout(resolve, 100));
+        for (let i = 0; i <= 100; i += 5) {
+          await new Promise(resolve => setTimeout(resolve, 20)); // Update every 20 milliseconds
           progressBar.style.width = `${i}%`;
           progressBar.setAttribute('aria-valuenow', i);
         }
