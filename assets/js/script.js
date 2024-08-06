@@ -193,13 +193,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
       userInfoForm.style.display = 'none';
       progressBar.style.width = '0%';
       progressBar.setAttribute('aria-valuenow', 0);
-
+  
+      console.log('Progress bar initialized:', {
+        display: progressContainer.style.display,
+        width: progressBar.style.width,
+        ariaValueNow: progressBar.getAttribute('aria-valuenow')
+      });
+  
       try {
         // Simulate progress
         for (let i = 0; i <= 100; i += 5) {
           await new Promise(resolve => setTimeout(resolve, 20)); // Update every 20 milliseconds
           progressBar.style.width = `${i}%`;
           progressBar.setAttribute('aria-valuenow', i);
+  
+          console.log('Progress bar updated:', {
+            width: progressBar.style.width,
+            ariaValueNow: progressBar.getAttribute('aria-valuenow')
+          });
         }
 
         const result = await handleFormSubmission(userEmail, userPhone);
