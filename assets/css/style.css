@@ -235,3 +235,42 @@ img {
   background-color: #333; /* Match container background */
 }
 
+
+/* Modal Styles */
+.modal-content {
+  background-color: #2b2b2b; /* Dark grey background */
+  color: #f5f5f5; /* Light text color */
+}
+
+.modal-header {
+  border-bottom: 1px solid #444; /* Slight border for separation */
+}
+
+.modal-header .modal-title {
+  color: #f5f5f5; /* Light text color for the title */
+}
+
+.modal-body {
+  background-color: #2b2b2b; /* Matching the body background */
+}
+
+.modal-body .form-label {
+  color: #f5f5f5; /* Light text color for labels */
+}
+
+.modal-footer {
+  border-top: 1px solid #444; /* Slight border for separation */
+  background-color: #2b2b2b; /* Matching the body background */
+}
+
+.btn-primary {
+  background-color: rgb(233, 107, 5); /* Orange button background */
+  color: #2b2b2b; /* Dark text color */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e07b00; /* Darker orange on hover */
+  color: #fff; /* White text on hover */
+}
+
