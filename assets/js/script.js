@@ -77,6 +77,7 @@ function sendCustomEvent(eventName, eventParams) {
 }
 
 async function handleFormSubmission(email, phone) {
+  console.log('Handling form submission');
   try {
     const response = await fetch(`${config.apiEndpoint}/form-contact`, {
       method: 'POST',
@@ -104,7 +105,6 @@ async function handleFormSubmission(email, phone) {
     throw error;
   }
 }
-
 
 // Main execution
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -157,15 +157,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   
   document.addEventListener('DOMContentLoaded', (event) => {
-    const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
+    console.log('DOM fully loaded and parsed');
+  
+    const userInfoModalElement = document.getElementById('userInfoModal');
+    if (!userInfoModalElement) {
+      console.error('Modal element not found');
+      return;
+    }
+  
+    const userInfoModal = new bootstrap.Modal(userInfoModalElement, {
       backdrop: 'static',
       keyboard: false
     });
   
-    document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
+    const userInfoForm = document.getElementById('userInfoForm');
+    if (!userInfoForm) {
+      console.error('Form element not found');
+      return;
+    }
+  
+    userInfoForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      console.log('Form submitted');
+  
       const userEmail = document.getElementById('userEmail').value;
       const userPhone = document.getElementById('userPhone').value;
+  
+      console.log('Email:', userEmail);
+      console.log('Phone:', userPhone);
   
       if (userEmail && userPhone) {
         try {
@@ -184,9 +203,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
   
     // Check if the user needs to input email and phone
     if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
+      console.log('Showing modal because user info is missing');
       userInfoModal.show();
+    } else {
+      console.log('User info already present');
     }
-
   });
   // adjust to work with lambda function while still keeping modal functionality
   // const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
