@@ -28,17 +28,20 @@
                 <h5 class="modal-title" id="userInfoModalLabel">Enter Your Information to view</h5>
             </div>
             <div class="modal-body">
-                <form id="userInfoForm">
-                    <div class="mb-3">
-                        <label for="userEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="userEmail" name="userEmail" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="userPhone" class="form-label">Phone</label>
-                        <input type="tel" class="form-control" id="userPhone" name="userPhone" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+              <form id="userInfoForm">
+                <div class="mb-3">
+                  <label for="userEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                </div>
+                <div class="mb-3">
+                  <label for="userPhone" class="form-label">Phone</label>
+                  <input type="tel" class="form-control" id="userPhone" name="userPhone" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+              <div class="progress mt-3" id="formProgress" style="display: none;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
         </div>
     </div>
