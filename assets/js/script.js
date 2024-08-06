@@ -99,6 +99,11 @@ async function handleFormSubmission(email, phone) {
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userPhone', phone);
 
+    if (data.contact_internal_ID) {
+      // Call updateContactViaApiGateway with the returned contact ID
+      await updateContactViaApiGateway(data.contact_internal_ID);
+    }
+
     return { status: 'sent', message: 'Request sent successfully' };
   } catch (error) {
     console.error('Error managing contact:', error);
@@ -154,104 +159,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
+  const userInfoModalElement = document.getElementById('userInfoModal');
+  if (!userInfoModalElement) {
+    console.error('Modal element not found');
+    return;
+  }
 
-  
-  
-    const userInfoModalElement = document.getElementById('userInfoModal');
-    if (!userInfoModalElement) {
-        console.error('Modal element not found');
-        return;
+  const userInfoModal = new bootstrap.Modal(userInfoModalElement, {
+    backdrop: 'static',
+    keyboard: false
+  });
+
+  const userInfoForm = document.getElementById('userInfoForm');
+  if (!userInfoForm) {
+    console.error('Form element not found');
+    return;
+  }
+
+  userInfoForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const userEmail = document.getElementById('userEmail').value;
+    const userPhone = document.getElementById('userPhone').value;
+
+    if (userEmail && userPhone) {
+      try {
+        const result = await handleFormSubmission(userEmail, userPhone);
+        console.log('Form submission result:', result);
+        alert(result.message);
+        userInfoModal.hide();
+      } catch (error) {
+        console.error('Error handling form submission:', error);
+        alert('An error occurred. Please try again.');
+      }
+    } else {
+      alert('You must enter your email and phone to proceed.');
     }
+  });
 
-    const userInfoModal = new bootstrap.Modal(userInfoModalElement, {
-        backdrop: 'static',
-        keyboard: false
-    });
-
-    const userInfoForm = document.getElementById('userInfoForm');
-    if (!userInfoForm) {
-        console.error('Form element not found');
-        return;
-    }
-
-    userInfoForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const userEmail = document.getElementById('userEmail').value;
-        const userPhone = document.getElementById('userPhone').value;
-
-        if (userEmail && userPhone) {
-            try {
-                const result = await handleFormSubmission(userEmail, userPhone);
-                console.log('Form submission result:', result);
-                alert(result.message);
-                userInfoModal.hide();
-            } catch (error) {
-                console.error('Error handling form submission:', error);
-                alert('An error occurred. Please try again.');
-            }
-        } else {
-            alert('You must enter your email and phone to proceed.');
-        }
-    });
-
-    if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
-        userInfoModal.show();
-    }
+  if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
+    userInfoModal.show();
+  }
 });
-
-  // adjust to work with lambda function while still keeping modal functionality
-  // const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
-  //   backdrop: 'static',
-  //   keyboard: false
-  // });
-
-  // document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
-  //   e.preventDefault();
-  //   const userEmail = document.getElementById('userEmail').value;
-  //   const userPhone = document.getElementById('userPhone').value;
-
-  //   if (userEmail && userPhone) {
-  //     try {
-  //       const response = await fetch(`${config.apiEndpoint}/create-contact`, {
-  //         method: 'POST',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //           // Add any necessary API key or authorization header here
-  //         },
-  //         body: JSON.stringify({ email: userEmail, phone: userPhone }),
-  //       });
-
-  //       if (!response.ok) {
-  //         throw new Error(`HTTP error! status: ${response.status}`);
-  //       }
-
-  //       const data = await response.json();
-  //       console.log('New contact created:', data);
-
-  //       // Send custom event to Google Analytics
-  //       sendCustomEvent('Contact_Created', {
-  //         contact_email: userEmail,
-  //         contact_phone: userPhone,
-  //       });
-
-  //       // Hide the modal
-  //       userInfoModal.hide();
-
-  //       // Optionally, refresh the page
-  //       location.reload();
-  //     } catch (error) {
-  //       console.error('Error creating contact:', error);
-  //       alert('An error occurred. Please try again.');
-  //     }
-  //   } else {
-  //     alert('You must enter your email and phone to proceed.');
-  //   }
-  // });
-
-  // // Check if the user needs to input email and phone
-  // if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
-  //   userInfoModal.show();
-  // }
 
 
 // Navbar scroll behavior (unchanged)

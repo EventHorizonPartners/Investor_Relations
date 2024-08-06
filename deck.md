@@ -12,12 +12,12 @@ permalink: /deck
 <script>
   document.addEventListener('contextmenu', event => event.preventDefault()); //prevent rightclicks
   // Total number of pages/images
-  const totalPages = 12; // Replace with the actual number of images
+  const totalPages = 14; // Replace with the actual number of images
   const container = document.getElementById('deck-container');
 
   for (let i = 0; i <= totalPages; i++) {
     const img = document.createElement('img');
-    img.src = `assets/deck/compressed/EventHorizon_Presentation_LP-images-${i}.jpg`;
+    img.src = `assets/deck/compressed/Event Horizon_Presentation_LP_VR27-images-${i}.jpg`;
     img.alt = `Page ${i}`;
     img.className = 'deck-image';
     container.appendChild(img);
