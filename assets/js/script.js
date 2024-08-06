@@ -153,11 +153,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   });
 
-  // Handle user information modal
-  const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
-    backdrop: 'static',
-    keyboard: false
-  });
+
   
   document.addEventListener('DOMContentLoaded', (event) => {
     const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
@@ -186,9 +182,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   
     // Check if the user needs to input email and phone
-    // if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
-    //   userInfoModal.show();
-    // }
+    if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
+      userInfoModal.show();
+    }
 
   });
   // adjust to work with lambda function while still keeping modal functionality
