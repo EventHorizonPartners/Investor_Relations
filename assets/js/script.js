@@ -49,7 +49,7 @@ async function updateContactViaApiGateway(contactId) {
     }
 
     const data = await response.json();
-    console.log('Contact updated:', data);
+    console.log('Contact updated:');
     sessionStorage.setItem('contactUpdated', 'true');
 
     // Send custom event to Google Analytics
@@ -193,24 +193,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
       userInfoForm.style.display = 'none';
       progressBar.style.width = '0%';
       progressBar.setAttribute('aria-valuenow', 0);
-  
-      console.log('Progress bar initialized:', {
-        display: progressContainer.style.display,
-        width: progressBar.style.width,
-        ariaValueNow: progressBar.getAttribute('aria-valuenow')
-      });
-  
+
       try {
         // Simulate progress
         for (let i = 0; i <= 100; i += 5) {
-          await new Promise(resolve => setTimeout(resolve, 50)); // Update every 50 milliseconds
+          await new Promise(resolve => setTimeout(resolve, 100)); // Update every 100 milliseconds
           progressBar.style.width = `${i}%`;
           progressBar.setAttribute('aria-valuenow', i);
-  
-          console.log('Progress bar updated:', {
-            width: progressBar.style.width,
-            ariaValueNow: progressBar.getAttribute('aria-valuenow')
-          });
+
         }
 
         const result = await handleFormSubmission(userEmail, userPhone);
