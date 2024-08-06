@@ -101,6 +101,7 @@ async function handleFormSubmission(email, phone) {
 
     if (data.contact_ID) {
       // Call updateContactViaApiGateway with the returned contact ID
+      console.log ('Contact ID:', data.contact_ID);
       await updateContactViaApiGateway(data.contact_ID);
     }
 
