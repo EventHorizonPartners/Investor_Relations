@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
   
-  document.addEventListener('DOMContentLoaded', (event) => {
+  
     const userInfoModalElement = document.getElementById('userInfoModal');
     if (!userInfoModalElement) {
         console.error('Modal element not found');
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
   //   userInfoModal.show();
   // }
-});
+
 
 // Navbar scroll behavior (unchanged)
 // ... (keep the existing navbar scroll code here)
