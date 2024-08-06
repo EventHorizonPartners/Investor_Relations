@@ -98,7 +98,7 @@ async function handleFormSubmission(email, phone) {
     // Save user information to localStorage
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userPhone', phone);
-
+    console.log ('Contact ID:', data.contact_ID);
     if (data.contact_ID) {
       // Call updateContactViaApiGateway with the returned contact ID
       console.log ('Contact ID:', data.contact_ID);
