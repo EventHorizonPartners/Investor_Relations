@@ -247,9 +247,11 @@ img {
   }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 2500px) {
   .card {
     height: 900px;
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the card horizontally */
   }
   
   .card-title {
