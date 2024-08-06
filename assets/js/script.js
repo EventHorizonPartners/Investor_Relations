@@ -36,7 +36,7 @@ async function updateContactViaApiGateway(contactId) {
   try {
     const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}`, {
       method: 'GET',
-      mode: 'no-cors',
+      mode: 'cors', // Enable CORS
       headers: {
         'Content-Type': 'application/json',
         // Add any necessary API key or authorization header here
@@ -79,21 +79,25 @@ async function handleFormSubmission(email, phone) {
   try {
     const response = await fetch(`${config.apiEndpoint}/form-contact`, {
       method: 'POST',
-      mode: 'no-cors', // Reverted back to 'no-cors'
+      mode: 'cors', // Enable CORS
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email, phone }),
     });
 
-    // Note: With 'no-cors', we can't access the response content
-    console.log('Request sent successfully');
-    
-    // Log the response object for debugging purposes
-    console.log('Response:', response);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
-    // Since we can't read the response, we'll just return a placeholder
-    return { status: 'sent', message: 'Request sent, but response not readable due to CORS restrictions' };
+    const data = await response.json();
+    console.log('Form submission result:', data);
+
+    // Save user information to localStorage
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userPhone', phone);
+
+    return { status: 'sent', message: 'Request sent successfully' };
   } catch (error) {
     console.error('Error managing contact:', error);
     throw error;
@@ -155,30 +159,37 @@ document.addEventListener('DOMContentLoaded', (event) => {
     keyboard: false
   });
   
-  document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const userEmail = document.getElementById('userEmail').value;
-    const userPhone = document.getElementById('userPhone').value;
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
+      backdrop: 'static',
+      keyboard: false
+    });
   
-    if (userEmail && userPhone) {
-      try {
-        const result = await handleFormSubmission(userEmail, userPhone);
-        console.log('Form submission result:', result);
-        alert(result.message);
-        userInfoModal.hide(); // Hide modal on success
-      } catch (error) {
-        console.error('Error handling form submission:', error);
-        alert('An error occurred. Please try again.');
-        // userInfoModal.hide(); // Hide modal on failure
+    document.getElementById('userInfoForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userEmail = document.getElementById('userEmail').value;
+      const userPhone = document.getElementById('userPhone').value;
+  
+      if (userEmail && userPhone) {
+        try {
+          const result = await handleFormSubmission(userEmail, userPhone);
+          console.log('Form submission result:', result);
+          alert(result.message);
+          userInfoModal.hide(); // Hide modal on success
+        } catch (error) {
+          console.error('Error handling form submission:', error);
+          alert('An error occurred. Please try again.');
+        }
+      } else {
+        alert('You must enter your email and phone to proceed.');
       }
-    } else {
-      alert('You must enter your email and phone to proceed.');
+    });
+  
+    // Check if the user needs to input email and phone
+    if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
+      userInfoModal.show();
     }
   });
-  // Check if the user needs to input email and phone
-  if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
-    userInfoModal.show();
-  }
   // adjust to work with lambda function while still keeping modal functionality
   // const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
   //   backdrop: 'static',
