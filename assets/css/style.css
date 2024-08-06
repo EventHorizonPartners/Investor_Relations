@@ -156,13 +156,15 @@ img {
 
 /* Improved Card Styles */
 .card {
-  height: 100%; /* Make cards fill their container */
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 300px; /* Set a minimum height */
   background-size: cover;
   background-position: center;
   border: none;
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 20px; /* Add space between cards when stacked */
 }
 
 .card:hover {
@@ -180,32 +182,52 @@ img {
 }
 
 .card-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .card-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
+/* Button Styles */
 .btn-custom {
+  background-color: rgb(233, 107, 5);
+  color: #2b2b2b;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid rgb(233, 107, 5);
 }
 
 .btn-custom:hover {
-  background-color: #e07b00;
+  background-color: transparent;
+  color: #fff;
+  border-color: rgb(233, 107, 5);
 }
 
 /* Responsive adjustments */
+@media (min-width: 768px) {
+  .card {
+    height: 400px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+  }
+  
+  .card-text {
+    font-size: 1.1rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .card {
-    height: 600px;
+    height: 500px;
   }
   
   .card-title {
@@ -223,7 +245,7 @@ img {
 
 @media (min-width: 2560px) {
   .card {
-    height: 800px;
+    height: 600px;
   }
   
   .card-title {
@@ -239,7 +261,6 @@ img {
     padding: 1rem 2rem;
   }
 }
-
 
 
 .faq-container {
