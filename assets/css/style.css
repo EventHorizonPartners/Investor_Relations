@@ -205,7 +205,7 @@ img {
 }
 
 .btn-custom:hover {
- 
+  background-color: rgb(233, 107, 5);
   color: #fff;
   border-color: rgb(233, 107, 5);
 }
