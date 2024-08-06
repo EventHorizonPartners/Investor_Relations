@@ -23,26 +23,27 @@
   <!-- Modal -->
   <div class="modal fade" id="userInfoModal" tabindex="-1" aria-labelledby="userInfoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content bg-dark text-white">
-        <div class="modal-header">
-          <h5 class="modal-title" id="userInfoModalLabel">Enter Your Information to view</h5>
-        </div>
-        <div class="modal-body">
-          <form id="userInfoForm">
-            <div class="mb-3">
-              <label for="userEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userInfoModalLabel">Enter Your Information to view</h5>
             </div>
-            <div class="mb-3">
-              <label for="userPhone" class="form-label">Phone</label>
-              <input type="tel" class="form-control" id="userPhone" name="userPhone" required>
+            <div class="modal-body">
+                <form id="userInfoForm">
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userPhone" class="form-label">Phone</label>
+                        <input type="tel" class="form-control" id="userPhone" name="userPhone" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 </body>

@@ -157,58 +157,48 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   
   document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
-  
     const userInfoModalElement = document.getElementById('userInfoModal');
     if (!userInfoModalElement) {
-      console.error('Modal element not found');
-      return;
+        console.error('Modal element not found');
+        return;
     }
-  
+
     const userInfoModal = new bootstrap.Modal(userInfoModalElement, {
-      backdrop: 'static',
-      keyboard: false
+        backdrop: 'static',
+        keyboard: false
     });
-  
+
     const userInfoForm = document.getElementById('userInfoForm');
     if (!userInfoForm) {
-      console.error('Form element not found');
-      return;
+        console.error('Form element not found');
+        return;
     }
-  
+
     userInfoForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      console.log('Form submitted');
-  
-      const userEmail = document.getElementById('userEmail').value;
-      const userPhone = document.getElementById('userPhone').value;
-  
-      console.log('Email:', userEmail);
-      console.log('Phone:', userPhone);
-  
-      if (userEmail && userPhone) {
-        try {
-          const result = await handleFormSubmission(userEmail, userPhone);
-          console.log('Form submission result:', result);
-          alert(result.message);
-          userInfoModal.hide(); // Hide modal on success
-        } catch (error) {
-          console.error('Error handling form submission:', error);
-          alert('An error occurred. Please try again.');
+        e.preventDefault();
+        const userEmail = document.getElementById('userEmail').value;
+        const userPhone = document.getElementById('userPhone').value;
+
+        if (userEmail && userPhone) {
+            try {
+                const result = await handleFormSubmission(userEmail, userPhone);
+                console.log('Form submission result:', result);
+                alert(result.message);
+                userInfoModal.hide();
+            } catch (error) {
+                console.error('Error handling form submission:', error);
+                alert('An error occurred. Please try again.');
+            }
+        } else {
+            alert('You must enter your email and phone to proceed.');
         }
-      } else {
-        alert('You must enter your email and phone to proceed.');
-      }
     });
-  
-    // Check if the user needs to input email and phone
+
     if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
-      console.log('Showing modal because user info is missing');
-      userInfoModal.show();
-    } else {
-      console.log('User info already present');
+        userInfoModal.show();
     }
-  });
+});
+
   // adjust to work with lambda function while still keeping modal functionality
   // const userInfoModal = new bootstrap.Modal(document.getElementById('userInfoModal'), {
   //   backdrop: 'static',
