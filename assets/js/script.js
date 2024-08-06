@@ -93,19 +93,25 @@ async function handleFormSubmission(email, phone) {
     }
 
     const data = await response.json();
-    console.log('Form submission result:', data);
+    if (data && data.contact_id) {
+      console.log('Contact saved successfully');
+      // Save user information to localStorage
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userPhone', phone);
 
-    // Save user information to localStorage
-    localStorage.setItem('userEmail', email);
-    localStorage.setItem('userPhone', phone);
+      // Call updateContactViaApiGateway with the returned contact ID
+      await updateContactViaApiGateway(data.contact_id);
 
-    return { status: 'sent', message: 'Request sent successfully' };
+      return { status: 'sent', message: 'Request sent successfully' };
+    } else {
+      console.error('Failed to save contact: Contact ID is missing');
+      throw new Error('Failed to save contact: Contact ID is missing');
+    }
   } catch (error) {
     console.error('Error managing contact:', error);
     throw error;
   }
 }
-
 // Main execution
 document.addEventListener('DOMContentLoaded', (event) => {
   const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'contact_internal_ID'];
@@ -176,40 +182,44 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log('Form submitted');
   
     const userEmail = document.getElementById('userEmail').value;
-    const userPhone = document.getElementById('userPhone').value;
-  
-    console.log('Email:', userEmail);
-    console.log('Phone:', userPhone);
-  
-    if (userEmail && userPhone) {
-      const progressBar = document.querySelector('#formProgress .progress-bar');
-      const progressContainer = document.getElementById('formProgress');
-      progressContainer.style.display = 'block';
-      progressBar.style.width = '0%';
-      progressBar.setAttribute('aria-valuenow', 0);
-  
-      try {
-        // Simulate progress
-        for (let i = 0; i <= 100; i += 10) {
-          await new Promise(resolve => setTimeout(resolve, 100)); // Simulate delay
-          progressBar.style.width = `${i}%`;
-          progressBar.setAttribute('aria-valuenow', i);
-        }
-  
-        const result = await handleFormSubmission(userEmail, userPhone);
-        console.log('Form submission result:', result);
-        alert(result.message);
-        userInfoModal.hide(); // Hide modal on success
-      } catch (error) {
-        console.error('Error handling form submission:', error);
-        alert('An error occurred. Please try again.');
-      } finally {
-        progressContainer.style.display = 'none';
+  const userPhone = document.getElementById('userPhone').value;
+
+  console.log('Email:', userEmail);
+  console.log('Phone:', userPhone);
+
+  if (userEmail && userPhone) {
+    const progressBar = document.querySelector('#formProgress .progress-bar');
+    const progressContainer = document.getElementById('formProgress');
+    progressContainer.style.display = 'block';
+    progressBar.style.width = '0%';
+    progressBar.setAttribute('aria-valuenow', 0);
+
+    try {
+      // Simulate progress
+      for (let i = 0; i <= 100; i += 10) {
+        await new Promise(resolve => setTimeout(resolve, 100)); // Simulate delay
+        progressBar.style.width = `${i}%`;
+        progressBar.setAttribute('aria-valuenow', i);
       }
-    } else {
-      alert('You must enter your email and phone to proceed.');
+
+      const result = await handleFormSubmission(userEmail, userPhone);
+      console.log('Form submission result:', result);
+      alert(result.message);
+
+      // Hide modal on success using Bootstrap 5
+      const modalElement = document.getElementById('userInfoModal');
+      const modalInstance = bootstrap.Modal.getInstance(modalElement);
+      modalInstance.hide();
+    } catch (error) {
+      console.error('Error handling form submission:', error);
+      alert('An error occurred. Please try again.');
+    } finally {
+      progressContainer.style.display = 'none';
     }
-  });
+  } else {
+    alert('You must enter your email and phone to proceed.');
+  }
+});
 
   // Check if the user needs to input email and phone
   if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
