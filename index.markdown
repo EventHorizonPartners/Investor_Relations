@@ -13,8 +13,8 @@ title: EHP
         <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
       </div>
     </div>
-  <div class="row g-4">
-    <div class="col-md-6">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
       <div class="card text-white" style="background-image: url('{{ site.baseurl }}/assets/images/deck_preview.png');">
         <div class="card-img-overlay">
           <h5 class="card-title">Deck</h5>
@@ -23,7 +23,7 @@ title: EHP
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col">
       <div class="card text-white" style="background-image: url('{{ site.baseurl }}/assets/images/FAQ_preview.png');">
         <div class="card-img-overlay">
           <h5 class="card-title">FAQ</h5>
@@ -34,4 +34,3 @@ title: EHP
     </div>
   </div>
 </div>
-
