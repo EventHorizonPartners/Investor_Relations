@@ -197,7 +197,7 @@ img {
   background-color: rgb(233, 107, 5);
   color: #2b2b2b;
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
@@ -205,7 +205,7 @@ img {
 }
 
 .btn-custom:hover {
-  background-color: transparent;
+ 
   color: #fff;
   border-color: rgb(233, 107, 5);
 }
@@ -245,19 +245,19 @@ img {
 
 @media (min-width: 2560px) {
   .card {
-    height: 600px;
+    height: 900px;
   }
   
   .card-title {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   
   .card-text {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
   
   .btn-custom {
-    font-size: 1.2rem;
+    font-size: 5rem;
     padding: 1rem 2rem;
   }
 }
