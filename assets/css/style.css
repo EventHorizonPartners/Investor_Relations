@@ -284,16 +284,17 @@ img {
   box-shadow: none; /* Remove default focus shadow */
 }
 
-.progress {
-  height: 20px;
-  background-color: #444;
-  margin-top: 15px;
-  border-radius: 10px;
-  overflow: hidden;
+/* Custom progress bar container */
+#formProgress {
+  height: 20px; /* Adjust the height of the progress bar container */
+  background-color: #f0f0f0; /* Light gray background for the container */
+  border-radius: 5px; /* Rounded corners for the container */
+  overflow: hidden; /* Ensure the progress bar doesn't overflow */
 }
 
-.progress-bar {
-  background-color: rgb(233, 107, 5);
-  color: #fff;
-  transition: width 0.5s ease;
+/* Custom progress bar */
+#formProgress .progress-bar {
+  background-color: #ff6600; /* Custom color for the progress bar */
+  height: 100%; /* Ensure the progress bar fills the container height */
+  transition: width 0.2s ease; /* Smooth transition for width changes */
 }
