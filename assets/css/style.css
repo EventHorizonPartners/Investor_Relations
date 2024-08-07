@@ -111,11 +111,13 @@ footer img.footer-logo  {
   font-weight: normal;
   font-style: normal;
 }
+
 .custom-font {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  letter-spacing: 0.05em; /* Adjust this value to control the spacing */
 }
 
 .event-horizon {
@@ -153,6 +155,31 @@ h1 {
   font-size: 2em;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+/* Responsive h1 */
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 4em;
+  }
 }
 
 .deck-container {
