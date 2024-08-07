@@ -98,15 +98,38 @@ footer img.footer-logo  {
   width: auto;
   margin-right: 5px; /* Adds a small space between the icon and the text, if text is added next to the icon */
 }
-/* Welcome Banner */
 @font-face {
-  font-family: 'MontserratBlack';
-  src: url('/assets/fonts/Montserrat-Black.ttf') format('truetype');
+  font-family: 'MontserratBold';
+  src: url('/assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MontserratMedium';
+  src: url('/assets/fonts/Montserrat-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 .custom-font {
-  font-family: 'MontserratBlack', sans-serif;
+  position: relative;
+  text-align: center;
+}
+
+.event-horizon {
+  font-family: 'MontserratBold', sans-serif;
+  display: block;
+  color: white;
+}
+
+.partners {
+  font-family: 'MontserratMedium', sans-serif;
+  display: block;
+  position: absolute;
+  top: 50%; /* Adjust this value to position the text correctly */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
   color: white;
 }
 
