@@ -212,12 +212,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         thankYouMessage.style.display = 'block';
         progressContainer.style.display = 'none';
 
-        // Close modal after 3 seconds
+        // Close modal after 1 seconds
         setTimeout(() => {
           const modalElement = document.getElementById('userInfoModal');
           const modalInstance = bootstrap.Modal.getInstance(modalElement);
           modalInstance.hide();
-        }, 3000);
+        }, 1000);
       } catch (error) {
         console.error('Error handling form submission:', error);
         alert('An error occurred. Please try again.');
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const handleClick = async (elementId) => {
     const contactId = sessionStorage.getItem('contact_internal_ID');
     if (contactId) {
-      console.log(`Contact ID: calendly_clicked: ${contactId}`);
+      
       await updateContactViaApiGateway(contactId, 'calendly_clicked, visited_site');
     }
   };
