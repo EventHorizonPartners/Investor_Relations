@@ -15,7 +15,7 @@ title: EHP
     <div class="col">
       <div class="card text-white" style="background-image: url('{{ site.baseurl }}/assets/images/deck_preview.png');">
         <div class="card-img-overlay">
-          <h5 class="card-title">Deck</h5>
+          <h5 class="card-title"></h5>
           <p class="card-text">View our presentation deck for detailed information.</p>
           <a href="{{ site.baseurl }}/deck" class="btn btn-custom">Go to Deck</a>
         </div>
@@ -24,7 +24,7 @@ title: EHP
     <div class="col">
       <div class="card text-white" style="background-image: url('{{ site.baseurl }}/assets/images/FAQ_preview.png');">
         <div class="card-img-overlay">
-          <h5 class="card-title">FAQ</h5>
+          <h5 class="card-title"></h5>
           <p class="card-text">Find answers to common questions about our fund.</p>
           <a href="{{ site.baseurl }}/faq" class="btn btn-custom">Go to FAQ</a>
         </div>
