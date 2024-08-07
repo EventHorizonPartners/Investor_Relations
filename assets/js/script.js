@@ -28,14 +28,14 @@ function getParameterByName(name, url = window.location.href) {
 }
 
 // Function to update contact via API Gateway
-async function updateContactViaApiGateway(contactId) {
+async function updateContactViaApiGateway(contactId, tags = '') {
   if (sessionStorage.getItem('contactUpdated') === 'true') {
     console.log('Contact already updated in this session');
     return;
   }
 
   try {
-    const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}`, {
+    const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}&tags=${encodeURIComponent(tags)}`, {
       method: 'GET',
       mode: 'cors', // Enable CORS
       headers: {
@@ -51,11 +51,13 @@ async function updateContactViaApiGateway(contactId) {
     const data = await response.json();
     console.log('Contact updated:');
     sessionStorage.setItem('contactUpdated', 'true');
+    sessionStorage.setItem('contact_internal_ID', contactId);
 
     // Send custom event to Google Analytics
     sendCustomEvent('Contact_Updated', {
       contact_id: contactId,
       update_status: 'success',
+      tags: tags,
     });
   } catch (error) {
     console.error('Error updating contact:', error);
@@ -63,6 +65,7 @@ async function updateContactViaApiGateway(contactId) {
       contact_id: contactId,
       update_status: 'error',
       error_message: error.message,
+      tags: tags,
     });
   }
 }
@@ -100,7 +103,7 @@ async function handleFormSubmission(email, phone) {
       localStorage.setItem('userPhone', phone);
 
       // Call updateContactViaApiGateway with the returned contact ID
-      await updateContactViaApiGateway(data.contact_id);
+      await updateContactViaApiGateway(data.contact_id, 'visited_site');
 
       return { status: 'sent', message: 'Request sent successfully' };
     } else {
@@ -231,6 +234,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
     userInfoModal.show();
   } else {
     console.log('User info already present');
+  }
+
+
+
+
+  // Select the elements
+  const calendlyNav = document.getElementById('calendly-nav');
+  const calendlyWelcomeBtn = document.getElementById('calendly-welcome-btn');
+
+  // Define the event handler function
+  const handleClick = async (elementId) => {
+    const contactId = sessionStorage.getItem('contact_internal_ID');
+    if (contactId) {
+      await updateContactViaApiGateway(contactId, `calendly_clicked`);
+    }
+  };
+
+  // Add event listeners
+  if (calendlyNav) {
+    calendlyNav.addEventListener('click', () => handleClick('calendly-nav'));
+  }
+
+  if (calendlyWelcomeBtn) {
+    calendlyWelcomeBtn.addEventListener('click', () => handleClick('calendly-welcome-btn'));
   }
 });
 
