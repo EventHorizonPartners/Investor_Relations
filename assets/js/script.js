@@ -183,48 +183,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const progressContainer = document.getElementById('formProgress');
   const thankYouMessage = document.getElementById('thankYouMessage');
 
-  userInfoForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    console.log('Form submitted');
-
-    const userEmail = document.getElementById('userEmail').value;
-    const userPhone = document.getElementById('userPhone').value;
-
-    if (userEmail && userPhone) {
-      progressContainer.style.display = 'block';
-      userInfoForm.style.display = 'none';
-      progressBar.style.width = '0%';
-      progressBar.setAttribute('aria-valuenow', 0);
-
-      try {
-        // Simulate progress
-        for (let i = 0; i <= 100; i += 5) {
-          await new Promise(resolve => setTimeout(resolve, 100)); // Update every 100 milliseconds
-          progressBar.style.width = `${i}%`;
-          progressBar.setAttribute('aria-valuenow', i);
-
-        }
-
-        const result = await handleFormSubmission(userEmail, userPhone);
-        console.log('Form submission result:', result);
-
-        // Show thank you message
-        thankYouMessage.style.display = 'block';
-        progressContainer.style.display = 'none';
-
-        // Close modal after 1 seconds
-        setTimeout(() => {
-          const modalElement = document.getElementById('userInfoModal');
-          const modalInstance = bootstrap.Modal.getInstance(modalElement);
-          modalInstance.hide();
-        }, 1000);
-      } catch (error) {
-        console.error('Error handling form submission:', error);
-        alert('An error occurred. Please try again.');
+   userInfoForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      console.log('Form submitted');
+  
+      const userEmail = document.getElementById('userEmail').value;
+      const userPhone = document.getElementById('userPhone').value;
+  
+      if (userEmail && userPhone) {
+          progressContainer.style.display = 'block';
+          userInfoForm.style.display = 'none';
+          progressBar.style.width = '0%';
+          progressBar.setAttribute('aria-valuenow', 0);
+  
+          // Simulate progress for 500ms
+          for (let i = 0; i <= 100; i += 20) {
+              await new Promise(resolve => setTimeout(resolve, 100)); // Update every 100 milliseconds
+              progressBar.style.width = `${i}%`;
+              progressBar.setAttribute('aria-valuenow', i);
+          }
+  
+          // Show thank you message
+          thankYouMessage.style.display = 'block';
+          progressContainer.style.display = 'none';
+  
+          // Close modal after 1 second
+          setTimeout(() => {
+              const modalElement = document.getElementById('userInfoModal');
+              const modalInstance = bootstrap.Modal.getInstance(modalElement);
+              modalInstance.hide();
+          }, 1000);
+  
+          // Run the API call in the background
+          handleFormSubmission(userEmail, userPhone)
+              .then(result => {
+                  console.log('Form submission result:', result);
+              })
+              .catch(error => {
+                  console.error('Error handling form submission:', error);
+                  alert('An error occurred. Please try again.');
+              });
+      } else {
+          alert('You must enter your email and phone to proceed.');
       }
-    } else {
-      alert('You must enter your email and phone to proceed.');
-    }
   });
 
   // Check if the user needs to input email and phone
