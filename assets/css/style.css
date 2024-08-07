@@ -130,10 +130,9 @@ footer img.footer-logo  {
   color: white;
 }
 
-/* Welcome Banner */
 .welcome-banner {
   margin: 20px auto;
-  max-width: 900px;
+  max-width: 900px; /* Increase the max-width to make it less square */
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -141,16 +140,25 @@ footer img.footer-logo  {
 }
 
 .welcome-banner .custom-font {
-  font-size: 2.5em;
+  font-size: 2em; /* Decrease the base font size */
   line-height: 1.2;
 }
 
 .welcome-banner p {
   margin-top: 1px; /* Closer to the logo */
-  font-size: 1.2em;
+  font-size: 1em; /* Decrease the base font size */
 }
 
 @media (min-width: 576px) {
+  .welcome-banner .custom-font {
+    font-size: 2.5em;
+  }
+  .welcome-banner p {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
   .welcome-banner .custom-font {
     font-size: 3em;
   }
@@ -159,7 +167,7 @@ footer img.footer-logo  {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .welcome-banner .custom-font {
     font-size: 3.5em;
   }
@@ -168,7 +176,7 @@ footer img.footer-logo  {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .welcome-banner .custom-font {
     font-size: 4em;
   }
@@ -177,20 +185,12 @@ footer img.footer-logo  {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1920px) {
   .welcome-banner .custom-font {
     font-size: 4.5em;
   }
   .welcome-banner p {
     font-size: 2em;
-  }
-}
-@media (min-width: 1920px) {
-  .welcome-banner .custom-font {
-    font-size: 5em;
-  }
-  .welcome-banner p {
-    font-size: 2.2em;
   }
 }
 
