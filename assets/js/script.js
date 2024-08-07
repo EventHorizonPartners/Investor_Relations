@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   // Check if the user needs to input email and phone
-  if (!getParameterByName('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
+  if (!localStorage.getItem('contact_internal_ID') && (!localStorage.getItem('userEmail') || !localStorage.getItem('userPhone'))) {
     console.log('Showing modal because user info is missing');
     userInfoModal.show();
   } else {
@@ -247,17 +247,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const handleClick = async (elementId) => {
     const contactId = sessionStorage.getItem('contact_internal_ID');
     if (contactId) {
-      await updateContactViaApiGateway(contactId, `calendly_clicked`);
+      console.log(`Contact ID: calendly_clicked: ${contactId}`);
+      await updateContactViaApiGateway(contactId, 'calendly_clicked');
     }
   };
 
   // Add event listeners
   if (calendlyNav) {
     calendlyNav.addEventListener('click', () => handleClick('calendly-nav'));
+    console.log('calendly-nav event listener added');
   }
 
   if (calendlyWelcomeBtn) {
     calendlyWelcomeBtn.addEventListener('click', () => handleClick('calendly-welcome-btn'));
+    console.log('calendly-welcome-btn event listener added'); 
   }
 });
 
