@@ -112,24 +112,19 @@ footer img.footer-logo  {
   font-style: normal;
 }
 .custom-font {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .event-horizon {
   font-family: 'MontserratBold', sans-serif;
-  display: block;
   color: white;
 }
 
 .partners {
   font-family: 'MontserratMedium', sans-serif;
-  display: block;
-  position: absolute;
-  top: 50%; /* Adjust this value to position the text correctly */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
   color: white;
 }
 
