@@ -31,11 +31,10 @@ function getParameterByName(name, url = window.location.href) {
 async function updateContactViaApiGateway(contactId, tags = '') {
   if (sessionStorage.getItem('contactUpdated') === 'true') {
     console.log('Contact already updated in this session');
-    return;
   }
 
   try {
-    const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}&tags=${encodeURIComponent(tags)}`, {
+    const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}&tags=${tags}`, {
       method: 'GET',
       mode: 'cors', // Enable CORS
       headers: {
