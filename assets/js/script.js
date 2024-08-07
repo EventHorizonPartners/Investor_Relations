@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const contactId = sessionStorage.getItem('contact_internal_ID');
     if (contactId) {
       console.log(`Contact ID: calendly_clicked: ${contactId}`);
-      await updateContactViaApiGateway(contactId, 'calendly_clicked');
+      await updateContactViaApiGateway(contactId, 'calendly_clicked, visited_site');
     }
   };
 
