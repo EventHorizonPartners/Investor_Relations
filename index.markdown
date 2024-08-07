@@ -5,14 +5,13 @@ title: EHP
 <!-- Welcome Banner -->
 <div class="container mt-4">
   <div class="welcome-banner">
-      <img src="{{ site.baseurl }}/assets/images/EventHorizon_white_textOnly.png" alt="EHP Logo" class="img-fluid">
-      <p class="lead mt-3">Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
-      <!-- Schedule Meeting Button and Via Calendly Text -->
-      <div class="text-center mt-4">
+        <h1 class="custom-font">EVENT HORIZON PARTNERS</h1>
+        <p>Welcome to our site! We're glad you're here. We are dedicated to providing you with the best investment opportunities. Explore our deck and FAQ pages to learn more about our strategies and performance.</p>
+        <a href="#schedule" class="btn btn-custom">SCHEDULE A MEETING</a>
       <!-- add part here to track some metrics on calendly clicking -->
-        <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
-      </div>
+      <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
     </div>
+  </div>
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
       <div class="card text-white" style="background-image: url('{{ site.baseurl }}/assets/images/deck_preview.png');">
