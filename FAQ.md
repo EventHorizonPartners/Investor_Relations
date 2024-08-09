@@ -25,7 +25,7 @@ permalink: /faq
               </h2>
               <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
                 <div class="accordion-body">
-                 Event Horizon Partners is a quantitative hedge fund that uses advanced machine learning and AI to build fully automated trading models. Our models are designed to adapt to various market conditions, working together to balance risk and optimize performance. We continually refine our processes to ensure our models evolve and improve over time.
+                  Event Horizon Partners is a quantitative hedge fund that uses advanced machine learning and AI to build fully automated trading models. Our models are designed to adapt to various market conditions, working together to balance risk and optimize performance. We continually refine our processes to ensure our models evolve and improve over time.
                 </div>
               </div>
             </div>
@@ -36,7 +36,7 @@ permalink: /faq
     <!-- Leadership Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeadership" aria-expanded="true" aria-controls="collapseLeadership">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeadership" aria-expanded="true" aria-controls="collapseLeadership">
           Leadership
         </button>
       </h2>
@@ -67,11 +67,11 @@ permalink: /faq
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThree" aria-expanded="false" aria-controls="sub-collapseThree">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThree" aria-expanded="true" aria-controls="sub-collapseThree">
                  Why did you start a quant fund?
                 </button>
               </h2>
-              <div id="sub-collapseThree" class="accordion-collapse collapse" aria-labelledby="sub-headingThree" data-bs-parent="#sub-accordionLeadership">
+              <div id="sub-collapseThree" class="accordion-collapse collapse show" aria-labelledby="sub-headingThree" data-bs-parent="#sub-accordionLeadership">
                 <div class="accordion-body">
                   What began as a passion project to test new concepts and build capabilities for automating trading has grown into a highly advanced and scalable quant factory. Seeing it evolve beyond our original vision has been incredibly satisfying, and we’re committed to pushing its potential even further.
                 </div>
@@ -79,11 +79,11 @@ permalink: /faq
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFour" aria-expanded="false" aria-controls="sub-collapseFour">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFour" aria-expanded="true" aria-controls="sub-collapseFour">
                   What makes your team qualified to run a quant fund?
                 </button>
               </h2>
-              <div id="sub-collapseFour" class="accordion-collapse collapse" aria-labelledby="sub-headingFour" data-bs-parent="#sub-accordionLeadership">
+              <div id="sub-collapseFour" class="accordion-collapse collapse show" aria-labelledby="sub-headingFour" data-bs-parent="#sub-accordionLeadership">
                 <div class="accordion-body">
                   We have over 40 years of combined experience using data science to automate financial processes, ranging from fund movement to compliance reporting at the largest US banks. Additionally, we have been building automated trading models for over a decade, honing our understanding of markets and their underlying microstructures.
                   <blockquote>
@@ -100,7 +100,7 @@ permalink: /faq
     <!-- Strategy and Objectives Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStrategy" aria-expanded="true" aria-controls="collapseStrategy">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStrategy" aria-expanded="true" aria-controls="collapseStrategy">
           Strategy and Objectives
         </button>
       </h2>
@@ -132,7 +132,7 @@ permalink: /faq
     <!-- Performance and Results Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerformance" aria-expanded="true" aria-controls="collapsePerformance">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerformance" aria-expanded="true" aria-controls="collapsePerformance">
           Performance and Results
         </button>
       </h2>
@@ -154,13 +154,13 @@ permalink: /faq
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingSeven">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseSeven" aria-expanded="false" aria-controls="sub-collapseSeven">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseSeven" aria-expanded="true" aria-controls="sub-collapseSeven">
                   How do you report performance?
                 </button>
               </h2>
-              <div id="sub-collapseSeven" class="accordion-collapse collapse" aria-labelledby="sub-headingSeven" data-bs-parent="#sub-accordionPerformance">
+              <div id="sub-collapseSeven" class="accordion-collapse collapse show" aria-labelledby="sub-headingSeven" data-bs-parent="#sub-accordionPerformance">
                 <div class="accordion-body">
-                   Daily performance reports are provided independently through our fund administrator, offering transparent visibility into trading outcomes.
+                  Daily performance reports are provided independently through our fund administrator, offering transparent visibility into trading outcomes.
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@ permalink: /faq
     <!-- Competitive Edge Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompetitive" aria-expanded="true" aria-controls="collapseCompetitive">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompetitive" aria-expanded="true" aria-controls="collapseCompetitive">
           Competitive Edge
         </button>
       </h2>
@@ -197,7 +197,7 @@ permalink: /faq
     <!-- Growth and Expansion Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrowth" aria-expanded="true" aria-controls="collapseGrowth">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrowth" aria-expanded="true" aria-controls="collapseGrowth">
           Growth and Expansion
         </button>
       </h2>
@@ -228,7 +228,7 @@ permalink: /faq
     <!-- Risk Management Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRisk" aria-expanded="true" aria-controls="collapseRisk">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRisk" aria-expanded="true" aria-controls="collapseRisk">
           Risk Management
         </button>
       </h2>
@@ -253,11 +253,11 @@ permalink: /faq
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingEleven">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseEleven" aria-expanded="false" aria-controls="sub-collapseEleven">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseEleven" aria-expanded="true" aria-controls="sub-collapseEleven">
                   What risk management tools do you use?
                 </button>
               </h2>
-              <div id="sub-collapseEleven" class="accordion-collapse collapse" aria-labelledby="sub-headingEleven" data-bs-parent="#sub-accordionRisk">
+              <div id="sub-collapseEleven" class="accordion-collapse collapse show" aria-labelledby="sub-headingEleven" data-bs-parent="#sub-accordionRisk">
                 <div class="accordion-body">
                   We employ a range of tools including scenario analysis, decision science, real-time monitoring, and automated risk controls to effectively manage and mitigate risks.
                 </div>
@@ -270,7 +270,7 @@ permalink: /faq
     <!-- Service Providers and Partnerships Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServiceProviders" aria-expanded="true" aria-controls="collapseServiceProviders">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseServiceProviders" aria-expanded="true" aria-controls="collapseServiceProviders">
           Service Providers and Partnerships
         </button>
       </h2>
@@ -291,11 +291,11 @@ permalink: /faq
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingThirteen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThirteen" aria-expanded="false" aria-controls="sub-collapseThirteen">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThirteen" aria-expanded="true" aria-controls="sub-collapseThirteen">
                   How do these partnerships enhance your operations?
                 </button>
               </h2>
-              <div id="sub-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="sub-headingThirteen" data-bs-parent="#sub-accordionServiceProviders">
+              <div id="sub-collapseThirteen" class="accordion-collapse collapse show" aria-labelledby="sub-headingThirteen" data-bs-parent="#sub-accordionServiceProviders">
                 <div class="accordion-body">
                    These partnerships enhance our operations by offering robust support in areas like fund administration, banking, legal, and technology. This allows us to focus on generating alpha while ensuring efficiency and compliance.
                 </div>
@@ -308,7 +308,7 @@ permalink: /faq
     <!-- Legal and Compliance Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLegal" aria-expanded="true" aria-controls="collapseLegal">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLegal" aria-expanded="true" aria-controls="collapseLegal">
           Legal and Compliance
         </button>
       </h2>
@@ -329,11 +329,11 @@ permalink: /faq
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingFifteen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFifteen" aria-expanded="false" aria-controls="sub-collapseFifteen">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFifteen" aria-expanded="true" aria-controls="sub-collapseFifteen">
                   How do you ensure compliance with regulations?
                 </button>
               </h2>
-              <div id="sub-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="sub-headingFifteen" data-bs-parent="#sub-accordionLegal">
+              <div id="sub-collapseFifteen" class="accordion-collapse collapse show" aria-labelledby="sub-headingFifteen" data-bs-parent="#sub-accordionLegal">
                 <div class="accordion-body">
                   Compliance is ensured through stringent internal controls, frequent audits, and adherence to industry best practices. Automated processes enhance transparency, and our fund administrator manages most compliance tasks, allowing us to focus on alpha development and performance.
                 </div>
@@ -346,7 +346,7 @@ permalink: /faq
     <!-- Additional Questions Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalQuestions" aria-expanded="true" aria-controls="collapseAdditionalQuestions">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdditionalQuestions" aria-expanded="true" aria-controls="collapseAdditionalQuestions">
           Additional Questions
         </button>
       </h2>
@@ -367,11 +367,11 @@ permalink: /faq
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingSeventeen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseSeventeen" aria-expanded="false" aria-controls="sub-collapseSeventeen">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseSeventeen" aria-expanded="true" aria-controls="sub-collapseSeventeen">
                   How do you communicate with your investors?
                 </button>
               </h2>
-              <div id="sub-collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="sub-headingSeventeen" data-bs-parent="#sub-accordionAdditionalQuestions">
+              <div id="sub-collapseSeventeen" class="accordion-collapse collapse show" aria-labelledby="sub-headingSeventeen" data-bs-parent="#sub-accordionAdditionalQuestions">
                 <div class="accordion-body">
                   Our administrator portal provides daily, monthly, and quarterly transparency into performance. We also send commentary as warranted to keep investors informed.
                 </div>
