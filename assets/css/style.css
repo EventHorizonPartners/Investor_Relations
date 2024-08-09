@@ -378,10 +378,10 @@ img {
 
 .faq-container h1, .accordion-button {
   color: rgb(233, 107, 5);
-  font-size: 1.8rem; 
+  font-size: 1.4rem; 
 }
 .faq-container h2 {
-  font-size: 1.2rem; /* 32px */
+  font-size: 1rem; /* 32px */
 }
 .faq-container p {
   font-size: 1rem; /* 16px */
