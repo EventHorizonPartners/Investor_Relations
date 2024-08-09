@@ -147,8 +147,10 @@ permalink: /faq
               </h2>
               <div id="sub-collapseSix" class="accordion-collapse collapse show" aria-labelledby="sub-headingSix" data-bs-parent="#sub-accordionPerformance">
                 <div class="accordion-body">
-                  The success of quant funds like Renaissance, Citadel, and Millennium demonstrates that consistent alpha with reduced volatility is achievable. We focus on building efficient data science pipelines that continuously adapt to the market and improve system performance.
-                  <p>Our latest model release in April 2024 has shown consistent returns in both rising and falling markets, with results aligning closely with the data used for training. We believe this marks a significant phase transition for our quant factory.</p>
+                  <ul>
+                    <li>The success of quant funds like Renaissance, Citadel, and Millennium demonstrates that consistent alpha with reduced volatility is achievable. We focus on building efficient data science pipelines that continuously adapt to the market and improve system performance.</li>
+                    <li>Our latest model release in April 2024 has shown consistent returns in both rising and falling markets, with results aligning closely with the data used for training. We believe this marks a significant phase transition for our quant factory.</li>
+                  </ul>
                 </div>
               </div>
             </div>

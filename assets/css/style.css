@@ -383,6 +383,9 @@ img {
 .faq-container h2 {
   font-size: 1rem; /* 32px */
 }
+[id^="sub-heading"] {
+  font-size: 0.8em; /* Adjust the font size as needed */
+}
 .faq-container p {
   font-size: 1rem; /* 16px */
 }
