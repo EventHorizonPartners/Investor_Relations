@@ -368,57 +368,36 @@ img {
   color: #f5f5f5;
   max-width: 900px;
   margin: 20px auto;
-  border: none; /* Ensure no border */
 }
 
 .faq-container h1, .accordion-button {
   color: rgb(233, 107, 5);
-  border: none; /* Ensure no border */
 }
 
 .accordion-button {
   background-color: #444; /* Slightly darker grey for the button background */
   color: rgb(233, 107, 5); /* Orange color for the text */
-  border: none; /* Ensure no border */
 }
 
 .accordion-button:focus {
   box-shadow: none; /* Remove default focus shadow */
-  border: none; /* Ensure no border */
 }
 
 .accordion-button:not(.collapsed) {
   background-color: #444; /* Orange color for expanded state */
   color: rgb(233, 107, 5); /* Darker text color for better contrast in expanded state */
-  border: none; /* Ensure no border */
 }
 
 .accordion-button:hover {
   background-color: rgb(233, 107, 5); /* Brighter orange on hover */
   color: #fff; /* White text on hover for better visibility */
-  border: none; /* Ensure no border */
 }
 
 .accordion-body {
   padding-left: 20px; /* Indent the text */
   color: #f5f5f5; /* Ensure body text is light for readability */
   background-color: #333; /* Match container background */
-  border: none; /* Ensure no border */
 }
-
-/* Override Bootstrap accordion styles */
-.accordion-item {
-  border: none; /* Remove border from accordion item */
-}
-
-.accordion-header {
-  border: none; /* Remove border from accordion header */
-}
-
-.accordion-collapse {
-  border: none; /* Remove border from accordion collapse */
-}
-
 
 /* Modal Styles */
 .modal-content {
