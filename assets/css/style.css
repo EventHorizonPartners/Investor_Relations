@@ -406,6 +406,19 @@ img {
   border: none; /* Ensure no border */
 }
 
+/* Override Bootstrap accordion styles */
+.accordion-item {
+  border: none; /* Remove border from accordion item */
+}
+
+.accordion-header {
+  border: none; /* Remove border from accordion header */
+}
+
+.accordion-collapse {
+  border: none; /* Remove border from accordion collapse */
+}
+
 
 /* Modal Styles */
 .modal-content {
