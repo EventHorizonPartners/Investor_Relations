@@ -9,7 +9,7 @@ title: EHP
       <span class="event-horizon">EVENT HORIZON</span>
       <span class="partners">PARTNERS</span>
     </h1>
-    <p>See how we use machine learning and AI to drive our automated trading systems. Browse our deck and FAQ, and schedule a call with our founder to find out if we’re a good match for your portfolio</p>
+    <p>Interested in how we use machine learning and AI to drive our automated trading systems? Browse our deck and FAQ, and schedule a call with our founder to find out if we’re a good match for your portfolio</p>
     <!-- add part here to track some metrics on calendly clicking -->
     <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
   </div>
