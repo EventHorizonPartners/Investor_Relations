@@ -372,7 +372,7 @@ img {
   color: #f5f5f5;
   max-width: 900px;
   margin: 20px auto;
-  border: 1px solid var(--bs-accordion-border-color); /* Use custom border color */
+  border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
 
 .faq-container h1, .accordion-button {
@@ -382,31 +382,31 @@ img {
 .accordion-button {
   background-color: #444; /* Slightly darker grey for the button background */
   color: rgb(233, 107, 5); /* Orange color for the text */
-  border: 1px solid var(--bs-accordion-border-color); /* Use custom border color */
+  border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
 
 .accordion-button:focus {
   box-shadow: none; /* Remove default focus shadow */
-  border: 1px solid var(--bs-accordion-border-color); /* Use custom border color */
+  border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
 
 .accordion-button:not(.collapsed) {
   background-color: #444; /* Orange color for expanded state */
   color: rgb(233, 107, 5); /* Darker text color for better contrast in expanded state */
-  border: 1px solid var(--bs-accordion-border-color); /* Use custom border color */
+  border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
 
 .accordion-button:hover {
   background-color: rgb(233, 107, 5); /* Brighter orange on hover */
   color: #fff; /* White text on hover for better visibility */
-  border: 1px solid var(--bs-accordion-border-color); /* Use custom border color */
+  border: var(--bs-accordion-border-color); /* Use custom border color */
 }
 
 .accordion-body {
   padding-left: 20px; /* Indent the text */
   color: #f5f5f5; /* Ensure body text is light for readability */
   background-color: #333; /* Match container background */
-  border: 1px solid var(--bs-accordion-border-color); /* Use custom border color */
+  border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
 
 /* Modal Styles */
