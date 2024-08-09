@@ -6,168 +6,209 @@ permalink: /faq
 
 <div class="container faq-container mt-4">
   <h1 class="text-center">Frequently Asked Questions</h1>
-
   <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-          What does your quant fund do?
+          What is Event Horizon Partners?
         </button>
       </h2>
       <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>We specialize in finding market signals that allow us to profit from both upward and downward market movements. Our approach involves:</p>
-          <ol>
-            <li>Identifying and implementing strategies that generalize well across various market conditions.</li>
-            <li>Assembling these strategies to offset each other over time, thereby reducing return volatility.</li>
-            <li>Continuously monitoring and optimizing our strategies through our proprietary quant factory.</li>
-          </ol>
+          <p><strong>Event Horizon Partners</strong> is a quantitative hedge fund that employs advanced machine learning and AI to build fully automated trading models. Our strategies are designed to adapt to different market conditions, working together to balance risk and optimize performance. We continuously refine our proprietary quant factory, ensuring that our strategies evolve and improve over time.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
-          How long have you been operating?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          We've been trading with 100% automation for over five years, continuously improving our quant factory throughout this period.
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+            Who are the key people behind Event Horizon Partners?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <p><strong>Roger Parkinson:</strong></p>
+            <ul>
+              <li>Co-Founder and Technology Lead with 25 years of experience in data science at GE Capital, Bank of America, Wells Fargo, and Event Horizon Partners.</li>
+              <li>Prior to his career in applied financial data science, Roger served in US Special Forces and Military Intelligence.</li>
+              <li>He is passionate about leveraging cutting-edge technology to solve complex problems and enjoys the challenge of creating systems that can continuously evolve and improve.</li>
+            </ul>
+            <p><strong>Brad Parkinson:</strong></p>
+            <ul>
+              <li>Co-Founder and Operations Lead with 21 years of experience at Wells Fargo and JP Morgan, focusing on system stability and innovative trading strategies.</li>
+              <li>Brad’s deep curiosity and relentless drive for innovation have shaped his career in financial services. He thrives on optimizing operations and ensuring that the systems we build are not only stable but also capable of adapting to new challenges.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
-          What sets your fund apart from others?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <p>Our key differentiators include:</p>
-          <ul>
-            <li>A fully automated quant factory that makes all trading decisions and manages operations.</li>
-            <li>Deep expertise in data science and financial markets, with over 25 years of experience in major financial institutions.</li>
-            <li>A tech-first approach, treating our fund as a technology company that applies cutting-edge data science and engineering to financial markets.</li>
-          </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+            Why did you start this quant fund?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <p>The fund started as a passion project to test new concepts and build new capabilities. Over time, it grew into a highly advanced, automated quant factory. Seeing it evolve beyond our original vision has been incredibly satisfying, and we’re committed to pushing its potential even further.</p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
-          How do you find systems that work in both bullish and bearish markets?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <p>Our success in finding versatile trading systems stems from:</p>
-          <ul>
-            <li>Industrialized Data Science: We've built a machine that trains algorithms to identify profitable opportunities in various market conditions.</li>
-            <li>Extensive Experience: Our team has spent decades honing our skills in data science and financial markets at institutions like GE Capital, Bank of America, and Wells Fargo.</li>
-            <li>Innovative Technology: Our proprietary quant factory continuously evolves, allowing us to stay at the forefront of market analysis and strategy development.</li>
-          </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+            What makes your team qualified to run a quant fund?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <p>We have been managing automated trading operations for five years and have built many features as a response to what the market had to teach us. Additionally, our team combines deep expertise in financial systems, data science, and technological innovation, honed over decades of experience. We’ve built robust systems for major financial institutions, ensuring reliability and transparency. With rigorous controls in place, we focus on generating alpha, leaving fund management to our trusted administrator.</p>
+            <p>We also adhere to Gall's Law, ensuring our systems evolve from simple, functioning systems to avoid unnecessary complexity:</p>
+            <blockquote>
+              <p>"A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system."</p>
+            </blockquote>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
-          What is your performance track record?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <em>[Note: Please insert your specific performance metrics here. It's crucial to provide accurate and up-to-date information, and to comply with all relevant financial regulations regarding performance reporting.]</em>
-        </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+            What are the primary objectives of Event Horizon Partners?
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            <ul>
+              <li>Maximize the diversity of non-correlated systems and instruments</li>
+              <li>Maximize alpha generation</li>
+              <li>Optimize beta for balanced returns</li>
+              <li>Minimize overall portfolio volatility</li>
+            </ul>
+          </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStayOpen-collapseSix">
-          Why did you start this quant fund?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <p>Our journey into quantitative trading is driven by several factors:</p>
-          <ul>
-            <li>Natural Progression: Given our deep expertise in data and financial markets, creating a quant fund was a logical next step in our trading obsession.</li>
-            <li>Passion for Data Science: We love applying data science and engineering to financial markets. It allows us to leverage our skills in a challenging and rewarding field.</li>
-            <li>Continuous Improvement: We're addicted to the process of accumulating marginal gains and expanding the frontiers of what's possible in quantitative trading.</li>
-            <li>Technological Challenge: Building and refining our quant factory is an ongoing project that satisfies our desire to create and improve automated business machines.</li>
-          </ul>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStayOpen-collapseSix">
+              What evidence supports your approach?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>The success of quant funds like Renaissance, Citadel, and Millennium demonstrates that consistent alpha with reduced volatility is achievable. Like them, we focus on building efficient data science pipelines that continuously adapt to the market and improve system performance.</p>
+              <p>Our portfolio achieved an 8% increase in the last 30 days, even as the broader market declined.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeven">
-          How do you approach risk management?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <p>Risk management is integral to our strategy:</p>
-          <ul>
-            <li>Diversification: We assemble strategies that offset each other over time, reducing overall volatility.</li>
-            <li>Continuous Monitoring: Our quant factory constantly monitors all strategies, allowing for quick adjustments when necessary.</li>
-            <li>Rigorous Testing: All strategies undergo extensive backtesting and out-of-sample testing before implementation.</li>
-          </ul>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeven">
+              How do you report performance?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>Daily performance reports are provided through our fund administrator, offering detailed insights into trading outcomes.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="true" aria-controls="panelsStayOpen-collapseEight">
-          What makes your team qualified to run a quant fund?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <p>Our team brings a unique blend of skills and experience:</p>
-          <ul>
-            <li>Extensive Financial Expertise: We have worked on data projects across 10 different financial businesses.</li>
-            <li>Data Science Mastery: We've coached hundreds of projects on using data and applied statistics to improve decision-making.</li>
-            <li>Technological Proficiency: Our background in data science and engineering allows us to build and maintain sophisticated trading systems.</li>
-            <li>Proven Track Record: Our experience includes successfully testifying in a class action lawsuit, demonstrating our deep understanding of financial markets and data analysis.</li>
-          </ul>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="true" aria-controls="panelsStayOpen-collapseEight">
+              How do you stay competitive in the changing financial markets?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>We maintain our edge through continuous learning, technological innovation, and automation. Our quant factory adapts to new market conditions while we integrate the latest data science techniques to ensure we remain at the forefront.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="true" aria-controls="panelsStayOpen-collapseNine">
-          How do you stay competitive in the ever-changing financial markets?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <p>We maintain our competitive edge through:</p>
-          <ul>
-            <li>Continuous Learning: Our quant factory is designed to adapt and learn from new market conditions.</li>
-            <li>Technological Innovation: We're constantly improving our systems and incorporating new data science techniques.</li>
-            <li>Focus on Automation: By automating our processes, we can quickly adapt to market changes and scale our operations efficiently.</li>
-          </ul>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="true" aria-controls="panelsStayOpen-collapseNine">
+              What is next for the fund?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <ul>
+                <li>Further develop our trading systems for better alpha and lower risk</li>
+                <li>Explore new markets</li>
+                <li>Increase AUM through performance-driven growth</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="true" aria-controls="panelsStayOpen-collapseTen">
-          What is your long-term vision for the fund?
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <p>Our goal is to continue pushing the boundaries of quantitative trading by:</p>
-          <ul>
-            <li>Expanding our quant factory's capabilities.</li>
-            <li>Exploring new markets and asset classes.</li>
-            <li>Continuously refining our strategies to improve performance and reduce risk.</li>
-          </ul>
-          <p>We see our fund as an ever-evolving project, much like a child that we're nurturing to reach its full potential in the world of quantitative finance.</p>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTen" aria-expanded="true" aria-controls="panelsStayOpen-collapseTen">
+              How do you approach risk management?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTen" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>We manage risk by diversifying strategies that balance each other, reducing volatility. We monitor real-time performance to ensure alignment with historical data and deactivate underperforming strategies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEleven" aria-expanded="true" aria-controls="panelsStayOpen-collapseEleven">
+              What risk management tools do you use?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseEleven" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>We employ a range of tools including scenario analysis, decision science, real-time monitoring, and automated risk controls to effectively manage and mitigate risks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwelve" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwelve">
+              Who are your key service providers?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwelve" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>Our partners include NAV Fund Administration Group, Axos Bank, Investment Law Group, Richey May, Interactive Brokers, AWS, Google Cloud, GitHub, and Microsoft Azure.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThirteen" aria-expanded="true" aria-controls="panelsStayOpen-collapseThirteen">
+              How do these partnerships enhance your operations?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThirteen" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>These partnerships enhance our operations by offering robust support in areas like fund administration, banking, legal, and technology. This enables us to concentrate on alpha generation while ensuring efficiency and compliance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSixteen" aria-expanded="true" aria-controls="panelsStayOpen-collapseSixteen">
+              How can investors withdraw their funds?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSixteen" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>We offer end-of-month (EOM) withdrawal options, providing liquidity without long lockup periods.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeventeen" aria-expanded="true" aria-controls="panelsStayOpen-collapseSeventeen">
+              How do you communicate with your investors?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSeventeen" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              <p>Our administrator portal provides daily, monthly, and quarterly transparency into performance. We also send commentary as warranted to keep investors informed.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
