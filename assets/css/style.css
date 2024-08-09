@@ -373,11 +373,52 @@ img {
   max-width: 900px;
   margin: 20px auto;
   border:  var(--bs-accordion-border-color); /* Use custom border color */
+  font-size: 16px;
 }
 
 .faq-container h1, .accordion-button {
   color: rgb(233, 107, 5);
+  font-size: 2.5rem; 
 }
+.faq-container h2 {
+  font-size: 2rem; /* 32px */
+}
+.faq-container p {
+  font-size: 1rem; /* 16px */
+}
+
+/* Media queries for responsiveness in FAQ section */
+@media (max-width: 1200px) {
+  .faq-container {
+    font-size: 15px; /* Slightly smaller font size for large screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .faq-container {
+    font-size: 14px; /* Smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    font-size: 13px; /* Smaller font size for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-container {
+    font-size: 12px; /* Smaller font size for extra small screens */
+  }
+}
+
+/* Specific adjustments for 4K screens */
+@media (min-width: 2560px) {
+  .faq-container {
+    font-size: 18px; /* Larger font size for 4K screens */
+  }
+}
+
 
 .accordion-button {
   background-color: #444; /* Slightly darker grey for the button background */
