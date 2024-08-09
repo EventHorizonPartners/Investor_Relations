@@ -243,9 +243,11 @@ permalink: /faq
               </h2>
               <div id="sub-collapseTen" class="accordion-collapse collapse show" aria-labelledby="sub-headingTen" data-bs-parent="#sub-accordionRisk">
                 <div class="accordion-body">
-                   1. Creating a stable trading environment with real-time monitoring and notifications to ensure maximum uptime.
-      \n2. Decoupling all trading models to reduce signal duplication.
-      \n3. Reviewing risk allocation daily and updating allocation percentages weekly to ensure optimized growth and capital preservation.
+                   <ol>
+                      <li>Creating a stable trading environment with real-time monitoring and notifications to                         ensure maximum uptime.</li>
+                      <li>Decoupling all trading models to reduce signal duplication.</li>
+                      <li>Reviewing risk allocation daily and updating allocation percentages weekly to ensure                         optimized growth and capital preservation.</li>
+                    </ol>
                 </div>
               </div>
             </div>
