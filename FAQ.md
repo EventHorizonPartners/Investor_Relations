@@ -85,7 +85,6 @@ permalink: /faq
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
             <div class="accordion-item">
