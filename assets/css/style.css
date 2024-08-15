@@ -413,7 +413,7 @@ img {
 /* Accordion Styles */
 .accordion-item {
   background-color: transparent;
-  border: 1px solid #444;
+  border: 1px solid #e96b05;
   margin-bottom: 10px;
 }
 
@@ -437,10 +437,11 @@ img {
 }
 
 .accordion-button::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e96b05'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-.accordion-button:not(.collapsed)::after {
+.accordion-button:hover::after,
+.accordion-button:focus::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
@@ -464,6 +465,7 @@ img {
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e96b05;
 }
 
 .faq-card:hover {
@@ -495,22 +497,26 @@ img {
 
 /* Logos Container */
 .logos-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 15px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
-
 .logos-container img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: auto;
+  max-width: 70px;
   object-fit: contain;
   background: #444;
-  padding: 5px;
+  padding: 8px;
   border-radius: 10px;
   border: 1px solid #555;
+  transition: transform 0.3s ease;
+}
+.logos-container img:hover {
+  transform: scale(1.1);
 }
 
 /* Contact Card Styles */
@@ -587,7 +593,11 @@ img {
   }
 
   .logos-container {
-    justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+
+  .logos-container img {
+    max-width: 90px;
   }
 
   .contact-icons {
@@ -642,9 +652,12 @@ img {
     font-size: 0.9rem;
   }
 
+  .logos-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
   .logos-container img {
-    width: 35px;
-    height: 35px;
+    max-width: 80px;
   }
 
   .contact-icons img {
@@ -656,6 +669,13 @@ img {
 @media (min-width: 1200px) {
   .faq-container {
     max-width: 1000px;
+  }
+  .logos-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .logos-container img {
+    max-width: 100px;
   }
 }
 
@@ -670,9 +690,12 @@ img {
     height: 200px;
   }
 
+  .logos-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
   .logos-container img {
-    width: 60px;
-    height: 60px;
+    max-width: 100px;
   }
 
   .contact-icons img {
