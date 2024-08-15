@@ -52,34 +52,34 @@ permalink: /faq
               <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
                 <div class="accordion-body">
                   <!-- Roger Parkinson -->
-              <div class="d-flex align-items-center mb-3">
-                <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" class="rounded-circle me-3" width="100" height="100">
-                <div>
-                  <strong>Roger Parkinson:</strong>
-                  <ul>
-                    <li>Co-Founder and Technology Lead with 25 years of experience in data science at GE Capital, Bank of America, Wells Fargo, and Event Horizon Partners.</li>
-                    <li>Before transitioning to financial data science, Roger served in US Special Forces and Military Intelligence.</li>
-                    <li>He is driven by a passion for leveraging cutting-edge technology to solve complex problems and enjoys the challenge of building systems that continuously evolve and improve.</li>
-                  </ul>
-                </div>
-                <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
-                  <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" class="ms-3" width="24" height="24" style="filter: hue-rotate(30deg) saturate(200%);">
-                </a>
-              </div>
-              <!-- Brad Parkinson -->
-              <div class="d-flex align-items-center">
-                <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" class="rounded-circle me-3" width="100" height="100">
-                <div>
-                  <strong>Brad Parkinson:</strong>
-                  <ul>
-                    <li>Co-Founder with 21 years of experience in treasury management and data science at Wells Fargo and JP Morgan. Brad has extensive experience consulting companies on the efficient collection and disbursement of funds while optimizing visibility into cash management processes.</li>
-                    <li>Brad’s deep curiosity and relentless drive for innovation have shaped his career in financial services. He excels in optimizing operations and ensuring that the models we build are reliable and reproducible.</li>
-                  </ul>
-                </div>
-                <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
-                  <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" class="ms-3" width="24" height="24" style="filter: hue-rotate(30deg) saturate(200%);">
-                </a>
-              </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" class="rounded-circle me-3" width="100" height="100">
+                    <div>
+                      <strong>Roger Parkinson:</strong>
+                      <ul>
+                        <li>Co-Founder and Technology Lead with 25 years of experience in data science at GE Capital, Bank of America, Wells Fargo, and Event Horizon Partners.</li>
+                        <li>Before transitioning to financial data science, Roger served in US Special Forces and Military Intelligence.</li>
+                        <li>He is driven by a passion for leveraging cutting-edge technology to solve complex problems and enjoys the challenge of building systems that continuously evolve and improve.</li>
+                      </ul>
+                    </div>
+                    <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
+                      <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" class="ms-3" width="24" height="24" style="filter: hue-rotate(30deg) saturate(200%);">
+                    </a>
+                  </div>
+                  <!-- Brad Parkinson -->
+                  <div class="d-flex align-items-center">
+                    <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" class="rounded-circle me-3" width="100" height="100">
+                    <div>
+                      <strong>Brad Parkinson:</strong>
+                      <ul>
+                        <li>Co-Founder with 21 years of experience in treasury management and data science at Wells Fargo and JP Morgan. Brad has extensive experience consulting companies on the efficient collection and disbursement of funds while optimizing visibility into cash management processes.</li>
+                        <li>Brad’s deep curiosity and relentless drive for innovation have shaped his career in financial services. He excels in optimizing operations and ensuring that the models we build are reliable and reproducible.</li>
+                      </ul>
+                    </div>
+                    <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
+                      <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" class="ms-3" width="24" height="24" style="filter: hue-rotate(30deg) saturate(200%);">
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
