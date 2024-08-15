@@ -482,14 +482,46 @@ img {
 }
 
 .faq-container .faq-btn-outline-light {
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .faq-container .faq-btn-outline-light:hover {
-  background-color: #E96B05;
+  background-color: #333;
   color: #fff;
   border-color: #E96B05;
 }
+
+.faq-container .faq-card .logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Add some space between the logos */
+  margin-top: 15px;
+}
+
+.faq-container .faq-card .logos-container img {
+  max-height: 40px; /* Set a maximum height for the logos */
+  height: auto;
+  width: auto;
+  max-width: 100px; /* Ensure the logos don't exceed the card width */
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .faq-container .faq-card .logos-container img {
+    max-height: 50px; /* Increase height slightly for larger screens */
+    max-width: 120px; /* Adjust max width for larger screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .faq-container .faq-card .logos-container img {
+    max-height: 60px; /* Further increase height for even larger screens */
+    max-width: 140px; /* Adjust max width for larger screens */
+  }
+}
+
 
 /* Responsive Card Adjustments */
 @media (min-width: 2560px) {
