@@ -444,14 +444,17 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
 .faq-container .faq-card-horizontal {
-  flex-direction: row; /* Horizontal layout for larger screens */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
 
 
 .faq-container .faq-card-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100px; /* Adjust image size */
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .faq-container .faq-card img {
@@ -462,11 +465,7 @@ img {
 }
 
 .faq-container .faq-card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  text-align: left;
+  padding: 10px;
 }
 
 .faq-container .faq-card-title {
@@ -525,10 +524,10 @@ img {
 }
 
 .faq-container .contact-icons img {
-  width: 40px; /* Increase size */
-  height: 40px; /* Increase size */
+  width: 30px; /* Decrease size */
+  height: 30px; /* Decrease size */
   background: #555; /* Keep the background consistent */
-  padding: 10px; /* Increase padding for better readability */
+  padding: 6px; /* Decrease padding */
   border-radius: 50%; /* Maintain the round shape */
   object-fit: contain; /* Ensure the icons fit well inside the container */
 }
@@ -545,18 +544,19 @@ img {
 }
 
 .faq-container .logos-container img {
-  width: 6vw; /* Responsive width based on viewport width */
-  height: 6vw; /* Responsive height based on viewport width */
-  max-width: 80px; /* Set a maximum size to prevent the logos from getting too large */
-  max-height: 80px; /* Same as above */
-  min-width: 50px; /* Set a minimum size for very small screens */
-  min-height: 50px; /* Same as above */
+  width: 5vw; /* Responsive width based on viewport width */
+  height: 5vw; /* Responsive height based on viewport width */
+  max-width: 60px; /* Set a maximum size */
+  max-height: 60px; /* Set a maximum size */
+  min-width: 40px; /* Set a minimum size */
+  min-height: 40px; /* Set a minimum size */
   object-fit: contain; /* Ensures the logo scales to fit within the container */
   background: #444; /* Keeps the existing background */
-  padding: 1px;
-  border-radius: 15px;
+  padding: 2px; /* Reduced padding for a tighter fit */
+  border-radius: 10px; /* Slightly smaller border radius */
   border: 1px solid #555; /* Keeps the existing border */
 }
+
 
 /* Responsive Layout Adjustments */
 @media (max-width: 768px) {
@@ -586,6 +586,10 @@ img {
       height: 10vw; /* Maintain aspect ratio */
       max-width: 60px; /* Adjust maximum size for smaller screens */
       max-height: 60px;
+    }
+  .faq-container .contact-icons img {
+    width: 25px; /* Further reduce size for smaller screens */
+    height: 25px;
   }
 }
 
@@ -616,7 +620,11 @@ img {
     height: 12vw;
     max-width: 50px; /* Adjust maximum size for smallest screens */
     max-height: 50px;
-}
+  }
+  .faq-container .contact-icons img {
+    width: 20px; /* Further reduce size for smaller screens */
+    height: 20px;
+  }
 }
 @media (min-width: 1200px) {
   .faq-container .faq-card-horizontal .faq-card-content {
