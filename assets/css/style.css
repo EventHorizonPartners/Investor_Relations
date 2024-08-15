@@ -369,172 +369,116 @@ img {
 /* General FAQ Container Styles */
 .faq-container {
   background: #333;
-  padding: 20px;
-  border-radius: 10px;
-  color: #f5f5f5;
   max-width: 900px;
   margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
   font-size: 16px;
 }
 
-/* Responsive Font Sizes */
-@media (max-width: 1200px) {
-  .faq-container {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 992px) {
-  .faq-container {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .faq-container {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 576px) {
-  .faq-container {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 2560px) {
-  .faq-container {
-    font-size: 30px;
-  }
-}
-
-/* Accordion and Button Styles */
-.faq-container .accordion-button {
-  background-color: #444;
-  color: rgb(233, 107, 5);
-  border: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.faq-container .accordion-button:hover {
-  background-color: rgb(233, 107, 5);
-  color: #fff;
-}
-
-.faq-container .accordion-body {
-  padding-left: 20px;
-  color: #f5f5f5;
-  background-color: #333;
-}
-
-/* Specific Styles for FAQ Accordion Cards */
-.faq-container .faq-card {
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  background: #2b2b2b;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
-  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-}
-.faq-container .faq-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-}
-.faq-container .faq-card-horizontal {
-  flex-direction: column;
-  align-items: center;
+/* Typography */
+.faq-container h1 {
+  color: #e96b05;
+  font-size: 2.5em;
+  margin-bottom: 30px;
   text-align: center;
-  padding: 10px;
 }
 
-
-.faq-container .faq-card-img {
-  width: 100px; /* Adjust image size */
-  height: auto;
+.faq-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e96b05;
   margin-bottom: 10px;
 }
 
-.faq-container .faq-card img {
-  border-radius: 50%;
-  background-color: rgb(233, 107, 5);
-  padding: 1px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-}
-
-.faq-container .faq-card-content {
-  padding: 10px;
-}
-
-.faq-container .faq-card-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-.faq-container .faq-card-subtitle {
+.faq-card-subtitle {
   font-size: 1.1rem;
   font-weight: 400;
   font-style: italic;
   color: #ccc;
+  margin-bottom: 15px;
 }
 
-.faq-container .faq-list-unstyled li {
-  font-size: 1.1rem;
+.faq-list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.faq-list-unstyled li {
+  font-size: 1rem;
   line-height: 1.5;
-}
-
-/* Contact Card Styles */
-.faq-container .contact-card {
-  background: #444;
-  padding: 15px;
-  border-radius: 15px;
-  margin-top: 20px;
-  color: #f5f5f5;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Same shadow effect as the main card */
-  transition: box-shadow 0.3s ease; /* Smooth transition on hover */
-}
-
-.faq-container .contact-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-}
-
-.faq-container .contact-card h6 {
-  font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.faq-container .contact-card p {
-  font-size: 1rem;
-  margin: 5px 0;
+/* Accordion Styles */
+.accordion-item {
+  background-color: transparent;
+  border: 1px solid #444;
 }
 
-.faq-container .contact-card a {
-  color: rgb(233, 107, 5);
-  text-decoration: none;
-  font-weight: 600;
+.accordion-button {
+  background-color: #444;
+  color: #e96b05;
+  font-size: 1.2rem;
+  padding: 15px 20px;
 }
 
-.faq-container .contact-icons {
-  margin-top: 10px;
+.accordion-button:not(.collapsed) {
+  background-color: #e96b05;
+  color: #fff;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: #e96b05;
+}
+
+.accordion-body {
+  background-color: #2b2b2b;
+  color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Card Styles */
+.faq-card {
+  background: #2b2b2b;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.faq-card-horizontal {
   display: flex;
-  justify-content: flex-start;
-  gap: 15px; /* Increased gap for better spacing */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.faq-container .contact-icons img {
-  width: 30px; /* Decrease size */
-  height: 30px; /* Decrease size */
-  background: #555; /* Keep the background consistent */
-  padding: 6px; /* Decrease padding */
-  border-radius: 50%; /* Maintain the round shape */
-  object-fit: contain; /* Ensure the icons fit well inside the container */
+.faq-card-img {
+  margin-bottom: 20px;
 }
 
+.faq-card-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e96b05;
+}
+
+.faq-card-content {
+  width: 100%;
+}
 
 /* Logos Container */
-.faq-container .logos-container {
+.logos-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -543,92 +487,181 @@ img {
   margin-top: 15px;
 }
 
-.faq-container .logos-container img {
-  width: 5vw; /* Responsive width based on viewport width */
-  height: 5vw; /* Responsive height based on viewport width */
-  max-width: 60px; /* Set a maximum size */
-  max-height: 60px; /* Set a maximum size */
-  min-width: 40px; /* Set a minimum size */
-  min-height: 40px; /* Set a minimum size */
-  object-fit: contain; /* Ensures the logo scales to fit within the container */
-  background: #444; /* Keeps the existing background */
-  padding: 2px; /* Reduced padding for a tighter fit */
-  border-radius: 10px; /* Slightly smaller border radius */
-  border: 1px solid #555; /* Keeps the existing border */
+.logos-container img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: #444;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #555;
 }
 
+/* Contact Card Styles */
+.contact-card {
+  background: #444;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-/* Responsive Layout Adjustments */
-@media (max-width: 768px) {
-    .faq-container .faq-card-horizontal {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px; /* Adjust padding */
-    }
+.contact-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
 
-    .faq-container .faq-card img {
-        width: 150px; /* Reduce image size */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 15px; /* Reduce bottom margin */
-    }
+.contact-card h6 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #e96b05;
+}
 
-    .faq-container .faq-card-title {
-        font-size: 1.4rem; /* Reduce title font size */
-    }
+.contact-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
 
-    .faq-container .faq-card-subtitle {
-        font-size: 1rem; /* Reduce subtitle font size */
-    }
+.contact-card a {
+  color: #e96b05;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    .faq-container .logos-container img {
-      width: 10vw; /* Increase size slightly for smaller screens */
-      height: 10vw; /* Maintain aspect ratio */
-      max-width: 60px; /* Adjust maximum size for smaller screens */
-      max-height: 60px;
-    }
-  .faq-container .contact-icons img {
-    width: 25px; /* Further reduce size for smaller screens */
-    height: 25px;
+.contact-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.contact-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+}
+
+.contact-icons img {
+  width: 30px;
+  height: 30px;
+  background: #555;
+  padding: 6px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .faq-card-horizontal {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .faq-card-img {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .faq-card-content {
+    flex: 1;
+  }
+
+  .logos-container {
+    justify-content: flex-start;
+  }
+
+  .contact-icons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-container {
+    font-size: 14px;
+  }
+
+  .faq-card-img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .faq-card-title {
+    font-size: 1.4rem;
+  }
+
+  .faq-card-subtitle {
+    font-size: 1rem;
+  }
+
+  .logos-container img {
+    width: 40px;
+    height: 40px;
   }
 }
 
 @media (max-width: 576px) {
-  .faq-container .faq-card-horizontal {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 5px; /* Further reduce padding */
+  .faq-container {
+    font-size: 12px;
+    padding: 15px;
   }
 
-  .faq-container .faq-card img {
-      width: 120px; /* Further reduce image size */
-      height: auto; /* Maintain aspect ratio */
-      margin-bottom: 10px; /* Further reduce bottom margin */
+  .faq-card {
+    padding: 15px;
   }
 
-  .faq-container .faq-card-title {
-      font-size: 1.2rem; /* Further reduce title font size */
+  .faq-card-img img {
+    width: 100px;
+    height: 100px;
   }
 
-  .faq-container .faq-card-subtitle {
-      font-size: 0.9rem; /* Further reduce subtitle font size */
+  .faq-card-title {
+    font-size: 1.2rem;
   }
 
-  .faq-container .logos-container img {
-    width: 12vw; /* Further adjust size for smaller screens */
-    height: 12vw;
-    max-width: 50px; /* Adjust maximum size for smallest screens */
-    max-height: 50px;
+  .faq-card-subtitle {
+    font-size: 0.9rem;
   }
-  .faq-container .contact-icons img {
-    width: 20px; /* Further reduce size for smaller screens */
-    height: 20px;
+
+  .logos-container img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-icons img {
+    width: 25px;
+    height: 25px;
   }
 }
+
 @media (min-width: 1200px) {
-  .faq-container .faq-card-horizontal .faq-card-content {
-    padding: 40px;
+  .faq-container {
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .faq-container {
+    font-size: 18px;
+    max-width: 1200px;
+  }
+
+  .faq-card-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .logos-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-icons img {
+    width: 40px;
+    height: 40px;
   }
 }
 
