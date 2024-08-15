@@ -52,8 +52,13 @@ permalink: /faq
               <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
                 <div class="accordion-body">
                   <!-- Roger Parkinson -->
-                  <div class="d-flex align-items-center mb-3">
-                    <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" class="rounded-circle me-3" width="100" height="100">
+                  <div class="d-flex align-items-start mb-4">
+                    <div class="text-center me-4">
+                      <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" class="rounded-circle mb-2" width="120" height="120">
+                      <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
+                        <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" width="20" height="20">
+                      </a>
+                    </div>
                     <div>
                       <strong>Roger Parkinson:</strong>
                       <ul>
@@ -62,13 +67,15 @@ permalink: /faq
                         <li>He is driven by a passion for leveraging cutting-edge technology to solve complex problems and enjoys the challenge of building systems that continuously evolve and improve.</li>
                       </ul>
                     </div>
-                    <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
-                      <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" class="ms-3" width="24" height="24" style="filter: hue-rotate(30deg) saturate(200%);">
-                    </a>
                   </div>
                   <!-- Brad Parkinson -->
-                  <div class="d-flex align-items-center">
-                    <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" class="rounded-circle me-3" width="100" height="100">
+                  <div class="d-flex align-items-start">
+                    <div class="text-center me-4">
+                      <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" class="rounded-circle mb-2" width="120" height="120">
+                      <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
+                        <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" width="20" height="20">
+                      </a>
+                    </div>
                     <div>
                       <strong>Brad Parkinson:</strong>
                       <ul>
@@ -76,11 +83,9 @@ permalink: /faq
                         <li>Brad’s deep curiosity and relentless drive for innovation have shaped his career in financial services. He excels in optimizing operations and ensuring that the models we build are reliable and reproducible.</li>
                       </ul>
                     </div>
-                    <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
-                      <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" class="ms-3" width="24" height="24" style="filter: hue-rotate(30deg) saturate(200%);">
-                    </a>
                   </div>
                 </div>
+
               </div>
             </div>
             <div class="accordion-item">
