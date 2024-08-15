@@ -35,83 +35,79 @@ permalink: /faq
     </div>
     <!-- Leadership Section -->
     <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeadership" aria-expanded="true" aria-controls="collapseLeadership">
-          Leadership
-        </button>
-      </h2>
-      <div id="collapseLeadership" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <div class="accordion" id="sub-accordionLeadership">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="sub-headingTwo">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="true" aria-controls="sub-collapseTwo">
-                  Who are the key people behind Event Horizon Partners?
-                </button>
-              </h2>
-              <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
-                <div class="accordion-body">
-                  <!-- Roger Parkinson -->
-                  <div class="d-flex align-items-start mb-4">
-                    <div class="text-center me-4">
-                      <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" class="rounded-circle mb-2" width="120" height="120">
-                      <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
-                        <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" width="20" height="20">
-                      </a>
-                    </div>
-                    <div>
-                      <strong>Roger Parkinson:</strong>
-                      <ul>
-                        <li>Co-Founder and Technology Lead with 25 years of experience in data science at GE Capital, Bank of America, Wells Fargo, and Event Horizon Partners.</li>
-                        <li>Before transitioning to financial data science, Roger served in US Special Forces and Military Intelligence.</li>
-                        <li>He is driven by a passion for leveraging cutting-edge technology to solve complex problems and enjoys the challenge of building systems that continuously evolve and improve.</li>
+  <h2 class="accordion-header">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeadership" aria-expanded="true" aria-controls="collapseLeadership">
+      Leadership
+    </button>
+  </h2>
+  <div id="collapseLeadership" class="accordion-collapse collapse show">
+    <div class="accordion-body">
+      <div class="accordion" id="sub-accordionLeadership">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="sub-headingTwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="true" aria-controls="sub-collapseTwo">
+              Who are the key people behind Event Horizon Partners?
+            </button>
+          </h2>
+          <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
+            <div class="accordion-body">
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Roger Parkinson -->
+                <div class="col">
+                  <div class="card h-100 bg-dark text-white">
+                    <div class="card-body d-flex flex-column align-items-center">
+                      <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" class="rounded-circle mb-3" width="150" height="150">
+                      <h5 class="card-title">Roger Parkinson</h5>
+                      <p class="card-text">
+                        <small>Co-Founder and Technology Lead</small>
+                      </p>
+                      <ul class="list-unstyled text-start">
+                        <li>25 years of experience in data science</li>
+                        <li>Former US Special Forces and Military Intelligence</li>
+                        <li>Passionate about leveraging cutting-edge technology</li>
                       </ul>
-                    </div>
-                  </div>
-                  <!-- Brad Parkinson -->
-                  <div class="d-flex align-items-start">
-                    <div class="text-center me-4">
-                      <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" class="rounded-circle mb-2" width="120" height="120">
-                      <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
-                        <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" width="20" height="20">
-                      </a>
-                    </div>
-                    <div>
-                      <strong>Brad Parkinson:</strong>
-                      <ul>
-                        <li>Co-Founder with 21 years of experience in treasury management and data science at Wells Fargo and JP Morgan. Brad has extensive experience consulting companies on the efficient collection and disbursement of funds while optimizing visibility into cash management processes.</li>
-                        <li>Brad’s deep curiosity and relentless drive for innovation have shaped his career in financial services. He excels in optimizing operations and ensuring that the models we build are reliable and reproducible.</li>
-                      </ul>
+                      <div class="mt-auto">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                          <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo" height="30">
+                          <img src="{{ site.baseurl }}/assets/images/logos/ge_capital_logo.png" alt="GE Capital Logo" height="30">
+                          <img src="{{ site.baseurl }}/assets/images/logos/bofa_logo.png" alt="Bank of America Logo" height="30">
+                          <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo" height="30">
+                        </div>
+                        <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank" class="btn btn-outline-light mt-3">
+                          <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" width="20" height="20" class="me-2">
+                          Connect on LinkedIn
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="sub-headingThree">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseThree" aria-expanded="true" aria-controls="sub-collapseThree">
-                 Why did you start a quant fund?
-                </button>
-              </h2>
-              <div id="sub-collapseThree" class="accordion-collapse collapse show" aria-labelledby="sub-headingThree" data-bs-parent="#sub-accordionLeadership">
-                <div class="accordion-body">
-                  What began as a passion project to test new concepts and build capabilities for automating trading has grown into a highly advanced and scalable quant factory. Seeing it evolve beyond our original vision has been incredibly satisfying, and we’re committed to pushing its potential even further.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="sub-headingFour">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseFour" aria-expanded="true" aria-controls="sub-collapseFour">
-                  What makes your team qualified to run a quant fund?
-                </button>
-              </h2>
-              <div id="sub-collapseFour" class="accordion-collapse collapse show" aria-labelledby="sub-headingFour" data-bs-parent="#sub-accordionLeadership">
-                <div class="accordion-body">
-                  We have over 40 years of combined experience using data science to automate financial processes, ranging from fund movement to compliance reporting at the largest US banks. Additionally, we have been building automated trading models for over a decade, honing our understanding of markets and their underlying microstructures.
-                  <blockquote>
-                    <p> We also adhere to Gall's Law, which emphasizes building systems from simple, functioning foundations to avoid unnecessary complexity:</p>
-                    <p>"A complex system that works is invariably found to have evolved from a simple system that worked"</p>
-                  </blockquote>
+                <!-- Brad Parkinson -->
+                <div class="col">
+                  <div class="card h-100 bg-dark text-white">
+                    <div class="card-body d-flex flex-column align-items-center">
+                      <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" class="rounded-circle mb-3" width="150" height="150">
+                      <h5 class="card-title">Brad Parkinson</h5>
+                      <p class="card-text">
+                        <small>Co-Founder</small>
+                      </p>
+                      <ul class="list-unstyled text-start">
+                        <li>21 years of experience in treasury management and data science</li>
+                        <li>Expertise in cash management processes</li>
+                        <li>Driven by curiosity and innovation in financial services</li>
+                      </ul>
+                      <div class="mt-auto">
+                        <div class="d-flex justify-content-center align-items-center gap-3">
+                          <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo" height="30">
+                          <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo" height="30">
+                          <img src="{{ site.baseurl }}/assets/images/logos/jp_morgan_logo.png" alt="JP Morgan Logo" height="30">
+                        </div>
+                        <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank" class="btn btn-outline-light mt-3">
+                          <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" width="20" height="20" class="me-2">
+                          Connect on LinkedIn
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
