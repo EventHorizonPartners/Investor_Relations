@@ -69,6 +69,7 @@ permalink: /faq
                       <div class="mt-auto">
                         <div class="d-flex justify-content-center align-items-center gap-3">
                           <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo" height="30">
+                          <img src="{{ site.baseurl }}/assets/images/logos/specialforces_logo.png" alt="Special Forces Logo" height="30">
                           <img src="{{ site.baseurl }}/assets/images/logos/ge_capital_logo.png" alt="GE Capital Logo" height="30">
                           <img src="{{ site.baseurl }}/assets/images/logos/bofa_logo.png" alt="Bank of America Logo" height="30">
                           <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo" height="30">
