@@ -365,6 +365,7 @@ img {
   --bs-accordion-border-color: #444; /* Slightly lighter border color */
 }
 
+/* General FAQ Container Styles */
 .faq-container {
   background: #333;
   padding: 20px;
@@ -372,55 +373,39 @@ img {
   color: #f5f5f5;
   max-width: 900px;
   margin: 20px auto;
-  border:  var(--bs-accordion-border-color); /* Use custom border color */
   font-size: 16px;
 }
 
-.faq-container h1, .accordion-button {
-  color: rgb(233, 107, 5);
-  font-size: 1.4rem; 
-}
-.faq-container h2 {
-  font-size: 1rem; /* 32px */
-}
-
-
-.faq-container p {
-  font-size: 1rem; /* 16px */
-}
-
-/* Media queries for responsiveness in FAQ section */
+/* Responsive Font Sizes */
 @media (max-width: 1200px) {
   .faq-container {
-    font-size: 15px; /* Slightly smaller font size for large screens */
+    font-size: 15px;
   }
 }
 
 @media (max-width: 992px) {
   .faq-container {
-    font-size: 14px; /* Smaller font size for medium screens */
+    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
   .faq-container {
-    font-size: 13px; /* Smaller font size for small screens */
+    font-size: 13px;
   }
 }
 
 @media (max-width: 576px) {
   .faq-container {
-    font-size: 12px; /* Smaller font size for extra small screens */
+    font-size: 12px;
   }
 }
 
-/* Specific adjustments for 4K screens */
 @media (min-width: 2560px) {
   .faq-container {
-    font-size: 30px; /* Larger font size for 4K screens */
+    font-size: 30px;
   }
 }
-
 
 /* Accordion and Button Styles */
 .faq-container .accordion-button {
@@ -428,17 +413,6 @@ img {
   color: rgb(233, 107, 5);
   border: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.accordion-button:focus {
-  box-shadow: none; /* Remove default focus shadow */
-  border:  var(--bs-accordion-border-color); /* Use custom border color */
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: #444; /* Orange color for expanded state */
-  color: rgb(233, 107, 5); /* Darker text color for better contrast in expanded state */
-  border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
 
 .faq-container .accordion-button:hover {
@@ -451,94 +425,105 @@ img {
   color: #f5f5f5;
   background-color: #333;
 }
-[id^="sub-heading"] {
-  font-size: 0.8em; /* Adjust the font size as needed */
-}
 
 /* Specific Styles for FAQ Accordion Cards */
 .faq-container .faq-card {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background: #2b2b2b; /* Flat material design background */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.faq-container .faq-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+.faq-container .faq-card-horizontal {
+  flex-direction: row; /* Horizontal layout for larger screens */
+}
+
+.faq-container .faq-card img {
+  border-radius: 50%;
+  margin: 20px;
+  background-color: #444; /* Background to make the image pop */
+  padding: 5px; /* Add padding around the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+}
+
+.faq-container .faq-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: left;
 }
 
 .faq-container .faq-card-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .faq-container .faq-card-subtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   font-style: italic;
+  color: #ccc;
 }
 
 .faq-container .faq-list-unstyled li {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .faq-container .faq-btn-outline-light {
-  border-width: 1px;
+  border-width: 2px;
+  margin-top: 15px;
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  background-color: #e96b05;
+  color: #fff;
+  border: none;
+}
+
+.faq-container .faq-btn-outline-light img {
+  background: #444; /* Background color for the icon */
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .faq-container .faq-btn-outline-light:hover {
-  background-color: #333;
+  background-color: #d55b04;
   color: #fff;
-  border-color: #E96B05;
 }
 
-.faq-container .faq-card .logos-container {
+.faq-container .logos-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px; /* Add some space between the logos */
+  gap: 10px;
   margin-top: 15px;
 }
 
-.faq-container .faq-card .logos-container img {
-  max-height: 40px; /* Set a maximum height for the logos */
+.faq-container .logos-container img {
+  max-height: 40px;
   height: auto;
   width: auto;
-  max-width: 100px; /* Ensure the logos don't exceed the card width */
   object-fit: contain;
+  background: #444; /* Background color for transparency issues */
+  padding: 5px;
+  border-radius: 5px;
 }
 
+/* Responsive Layout Adjustments */
 @media (min-width: 768px) {
-  .faq-container .faq-card .logos-container img {
-    max-height: 50px; /* Increase height slightly for larger screens */
-    max-width: 120px; /* Adjust max width for larger screens */
+  .faq-container .faq-card-horizontal {
+    flex-direction: row;
   }
 }
 
 @media (min-width: 1200px) {
-  .faq-container .faq-card .logos-container img {
-    max-height: 60px; /* Further increase height for even larger screens */
-    max-width: 140px; /* Adjust max width for larger screens */
-  }
-}
-
-
-/* Responsive Card Adjustments */
-@media (min-width: 2560px) {
-  .faq-container .faq-card-title {
-    font-size: 2rem;
-  }
-
-  .faq-container .faq-card-subtitle {
-    font-size: 1.25rem;
-  }
-
-  .faq-container .faq-list-unstyled li {
-    font-size: 1.25rem;
-  }
-
-  .faq-container .faq-btn-outline-light {
-    padding: 0.75rem 1.5rem;
+  .faq-container .faq-card-horizontal .faq-card-content {
+    padding: 40px;
   }
 }
 
