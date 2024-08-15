@@ -422,10 +422,12 @@ img {
 }
 
 
-.accordion-button {
-  background-color: #444; /* Slightly darker grey for the button background */
-  color: rgb(233, 107, 5); /* Orange color for the text */
-  border:  var(--bs-accordion-border-color); /* Use custom border color */
+/* Accordion and Button Styles */
+.faq-container .accordion-button {
+  background-color: #444;
+  color: rgb(233, 107, 5);
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .accordion-button:focus {
@@ -439,21 +441,75 @@ img {
   border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
 
-.accordion-button:hover {
-  background-color: rgb(233, 107, 5); /* Brighter orange on hover */
-  color: #fff; /* White text on hover for better visibility */
-  border: var(--bs-accordion-border-color); /* Use custom border color */
+.faq-container .accordion-button:hover {
+  background-color: rgb(233, 107, 5);
+  color: #fff;
 }
 
-.accordion-body {
-  padding-left: 20px; /* Indent the text */
-  color: #f5f5f5; /* Ensure body text is light for readability */
-  background-color: #333; /* Match container background */
-  border:  var(--bs-accordion-border-color); /* Use custom border color */
+.faq-container .accordion-body {
+  padding-left: 20px;
+  color: #f5f5f5;
+  background-color: #333;
 }
 [id^="sub-heading"] {
   font-size: 0.8em; /* Adjust the font size as needed */
 }
+
+/* Specific Styles for FAQ Accordion Cards */
+.faq-container .faq-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-container .faq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+.faq-container .faq-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.faq-container .faq-card-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.faq-container .faq-list-unstyled li {
+  font-size: 1rem;
+}
+
+.faq-container .faq-btn-outline-light {
+  border-width: 2px;
+}
+
+.faq-container .faq-btn-outline-light:hover {
+  background-color: #E96B05;
+  color: #fff;
+  border-color: #E96B05;
+}
+
+/* Responsive Card Adjustments */
+@media (min-width: 2560px) {
+  .faq-container .faq-card-title {
+    font-size: 2rem;
+  }
+
+  .faq-container .faq-card-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .faq-container .faq-list-unstyled li {
+    font-size: 1.25rem;
+  }
+
+  .faq-container .faq-btn-outline-light {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
 /* Modal Styles */
 .modal-content {
   background-color: #2b2b2b; /* Dark grey background */
