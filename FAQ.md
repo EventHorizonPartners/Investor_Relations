@@ -41,74 +41,79 @@ permalink: /faq
         </button>
       </h2>
     <div id="collapseLeadership" class="accordion-collapse collapse show">
-  <div class="accordion-body">
-    <div class="accordion" id="sub-accordionLeadership">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="sub-headingTwo">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="true" aria-controls="sub-collapseTwo">
-            Who are the key people behind Event Horizon Partners?
-          </button>
-        </h2>
-        <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
-          <div class="accordion-body">
-            <div class="row row-cols-1 g-4">
-              <!-- Roger Parkinson -->
-              <div class="col">
-                <div class="faq-card faq-card-horizontal bg-dark text-white shadow-lg">
-                  <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" style="width: 150px; height: 150px;">
-                  <div class="faq-card-content">
-                    <h5 class="faq-card-title">Roger Parkinson</h5>
-                    <p class="faq-card-subtitle">Co-Founder and Technology Lead</p>
-                    <ul class="faq-list-unstyled">
-                      <li>Co-Founder and Technology Lead with 25 years of experience in data science at GE Capital, Bank of America, Wells Fargo, and Event Horizon Partners.</li>
-                      <li>Prior to his career in applied financial data science, Roger served in US Special Forces and Military Intelligence.</li>
-                      <li>He is passionate about leveraging cutting-edge technology to solve complex problems and enjoys the challenge of creating systems that can continuously evolve and improve.</li>
-                    </ul>
-                    <div class="logos-container">
-                      <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo">
-                      <img src="{{ site.baseurl }}/assets/images/logos/specialforces_logo.png" alt="Special Forces Logo">
-                      <img src="{{ site.baseurl }}/assets/images/logos/ge_capital_logo.jpg" alt="GE Capital Logo">
-                      <img src="{{ site.baseurl }}/assets/images/logos/bofa_logo.png" alt="Bank of America Logo">
-                      <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo">
+    <div class="accordion-body">
+      <div class="accordion" id="sub-accordionLeadership">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="sub-headingTwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="true" aria-controls="sub-collapseTwo">
+              Who are the key people behind Event Horizon Partners?
+            </button>
+          </h2>
+          <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
+            <div class="accordion-body">
+              <div class="row row-cols-1 g-4">
+                <!-- Roger Parkinson -->
+                <div class="col">
+                  <div class="faq-card faq-card-horizontal bg-dark text-white shadow-lg">
+                    <div class="faq-card-img">
+                      <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" style="width: 150px; height: 150px;">
+                      <div class="logos-container mt-3">
+                        <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo">
+                        <img src="{{ site.baseurl }}/assets/images/logos/specialforces_logo.png" alt="Special Forces Logo">
+                        <img src="{{ site.baseurl }}/assets/images/logos/ge_capital_logo.jpg" alt="GE Capital Logo">
+                        <img src="{{ site.baseurl }}/assets/images/logos/bofa_logo.png" alt="Bank of America Logo">
+                        <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo">
+                      </div>
                     </div>
-                    <div class="contact-card">
-                      <h6>Contact Information</h6>
-                      <p>Email: <a href="mailto:roger.parkinson@ehp.dev">roger.parkinson@ehp.dev</a></p>
-                      <p>Phone: <a href="tel:+15035120333">(503) 512-0333</a></p>
-                      <p>LinkedIn: 
-                        <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
-                          <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" style="width: 30px; height: 30px;">
-                        </a>
-                      </p>
+                    <div class="faq-card-content">
+                      <h5 class="faq-card-title">Roger Parkinson</h5>
+                      <p class="faq-card-subtitle">Co-Founder and Technology Lead</p>
+                      <ul class="faq-list-unstyled">
+                        <li>Co-Founder and Technology Lead with 25 years of experience in data science at GE Capital, Bank of America, Wells Fargo, and Event Horizon Partners.</li>
+                        <li>Prior to his career in applied financial data science, Roger served in US Special Forces and Military Intelligence.</li>
+                        <li>He is passionate about leveraging cutting-edge technology to solve complex problems and enjoys the challenge of creating systems that can continuously evolve and improve.</li>
+                      </ul>
+                      <div class="contact-card">
+                        <h6>Contact Information</h6>
+                        <p>Email: <a href="mailto:roger.parkinson@ehp.dev">roger.parkinson@ehp.dev</a></p>
+                        <p>Phone: <a href="tel:+15035120333">(503) 512-0333</a></p>
+                        <p>LinkedIn: 
+                          <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
+                            <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" style="width: 30px; height: 30px;">
+                          </a>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- Brad Parkinson -->
-              <div class="col">
-                <div class="faq-card faq-card-horizontal bg-dark text-white shadow-lg">
-                  <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" style="width: 150px; height: 150px;">
-                  <div class="faq-card-content">
-                    <h5 class="faq-card-title">Brad Parkinson</h5>
-                    <p class="faq-card-subtitle">Co-Founder and Operations Lead</p>
-                    <ul class="faq-list-unstyled">
-                      <li>Co-Founder and Operations Lead with 21 years of experience at Wells Fargo and JP Morgan, focusing on system stability and innovative trading strategies.</li>
-                      <li>Brad’s deep curiosity and relentless drive for innovation have shaped his career in financial services. He thrives on optimizing operations and ensuring that the systems we build are not only stable but also capable of adapting to new challenges.</li>
-                    </ul>
-                    <div class="logos-container">
-                      <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo">
-                      <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo">
-                      <img src="{{ site.baseurl }}/assets/images/logos/jp_morgan_logo.png" alt="JP Morgan Logo">
+                <!-- Brad Parkinson -->
+                <div class="col">
+                  <div class="faq-card faq-card-horizontal bg-dark text-white shadow-lg">
+                    <div class="faq-card-img">
+                      <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" style="width: 150px; height: 150px;">
+                      <div class="logos-container mt-3">
+                        <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo">
+                        <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo">
+                        <img src="{{ site.baseurl }}/assets/images/logos/jp_morgan_logo.png" alt="JP Morgan Logo">
+                      </div>
                     </div>
-                    <div class="contact-card">
-                      <h6>Contact Information</h6>
-                      <p>Email: <a href="mailto:brad.parkinson@ehp.dev">brad.parkinson@ehp.dev</a></p>
-                      <p>Phone: <a href="tel:+15035120333">(503) 512-0333</a></p>
-                      <p>LinkedIn: 
-                        <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
-                          <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" style="width: 30px; height: 30px;">
-                        </a>
-                      </p>
+                    <div class="faq-card-content">
+                      <h5 class="faq-card-title">Brad Parkinson</h5>
+                      <p class="faq-card-subtitle">Co-Founder and Operations Lead</p>
+                      <ul class="faq-list-unstyled">
+                        <li>Co-Founder and Operations Lead with 21 years of experience at Wells Fargo and JP Morgan, focusing on system stability and innovative trading strategies.</li>
+                        <li>Brad’s deep curiosity and relentless drive for innovation have shaped his career in financial services. He thrives on optimizing operations and ensuring that the systems we build are not only stable but also capable of adapting to new challenges.</li>
+                      </ul>
+                      <div class="contact-card">
+                        <h6>Contact Information</h6>
+                        <p>Email: <a href="mailto:brad.parkinson@ehp.dev">brad.parkinson@ehp.dev</a></p>
+                        <p>Phone: <a href="tel:+15035120333">(503) 512-0333</a></p>
+                        <p>LinkedIn: 
+                          <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
+                            <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn" style="width: 30px; height: 30px;">
+                          </a>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -120,7 +125,6 @@ permalink: /faq
     </div>
   </div>
 </div>
-    </div>
     <!-- Strategy and Objectives Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">

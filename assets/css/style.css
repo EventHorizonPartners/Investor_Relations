@@ -443,9 +443,15 @@ img {
   flex-direction: row; /* Horizontal layout for larger screens */
 }
 
+.faq-container .faq-card-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .faq-container .faq-card img {
   border-radius: 50%;
-  background-color: #444;
+  background-color: rgb(233, 107, 5);
   padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -502,7 +508,7 @@ img {
 
 .faq-container .logos-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
@@ -510,7 +516,7 @@ img {
 }
 
 .faq-container .logos-container img {
-  max-height: 50px; /* Increased size for better readability */
+  max-height: 60px; /* Increased size for better readability */
   width: auto;
   object-fit: contain;
   background: #444;
@@ -522,6 +528,14 @@ img {
 @media (min-width: 768px) {
   .faq-container .faq-card-horizontal {
     flex-direction: row;
+  }
+
+  .faq-container .faq-card-img {
+    width: 180px; /* Adjust width to better fit the logos and image */
+  }
+
+  .faq-container .logos-container {
+    justify-content: center;
   }
 }
 
@@ -545,7 +559,13 @@ img {
   .faq-container .contact-card {
     text-align: center;
   }
+
+  .faq-container .logos-container {
+    justify-content: center;
+    margin-top: 10px;
+  }
 }
+
 
 
 /* Modal Styles */
