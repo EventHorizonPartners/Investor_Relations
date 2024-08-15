@@ -383,9 +383,8 @@ img {
 .faq-container h2 {
   font-size: 1rem; /* 32px */
 }
-[id^="sub-heading"] {
-  font-size: 0.8em; /* Adjust the font size as needed */
-}
+
+
 .faq-container p {
   font-size: 1rem; /* 16px */
 }
@@ -452,7 +451,9 @@ img {
   background-color: #333; /* Match container background */
   border:  var(--bs-accordion-border-color); /* Use custom border color */
 }
-
+[id^="sub-heading"] {
+  font-size: 0.8em; /* Adjust the font size as needed */
+}
 /* Modal Styles */
 .modal-content {
   background-color: #2b2b2b; /* Dark grey background */
