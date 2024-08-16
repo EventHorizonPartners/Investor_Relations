@@ -506,6 +506,7 @@ img {
   object-fit: contain;
   background: #444;
   padding: 3px;
+  margin: 5px;
   border-radius: 6px;
   border: 1px solid #555;
   transition: transform 0.3s ease;
