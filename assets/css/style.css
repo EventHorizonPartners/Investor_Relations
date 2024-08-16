@@ -413,7 +413,7 @@ img {
 /* Accordion Styles */
 .accordion-item {
   background-color: transparent;
-  border: 1px solid #e96b05;
+  border: none;
   margin-bottom: 10px;
 }
 
@@ -447,7 +447,6 @@ img {
 
 .accordion-button:focus {
   box-shadow: none;
-  border-color: #e96b05;
 }
 
 .accordion-body {
@@ -462,14 +461,23 @@ img {
   border-radius: 15px;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 1px solid #e96b05;
 }
 
 .faq-card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.faq-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e96b05;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+.faq-card:hover .faq-card-title {
+  color: #ffffff;
 }
 
 .faq-card-horizontal {
@@ -480,7 +488,8 @@ img {
 }
 
 .faq-card-img {
-  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-bottom: 0;
 }
 
 .faq-card-img img {
@@ -498,23 +507,25 @@ img {
 /* Logos Container */
 .logos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
+
 .logos-container img {
   width: 100%;
   height: auto;
-  max-width: 70px;
+  max-width: 60px;
   object-fit: contain;
   background: #444;
-  padding: 8px;
-  border-radius: 10px;
+  padding: 4px;
+  border-radius: 8px;
   border: 1px solid #555;
   transition: transform 0.3s ease;
 }
+
 .logos-container img:hover {
   transform: scale(1.1);
 }
@@ -584,7 +595,7 @@ img {
   }
 
   .faq-card-img {
-    margin-right: 30px;
+    margin-right: 10px;
     margin-bottom: 0;
   }
 
@@ -593,11 +604,11 @@ img {
   }
 
   .logos-container {
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
 
   .logos-container img {
-    max-width: 90px;
+    max-width: 80px;
   }
 
   .contact-icons {
@@ -671,11 +682,11 @@ img {
     max-width: 1000px;
   }
   .logos-container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   }
 
   .logos-container img {
-    max-width: 100px;
+    max-width: 90px;
   }
 }
 
