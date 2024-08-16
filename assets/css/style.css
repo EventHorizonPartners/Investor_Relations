@@ -367,7 +367,6 @@ img {
 
 
 /* General FAQ Container Styles */
-/* General FAQ Container Styles */
 .faq-container {
   background: #333;
   max-width: 1200px;
@@ -465,17 +464,14 @@ img {
   padding: 10px;
   margin-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.faq-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.faq-card-horizontal {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.faq-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .faq-card-img {
@@ -496,18 +492,15 @@ img {
 
 /* Logos Container */
 .logos-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  gap: 8px;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  margin: 15px 0;
+  width: 100%;
 }
 
 .logos-container img {
-  width: 100%;
-  height: auto;
-  max-width: 40px;
+  height: 40px;
   object-fit: contain;
   background: #444;
   padding: 3px;
@@ -575,64 +568,6 @@ img {
   border-radius: 50%;
   object-fit: contain;
 }
-
-/* Responsive Styles */
-@media (min-width: 768px) {
-  .faq-card-horizontal {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .faq-card-img {
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-
-  .faq-card-content {
-    flex: 1;
-  }
-
-  .faq-card-img img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .logos-container {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  }
-
-  .logos-container img {
-    max-width: 60px;
-  }
-
-  .contact-icons {
-    justify-content: flex-start;
-  }
-
-  .contact-icons img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/* FAQ Grouping */
-.faq-group {
-  border: 1px solid #444;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-.faq-group-title {
-  font-size: 1.4rem;
-  color: #e96b05;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #444;
-}
-
-
 /* Modal Styles */
 .modal-content {
   background-color: #2b2b2b; /* Dark grey background */
