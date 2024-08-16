@@ -500,10 +500,12 @@ img {
 }
 
 .logos-container img {
+  width: auto; /* Maintain aspect ratio */
+  max-width: 80px; /* Adjust this value based on your needs */
   height: 40px;
   object-fit: contain;
   background: #444;
-  padding: 5px;
+  padding: 3px;
   border-radius: 6px;
   border: 1px solid #555;
   transition: transform 0.3s ease;
@@ -515,8 +517,9 @@ img {
 
 @media (max-width: 768px) {
   .logos-container img {
+    max-width: 60px; /* Smaller on mobile */
     height: 30px;
-    padding: 4px;
+    padding: 2px;
   }
 }
 
@@ -575,6 +578,7 @@ img {
   border-radius: 50%;
   object-fit: contain;
 }
+
 
 /* Modal Styles */
 .modal-content {
