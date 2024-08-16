@@ -418,7 +418,7 @@ img {
 }
 
 .accordion-button {
-  background-color: #fff;
+  background-color: #333;
   color: #f5f5f5;
   font-size: 1.2rem;
   padding: 15px 20px;
@@ -426,7 +426,7 @@ img {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #fff;
+  background-color: #333;
   color: #f5f5f5;
 }
 
