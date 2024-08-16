@@ -493,7 +493,7 @@ img {
 /* Logos Container */
 .logos-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 15px 0;
   width: 100%;
@@ -503,7 +503,7 @@ img {
   height: 40px;
   object-fit: contain;
   background: #444;
-  padding: 3px;
+  padding: 5px;
   border-radius: 6px;
   border: 1px solid #555;
   transition: transform 0.3s ease;
@@ -511,6 +511,13 @@ img {
 
 .logos-container img:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .logos-container img {
+    height: 30px;
+    padding: 4px;
+  }
 }
 
 /* Contact Card Styles */
@@ -568,6 +575,7 @@ img {
   border-radius: 50%;
   object-fit: contain;
 }
+
 /* Modal Styles */
 .modal-content {
   background-color: #2b2b2b; /* Dark grey background */
