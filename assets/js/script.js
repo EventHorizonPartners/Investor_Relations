@@ -32,24 +32,19 @@ function getParameterByName(name, url = window.location.href) {
 }
 
 // Function to update contact via API Gateway
-async function updateContactViaApiGateway(contactId, tags = '', status = '') {
+async function updateContactViaApiGateway(contactId, tags = '') {
   if (sessionStorage.getItem('contactUpdated') === 'true') {
     console.log('Contact already updated in this session');
     return;
   }
 
   try {
-    const response = await fetch(`${config.apiEndpoint}/update-contact`, {
-      method: 'POST',
+    const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}&tags=${tags}`, {
+      method: 'GET',
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        contact_internal_ID: contactId,
-        tags: tags,
-        status: status
-      }),
     });
 
     if (!response.ok) {
@@ -77,6 +72,17 @@ async function updateContactViaApiGateway(contactId, tags = '', status = '') {
       status: status
     });
   }
+}
+
+// New function to handle partial site visit
+async function handlePartialSiteVisit(contactId) {
+  if (sessionStorage.getItem('partialVisitHandled') === 'true') {
+    console.log('Partial visit already handled in this session');
+    return;
+  }
+
+  await updateContactViaApiGateway(contactId, 'partial_site_visit,no_login_site');
+  sessionStorage.setItem('partialVisitHandled', 'true');
 }
 
 // Function to send custom events to Google Analytics
@@ -109,13 +115,11 @@ async function handleFormSubmission(email, phone) {
       console.log('Contact saved successfully');
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userPhone', phone);
+      const tags = storedEmail && storedPhone ? 'full_site_visit,existing_contact_updated' : 'full_site_visit,new_contact';
 
-      const isNewContact = data.is_new_contact; // Assuming the API returns this information
-      const tags = isNewContact ? 'full_site_visit,new_contact' : 'full_site_visit,existing_contact_updated';
-      
-      await updateContactViaApiGateway(data.contact_id, tags, 'visited_site');
+      await updateContactViaApiGateway(data.contact_id, tags);
 
-      return { status: 'sent', message: 'Request sent successfully', isNewContact };
+      return { status: 'sent', message: 'Request sent successfully' };
     } else {
       console.error('Failed to save contact: Contact ID is missing');
       throw new Error('Failed to save contact: Contact ID is missing');
@@ -160,7 +164,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Update contact if ID is present
     if (utmValues.contact_internal_ID) {
-      updateContactViaApiGateway(utmValues.contact_internal_ID, 'partial_site_visit', 'visited_site');
+      handlePartialSiteVisit(utmValues.contact_internal_ID);
     }
   }
 
@@ -194,49 +198,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const progressContainer = document.getElementById('formProgress');
   const thankYouMessage = document.getElementById('thankYouMessage');
 
-   userInfoForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      console.log('Form submitted');
-  
-      const userEmail = document.getElementById('userEmail').value;
-      const userPhone = document.getElementById('userPhone').value;
-  
-      if (userEmail && userPhone) {
-          progressContainer.style.display = 'block';
-          userInfoForm.style.display = 'none';
-          progressBar.style.width = '0%';
-          progressBar.setAttribute('aria-valuenow', 0);
-  
-          // Simulate progress for 500ms
-          for (let i = 0; i <= 100; i += 20) {
-              await new Promise(resolve => setTimeout(resolve, 100)); // Update every 100 milliseconds
-              progressBar.style.width = `${i}%`;
-              progressBar.setAttribute('aria-valuenow', i);
-          }
-  
-          // Show thank you message
-          thankYouMessage.style.display = 'block';
-          progressContainer.style.display = 'none';
-  
-          // Close modal after 1 second
-          setTimeout(() => {
-              const modalElement = document.getElementById('userInfoModal');
-              const modalInstance = bootstrap.Modal.getInstance(modalElement);
-              modalInstance.hide();
-          }, 1000);
-  
-          // Run the API call in the background
-          handleFormSubmission(userEmail, userPhone)
-              .then(result => {
-                  console.log('Form submission result:', result);
-              })
-              .catch(error => {
-                  console.error('Error handling form submission:', error);
-                  alert('An error occurred. Please try again.');
-              });
-      } else {
-          alert('You must enter your email and phone to proceed.');
+  userInfoForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    console.log('Form submitted');
+
+    const userEmail = document.getElementById('userEmail').value;
+    const userPhone = document.getElementById('userPhone').value;
+
+    if (userEmail && userPhone) {
+      progressContainer.style.display = 'block';
+      userInfoForm.style.display = 'none';
+      progressBar.style.width = '0%';
+      progressBar.setAttribute('aria-valuenow', 0);
+
+      // Simulate progress for 500ms
+      for (let i = 0; i <= 100; i += 20) {
+        await new Promise(resolve => setTimeout(resolve, 100)); // Update every 100 milliseconds
+        progressBar.style.width = `${i}%`;
+        progressBar.setAttribute('aria-valuenow', i);
       }
+
+      // Show thank you message
+      thankYouMessage.style.display = 'block';
+      progressContainer.style.display = 'none';
+
+      // Close modal after 1 second
+      setTimeout(() => {
+        const modalElement = document.getElementById('userInfoModal');
+        const modalInstance = bootstrap.Modal.getInstance(modalElement);
+        modalInstance.hide();
+      }, 1000);
+
+      // Run the API call in the background
+      handleFormSubmission(userEmail, userPhone)
+        .then(result => {
+          console.log('Form submission result:', result);
+          const contactId = sessionStorage.getItem('contact_internal_ID');
+          if (contactId) {
+            updateContactViaApiGateway(contactId, 'full_site_visit', 'logged_in');
+          }
+        })
+        .catch(error => {
+          console.error('Error handling form submission:', error);
+          alert('An error occurred. Please try again.');
+        });
+    } else {
+      alert('You must enter your email and phone to proceed.');
+    }
   });
 
   // Check if the user needs to input email and phone
@@ -258,8 +266,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const handleClick = async (elementId) => {
     const contactId = sessionStorage.getItem('contact_internal_ID');
     if (contactId) {
-      
-      await updateContactViaApiGateway(contactId, 'calendly_clicked, visited_site');
+
+      await updateContactViaApiGateway(contactId, 'calendly_clicked');
     }
   };
 
@@ -271,7 +279,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   if (calendlyWelcomeBtn) {
     calendlyWelcomeBtn.addEventListener('click', () => handleClick('calendly-welcome-btn'));
-    console.log('calendly-welcome-btn event listener added'); 
+    console.log('calendly-welcome-btn event listener added');
   }
 });
 
