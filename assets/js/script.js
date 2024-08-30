@@ -115,7 +115,7 @@ async function handleFormSubmission(email, phone) {
       console.log('Contact saved successfully');
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userPhone', phone);
-      const tags = storedEmail && storedPhone ? 'full_site_visit,existing_contact_updated' : 'full_site_visit,new_contact';
+      const tags = userEmail && userPhone ? 'full_site_visit,existing_contact_updated' : 'full_site_visit,new_contact';
 
       await updateContactViaApiGateway(data.contact_id, tags);
 
