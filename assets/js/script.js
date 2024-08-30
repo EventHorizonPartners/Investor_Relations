@@ -28,19 +28,24 @@ function getParameterByName(name, url = window.location.href) {
 }
 
 // Function to update contact via API Gateway
-async function updateContactViaApiGateway(contactId, tags = '') {
+async function updateContactViaApiGateway(contactId, tags = '', status = '') {
   if (sessionStorage.getItem('contactUpdated') === 'true') {
     console.log('Contact already updated in this session');
+    return;
   }
 
   try {
-    const response = await fetch(`${config.apiEndpoint}/update-contact?contact_internal_ID=${contactId}&tags=${tags}`, {
-      method: 'GET',
-      mode: 'cors', // Enable CORS
+    const response = await fetch(`${config.apiEndpoint}/update-contact`, {
+      method: 'POST',
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
-        // Add any necessary API key or authorization header here
       },
+      body: JSON.stringify({
+        contact_internal_ID: contactId,
+        tags: tags,
+        status: status
+      }),
     });
 
     if (!response.ok) {
@@ -48,15 +53,15 @@ async function updateContactViaApiGateway(contactId, tags = '') {
     }
 
     const data = await response.json();
-    console.log('Contact updated:');
+    console.log('Contact updated:', data);
     sessionStorage.setItem('contactUpdated', 'true');
     sessionStorage.setItem('contact_internal_ID', contactId);
 
-    // Send custom event to Google Analytics
     sendCustomEvent('Contact_Updated', {
       contact_id: contactId,
       update_status: 'success',
       tags: tags,
+      status: status
     });
   } catch (error) {
     console.error('Error updating contact:', error);
@@ -65,6 +70,7 @@ async function updateContactViaApiGateway(contactId, tags = '') {
       update_status: 'error',
       error_message: error.message,
       tags: tags,
+      status: status
     });
   }
 }
@@ -83,7 +89,7 @@ async function handleFormSubmission(email, phone) {
   try {
     const response = await fetch(`${config.apiEndpoint}/form-contact`, {
       method: 'POST',
-      mode: 'cors', // Enable CORS
+      mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -97,14 +103,15 @@ async function handleFormSubmission(email, phone) {
     const data = await response.json();
     if (data && data.contact_id) {
       console.log('Contact saved successfully');
-      // Save user information to localStorage
       localStorage.setItem('userEmail', email);
       localStorage.setItem('userPhone', phone);
 
-      // Call updateContactViaApiGateway with the returned contact ID
-      await updateContactViaApiGateway(data.contact_id, 'visited_site');
+      const isNewContact = data.is_new_contact; // Assuming the API returns this information
+      const tags = isNewContact ? 'full_site_visit,new_contact' : 'full_site_visit,existing_contact_updated';
+      
+      await updateContactViaApiGateway(data.contact_id, tags, 'visited_site');
 
-      return { status: 'sent', message: 'Request sent successfully' };
+      return { status: 'sent', message: 'Request sent successfully', isNewContact };
     } else {
       console.error('Failed to save contact: Contact ID is missing');
       throw new Error('Failed to save contact: Contact ID is missing');
@@ -149,7 +156,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Update contact if ID is present
     if (utmValues.contact_internal_ID) {
-      updateContactViaApiGateway(utmValues.contact_internal_ID);
+      updateContactViaApiGateway(utmValues.contact_internal_ID, 'partial_site_visit', 'visited_site');
     }
   }
 
