@@ -10,6 +10,10 @@
 // SAMPLE URL
 //  https://ehp.dev/PitchDeck_FAQ/faq?utm_source=crm&utm_medium=email&utm_campaign=investor_outreach&email=grant.c.parkinson@gmail.com&contact_external_ID=28&deal_ID=27001951145&contact_internal_ID=27067037975&contact_name=Grant%20Parkinson&contact_phone=3609908088&deal_ID=27001951145
 
+
+
+// sample url for contact id
+// https://www.ehp.dev/?contact_internal_ID=12345
 // Configuration
 console.log("Script loaded");
 const config = {
