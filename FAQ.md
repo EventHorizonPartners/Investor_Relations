@@ -144,6 +144,7 @@ permalink: /faq
           </div>
         </div>
       </div>
+    </div>  
       <!-- Strategy and Objectives Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
