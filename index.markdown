@@ -312,6 +312,44 @@ title: EHP
                 </div>
               </div>
             </div>
+                        <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                  3.2. How do you cultivate a team of financial technology trailblazers?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  We're building a community of passionate innovators:
+                  <ul>
+                    <li>Competitive compensation with equity participation: We believe in shared success</li>
+                    <li>Cutting-edge work with real-world impact: Innovate and see your ideas move markets</li>
+                    <li>Clear growth opportunities: Your ambition shapes your career here</li>
+                    <li>Culture of relentless curiosity: We celebrate questions, ideas, and continuous learning</li>
+                    <li>Collaborative innovation: Regular knowledge-sharing and hackathons keep us at the forefront</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                  3.3. How do you ensure the continuity of your revolutionary approach?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  Our succession planning fuels sustained innovation:
+                  <ul>
+                    <li>Cross-training creates well-rounded experts and ensures continuity</li>
+                    <li>Meticulous self-documentation builds an evolving knowledge base</li>
+                    <li>"Fire drill" simulations empower team members and uncover fresh perspectives</li>
+                    <li>Our "Quant Factory" captures our collective intelligence, continually strengthening our edge</li>
+                  </ul>
+                  At Event Horizon Partners, we're not just running a fund; we're creating a machine that is worthy of all our attention.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
