@@ -148,11 +148,61 @@ title: EHP
         </div>
       </div>
     </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
+          2. Performance and Risk Management
+        </button>
+      </h2>
+      <div id="collapseIntro" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <div class="accordion" id="sub-accordionIntro">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                  2.1. What has been your historical performance?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  Our fund has shown consistent growth and adaptability:
+                  <ul>
+                    <li>From January 2023 to September 2024, we achieved a cumulative return of 14.15%</li>
+                    <li>Recent performance highlights include monthly net returns of 6% in July 2024, 4% in August 2024, and 3% in September 2024</li>
+                    <li>We've demonstrated the ability to generate positive returns in various market conditions, including during bearish periods</li>
+                  </ul>
+                  <img src="{{ site.baseurl }}/assets/images/FAQ_img/2.1_monthROR.png" alt="Monthly Returns">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                  2.2. How do you manage risk?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  Our risk management is multi-faceted and deeply integrated into our process:
+                  <ul>
+                    <li>Diversification across multiple, uncorrelated trading models and instruments</li>
+                    <li>Real-time monitoring and automated risk controls</li>
+                    <li>Regular stress testing and scenario analysis</li>
+                    <li>Adaptive risk allocation based on market conditions and model performance</li>
+                    <li>Independent risk management team that validates all models and strategies</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Leadership Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeadership" aria-expanded="true" aria-controls="collapseLeadership">
-          Leadership
+          3. Team and Expertise
         </button>
       </h2>
       <div id="collapseLeadership" class="accordion-collapse collapse show">
@@ -161,7 +211,7 @@ title: EHP
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingTwo">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="true" aria-controls="sub-collapseTwo">
-                  Who are the key people behind Event Horizon Partners?
+                  3.1. Who are the visionaries leading Event Horizon Partners?
                 </button>
               </h2>
               <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
