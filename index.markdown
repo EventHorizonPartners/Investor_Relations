@@ -37,13 +37,13 @@ title: EHP
 
 <!-- FAQ section -->
 <div class="container faq-container mt-4">
-  <h1 class="text-center">Frequently Asked Questions</h1>
+  <h1 class="text-center">Event Horizon Partners: Comprehensive Investor FAQ</h1>
   <div class="accordion" id="accordionPanelsStayOpenExample">
     <!-- Introduction Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
-          Introduction
+          1. Core Strategy and AI/ML Approach
         </button>
       </h2>
       <div id="collapseIntro" class="accordion-collapse collapse show">
@@ -52,12 +52,20 @@ title: EHP
             <div class="accordion-item">
               <h2 class="accordion-header" id="sub-headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
-                  What is Event Horizon Partners?
+                  1.1. How does Event Horizon Partners leverage technology in its investment strategy?
                 </button>
               </h2>
               <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
                 <div class="accordion-body">
-                  Event Horizon Partners is a quantitative hedge fund that uses advanced machine learning and AI to build fully automated trading models. Our models are designed to adapt to various market conditions, working together to balance risk and optimize performance. We continually refine our processes to ensure our models evolve and improve over time.
+                  Event Horizon Partners is at the forefront of applying data science and engineering to quantitative investing:
+                  <ul>
+                    <li>We use cutting-edge machine learning and AI to build our automated trading models</li>
+                    <li>Our technology stack is optimized for alpha generation, beta management, and volatility control</li>
+                    <li>We've implemented a fully systematic, model-driven approach powered by advanced algorithms</li>
+                    <li>Our systems are designed to minimize correlations and maximize strategy diversity</li>
+                    <li>We leverage our technology to trade across a wide range of instruments and timeframes</li>
+                  </ul>
+                  <img src="{{ site.baseurl }}/assets/images/FAQ_img/1.1_whatwedo.png" alt="What we do">
                 </div>
               </div>
             </div>
