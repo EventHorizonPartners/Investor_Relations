@@ -216,6 +216,11 @@ title: EHP
               </h2>
               <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
                 <div class="accordion-body">
+                  Our co-founders blend expertise with passion:
+                  <ul>
+                    <li>Roger Parkinson (Technology): With 25 years of experience in data-driven, automated decision-making in financial services, Roger is our technological mastermind. His background in US Special Forces and Military Intelligence brings a unique perspective to problem-solving and strategy execution. Roger's passion for pushing the boundaries of what's possible in quantitative finance drives our relentless innovation.</li>
+                    <li>Brad Parkinson (Operations): Brad's 21-year journey in financial services has honed his expertise in system stability and risk management. His unwavering commitment to operational excellence ensures that our cutting-edge strategies are implemented with precision and reliability. Brad's vision for a seamlessly functioning quantitative hedge fund keeps us at the forefront of the industry.</li>
+                  </ul>
                   <div class="row row-cols-1 g-4">
                     <!-- Roger Parkinson -->
                     <div class="col">
@@ -303,6 +308,7 @@ title: EHP
                       </div>
                     </div>
                   </div>
+                  Together, Roger and Brad form a dynamic duo, blending technological innovation with operational mastery to create a truly next-generation investment approach.
                 </div>
               </div>
             </div>
