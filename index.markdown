@@ -69,6 +69,81 @@ title: EHP
                 </div>
               </div>
             </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                  1.2. What makes your AI/ML approach innovative?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  Our AI/ML strategy pushes the boundaries of quantitative investing:
+                  <ul>
+                    <li>We've built our entire process from the ground up using the latest ML techniques</li>
+                    <li>Our models employ online learning and transfer learning for real-time adaptation</li>
+                    <li>We use advanced feature engineering, including deep learning for pattern recognition</li>
+                    <li>Our ensemble methods represent a new paradigm in capturing market behavior</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                  1.3. Can you explain the technological innovation behind your "Quant Factory"?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  The Quant Factory is our proprietary AI-driven research and development platform with a path to production:
+                  <ul>
+                    <li>It uses advanced algorithms to autonomously explore new strategies and data sources</li>
+                    <li>Our systems perform continuous model training and evaluation using distributed computing</li>
+                    <li>We've implemented a rigorous, data-driven selection process for production models</li>
+                    <li>The platform provides seamless integration between research and production environments and minimal deploy time</li>
+                    <li>It employs real-time monitoring and adaptive algorithms to respond to market dynamics</li>
+                  </ul>
+                  <img src="{{ site.baseurl }}/assets/images/FAQ_img/1.3_quantfactory.png" alt="Quant Factory">
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                 1.4. How does your technology adapt to evolving markets?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  Our adaptive technology stack ensures we remain effective as markets change:
+                  <ul>
+                    <li>We continuously update our models</li>
+                    <li>Our systems perform automated retraining and validation against recent market data</li>
+                    <li>We've implemented specialized ensemble models for regime change detection and adaptation</li>
+                    <li>Our research pipeline continuously integrates new ML techniques</li>
+                    <li>Our diverse, multi-strategy approach leverages technology to reduce concentration risk</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="sub-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
+                 1.5. How do you balance technological advancement with model interpretability?
+                </button>
+              </h2>
+              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
+                <div class="accordion-body">
+                  We're committed to advancing both the power and transparency of our technology:
+                  <ul>
+                    <li>We implement state-of-the-art interpretable ML techniques like LIME</li>
+                    <li>Our systems include automated model audit tools to validate decision processes</li>
+                    <li>We maintain a hybrid approach, combining complex AI with simpler, interpretable models</li>
+                    <li>We've developed custom performance attribution tools for granular return analysis</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
