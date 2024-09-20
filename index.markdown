@@ -75,7 +75,9 @@ title: EHP
             <li>Maximum Drawdown: -3.5% (benchmark: -8.5%)</li>
             <li>Alpha Generation: 11.2% over benchmark</li>
           </ul>
-          <img src="{{ site.baseurl }}/assets/images/FAQ_img/2_performance.png" alt="performance">
+          <div class="responsive-image-container">
+            <img src="{{ site.baseurl }}/assets/images/FAQ_img/2_performance.png" alt="performance">
+          </div>
           <p>These results demonstrate the effectiveness of our scientific method across various market conditions.</p>
         </div>
       </div>
@@ -96,8 +98,9 @@ title: EHP
             <li>Employs rigorous selection criteria favoring generalization</li>
             <li>Integrates seamlessly from research to production</li>
           </ul>
-          <img src="{{ site.baseurl }}/assets/images/FAQ_img/1.3_quantfactory.png" alt="quantfactory">
-        </div>
+          <div class="responsive-image-container">
+            <img src="{{ site.baseurl }}/assets/images/FAQ_img/1.3_quantfactory.png" alt="quantfactory">
+          </div>
       </div>
     </div>
     <!-- Leadership Section -->
@@ -229,9 +232,13 @@ title: EHP
           <p>We're seeking partners to help accelerate our development:</p>
           <ul>
             <li>Current focus: Scaling to $1 Billion AUM</li>
-            <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growthmarkets.png" alt="1 Billion AUM">
+            <div class="responsive-image-container">
+              <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growthmarkets.png" alt="1 Billion AUM">
+            </div>
             <li>Future goal: Expanding to $30 Billion+ AUM in major global markets</li>
-            <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growth_intl.png" alt="30 Billion AUM">
+            <div class="responsive-image-container">
+              <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growth_intl.png" alt="30 Billion AUM">
+            </div>
             <li>Ongoing commitment to research and technological advancement</li>
           </ul>
         </div>
