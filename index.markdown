@@ -81,6 +81,7 @@ title: EHP
           </div>
       </div>
     </div>
+  </div>
     <!-- Leadership Section -->
     <div class="accordion-item">
       <h2 class="accordion-header">
