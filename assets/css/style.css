@@ -387,7 +387,7 @@ img {
 
 /* General FAQ Container Styles */
 .faq-container {
-  background: #333;
+  background: rgba(255, 255, 255, 0.1);
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
