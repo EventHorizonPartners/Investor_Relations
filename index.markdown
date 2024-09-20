@@ -9,7 +9,7 @@ title: EHP
       <span class="event-horizon">EVENT HORIZON</span>
       <span class="partners">PARTNERS</span>
     </h1>
-    <p>Interested in how we use machine learning and AI to drive our automated trading systems? Browse our deck and FAQ, and schedule a call with our founder to find out if we’re a good match for your portfolio</p>
+    <p>Interested in how we use machine learning and AI to drive our automated trading systems? Browse our FAQ, and schedule a call with our founder to find out if we’re a good match for your portfolio</p>
     <!-- add part here to track some metrics on calendly clicking -->
     <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
   </div>
@@ -52,6 +52,7 @@ title: EHP
             <li>Sharpe Ratio: 1.8 (benchmark: 0.3)</li>
             <li>Maximum Drawdown: -3.5% (benchmark: -8.5%)</li>
             <li>Alpha Generation: 11.2% over benchmark</li>
+            <li>Outperformed in **4 out of 5** different market conditions</li>
           </ul>
           <div class="responsive-image-container">
             <img src="{{ site.baseurl }}/assets/images/FAQ_img/2_performance.png" alt="performance">
@@ -75,6 +76,10 @@ title: EHP
             <li>Utilizes distributed computing for efficient model training and evaluation</li>
             <li>Employs rigorous selection criteria favoring generalization</li>
             <li>Integrates seamlessly from research to production</li>
+            <li>Ensures effective model generalization through proprietary techniques</li>
+            <li>Adapts to market changes using reinforcement learning and regime detection</li>
+            <li>Balances innovation with practicality, focusing on performance and risk management</li>
+            <li>Combines complex AI models with simpler, robust models for comparison</li>          
           </ul>
           <div class="responsive-image-container">
             <img src="{{ site.baseurl }}/assets/images/FAQ_img/1.3_quantfactory.png" alt="quantfactory">
