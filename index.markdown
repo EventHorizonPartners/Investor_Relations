@@ -109,20 +109,23 @@ title: EHP
       </h2>
       <div id="collapseLeadership" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <div class="accordion" id="sub-accordionLeadership">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="sub-headingTwo">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="true" aria-controls="sub-collapseTwo">
-                  3.1. Who are the visionaries leading Event Horizon Partners?
-                </button>
-              </h2>
-              <div id="sub-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionLeadership">
-                <div class="accordion-body">
-                  Our co-founders blend expertise with passion:
+                  <p>Our team is led by two experienced professionals:</p>
+                  <ul>  
+                    <li><strong>Roger Parkinson (Technology):</strong>
                   <ul>
-                    <li>Roger Parkinson (Technology): With 25 years of experience in data-driven, automated decision-making in financial services, Roger is our technological mastermind. His background in US Special Forces and Military Intelligence brings a unique perspective to problem-solving and strategy execution. Roger's passion for pushing the boundaries of what's possible in quantitative finance drives our relentless innovation.</li>
-                    <li>Brad Parkinson (Operations): Brad's 21-year journey in financial services has honed his expertise in system stability and risk management. His unwavering commitment to operational excellence ensures that our cutting-edge strategies are implemented with precision and reliability. Brad's vision for a seamlessly functioning quantitative hedge fund keeps us at the forefront of the industry.</li>
+                    <li>25+ years in quantitative finance and data-driven decision making</li>
+                    <li>Background in data, complex systems and machine learning</li>
+                    <li>Focuses on continual improvement of our algorithmic strategies</li>
                   </ul>
+                </li>
+                  <li><strong>Brad Parkinson (Operations):</strong>
+                    <ul>
+                    <li>21 years in financial services, specializing in risk management</li>
+                    <li>Expertise in translating complex strategies into reliable systems</li>
+                    <li>Ensures operational excellence and regulatory compliance</li>
+                  </ul>
+                </li>
+          </ul>
                   <div class="row row-cols-1 g-4">
                     <!-- Roger Parkinson -->
                     <div class="col">
@@ -214,44 +217,6 @@ title: EHP
                 </div>
               </div>
             </div>
-                        <div class="accordion-item">
-              <h2 class="accordion-header" id="sub-headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
-                  3.2. How do you cultivate a team of financial technology trailblazers?
-                </button>
-              </h2>
-              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
-                <div class="accordion-body">
-                  We're building a community of passionate innovators:
-                  <ul>
-                    <li>Competitive compensation with equity participation: We believe in shared success</li>
-                    <li>Cutting-edge work with real-world impact: Innovate and see your ideas move markets</li>
-                    <li>Clear growth opportunities: Your ambition shapes your career here</li>
-                    <li>Culture of relentless curiosity: We celebrate questions, ideas, and continuous learning</li>
-                    <li>Collaborative innovation: Regular knowledge-sharing and hackathons keep us at the forefront</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="sub-headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="sub-collapseOne">
-                  3.3. How do you ensure the continuity of your revolutionary approach?
-                </button>
-              </h2>
-              <div id="sub-collapseOne" class="accordion-collapse collapse show" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionIntro">
-                <div class="accordion-body">
-                  Our succession planning fuels sustained innovation:
-                  <ul>
-                    <li>Cross-training creates well-rounded experts and ensures continuity</li>
-                    <li>Meticulous self-documentation builds an evolving knowledge base</li>
-                    <li>"Fire drill" simulations empower team members and uncover fresh perspectives</li>
-                    <li>Our "Quant Factory" captures our collective intelligence, continually strengthening our edge</li>
-                  </ul>
-                  At Event Horizon Partners, we're not just running a fund; we're creating a machine that is worthy of all our attention.
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -270,7 +235,7 @@ title: EHP
             <li>Current focus: Scaling to $1 Billion AUM</li>
             <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growthmarkets.png" alt="1 Billion AUM">
             <li>Future goal: Expanding to $30 Billion+ AUM in major global markets</li>
-            <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growth_intl_.png" alt="30 Billion AUM">
+            <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growth_intl.png" alt="30 Billion AUM">
             <li>Ongoing commitment to research and technological advancement</li>
           </ul>
         </div>
