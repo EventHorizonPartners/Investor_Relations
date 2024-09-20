@@ -197,14 +197,15 @@ footer img.footer-logo  {
 .responsive-image-container {
   width: 100%;
   margin: 20px 0;
+  text-align: left; /* Ensures content inside is left-aligned */
 }
 
 .responsive-image-container img {
   width: 100%;
   height: auto;
   max-width: 800px; /* Adjust this value as needed */
-  display: block;
-  margin: 0 auto;
+  display: inline-block; /* Changed from block to inline-block */
+  margin: 0; /* Removed auto margins */
 }
 
 @media (max-width: 768px) {
