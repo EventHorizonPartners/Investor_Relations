@@ -122,9 +122,7 @@ title: EHP
                   <h5 class="faq-card-title">Roger Parkinson</h5>
                   <p class="faq-card-subtitle">Co-Founder and Technology Lead</p>
                   <ul class="faq-list-unstyled">
-                    <li>Co-Founder and Technology Lead with 25 years of experience in data science at GE Capital, Bank of America, Wells Fargo, and Event Horizon Partners.</li>
-                    <li>Prior to his career in applied financial data science, Roger served in US Special Forces and Military Intelligence.</li>
-                    <li>He is passionate about leveraging cutting-edge technology to solve complex problems and enjoys the challenge of creating systems that can continuously evolve and improve.</li>
+                    <li>25+ years in quantitative finance, with deep expertise in data-driven decision-making, engineering complex financial systems, and advancing machine learning strategies.</li>
                   </ul>
                   <div class="contact-card">
                     <h6>Contact Information</h6>
@@ -167,7 +165,7 @@ title: EHP
                     <li>Co-Founder and Operations Lead with 21 years of experience at Wells Fargo and JP Morgan, focusing on system stability and innovative trading strategies.</li>
                     <li>Brad's deep curiosity and relentless drive for innovation have shaped his career in financial services. He thrives on optimizing operations and ensuring that the systems we build are not only stable but also capable of adapting to new challenges.</li>
                   </ul>
-                  <div class="contact-card">
+                  <!-- <div class="contact-card">
                     <h6>Contact Information</h6>
                     <p>
                       Email: <a href="mailto:brad.parkinson@ehp.dev">brad.parkinson@ehp.dev</a>
@@ -186,7 +184,7 @@ title: EHP
                         <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn">
                       </a>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
