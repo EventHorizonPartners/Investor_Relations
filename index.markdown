@@ -103,7 +103,7 @@ title: EHP
       </h2>
       <div id="collapseLeadership" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
             <!-- Roger Parkinson -->
             <div class="col">
               <div class="faq-card bg-dark text-white shadow-lg h-100">
