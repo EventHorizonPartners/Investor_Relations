@@ -613,6 +613,21 @@ img {
 .modal-header .modal-title {
   color: #f5f5f5; /* Light text color for the title */
 }
+.modal-title {
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.modal-subtitle {
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.modal-content {
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
 
 .modal-body {
   background-color: #2b2b2b; /* Matching the body background */
