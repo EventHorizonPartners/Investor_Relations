@@ -46,18 +46,25 @@ title: EHP
       </h2>
       <div id="collapsePerformance" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>Our systematic approach has yielded strong results:</p>
+          <p><strong>Our technology delivers</strong>. We’ve beaten the benchmark across every key measure:</p>
           <ul>
-            <li>Total Return: 12.8% (benchmark: 1.6%)</li>
-            <li>Sharpe Ratio: 1.8 (benchmark: 0.3)</li>
-            <li>Maximum Drawdown: -3.5% (benchmark: -8.5%)</li>
-            <li>Alpha Generation: 11.2% over benchmark</li>
-            <li>Outperformed in **4 out of 5** different market conditions</li>
+            <li><strong>Total Return:</strong> 12.8% vs. the benchmark’s 1.6%.</li>
+            <li><strong>Sharpe Ratio:</strong> 1.8, far above the benchmark’s 0.3. Superior returns with less risk.</li>
+            <li><strong>Maximum Drawdown:</strong> Capped at -3.5%, compared to the benchmark’s -8.5%.</li>
+            <li><strong>Beta:</strong> 0.65, showing lower sensitivity to market swings.</li>
+            <li><strong>Alpha:</strong> Generated 11.2% over the benchmark.</li>
+            <li><strong>Downside Protection:</strong> Gained 6.3% during an 8.5% market drop.</li>
+          </ul>
+          <p><strong>Our technology delivers</strong>. We’ve beaten the benchmark across every key measure:</p>
+          <ul>
+            <li>**July 2024:** 6%</li>
+            <li>**August 2024:** 4%</li>
+            <li>**September 2024:** 3% so far</li>
           </ul>
           <div class="responsive-image-container">
             <img src="{{ site.baseurl }}/assets/images/FAQ_img/2_performance.png" alt="performance">
           </div>
-          <p>These results demonstrate the effectiveness of our scientific method across various market conditions.</p>
+          <p>We’ve outperformed in 4 out of 5 market conditions, proving the strength and adaptability of our strategies.</p>
         </div>
       </div>
     </div>
@@ -65,22 +72,23 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuantFactory" aria-expanded="true" aria-controls="collapseQuantFactory">
-          3. The Quant Factory
+          3. <strong>Our AI-Driven Quant Factory: Powering Continuous Innovation</strong>
         </button>
       </h2>
       <div id="collapseQuantFactory" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>Our proprietary Model Training and Selection platform:</p>
+          <p>Our AI-powered Quant Factory fuels the innovation and performance of our automated trading systems, continuously refining strategies through data-driven precision.</p>
           <ul>
-            <li>Systematically explores new trading strategies</li>
-            <li>Utilizes distributed computing for efficient model training and evaluation</li>
-            <li>Employs rigorous selection criteria favoring generalization</li>
-            <li>Integrates seamlessly from research to production</li>
-            <li>Ensures effective model generalization through proprietary techniques</li>
-            <li>Adapts to market changes using reinforcement learning and regime detection</li>
-            <li>Balances innovation with practicality, focusing on performance and risk management</li>
-            <li>Combines complex AI models with simpler, robust models for comparison</li>          
+            <li><strong>Distributed Computing:</strong> Speeds up model training, testing, and deployment.</li>
+            <li><strong>Constant Innovation:</strong> New strategies are tested relentlessly, keeping us ahead.</li>
+            <li><strong>Alpha Selection:</strong> Only the top-performing signals survive. </li>
+            <li><strong>Stringent Pipeline:</strong> Models progress through Candidate, Challenger, Champion, to Retirement—ensuring peak performance.</li>
+            <li><strong>Generalization Focus:</strong> Robust models that excel across diverse market conditions.</li>
+            <li><strong>Seamless Integration:</strong> Research and production work together, allowing for fast, stable deployment.</li>
+            <li><strong>Adaptive AI:</strong> Our systems learn and evolve with the market, ensuring agility and resilience.</li>
+            <li><strong>Balanced Approach:</strong> We combine cutting-edge AI with reliable models for consistent real-world performance.</li>          
           </ul>
+          <p>This is how we stay at the forefront—continuously evolving to deliver results that matter.</p>
           <div class="responsive-image-container">
             <img src="{{ site.baseurl }}/assets/images/FAQ_img/1.3_quantfactory.png" alt="quantfactory">
           </div>
@@ -91,27 +99,15 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeadership" aria-expanded="true" aria-controls="collapseLeadership">
-          1. Leadership
+          4. Who We Are
         </button>
       </h2>
       <div id="collapseLeadership" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>Our team is led by two experienced professionals:</p>
+          <p>Event Horizon Partners is led by seasoned experts in data science, quantitative finance, and AI:</p>
           <ul>  
-            <li><strong>Roger Parkinson (Technology):</strong>
-              <ul>
-                <li>25+ years in quantitative finance and data-driven decision making</li>
-                <li>Background in data, complex systems and machine learning</li>
-                <li>Focuses on continual improvement of our algorithmic strategies</li>
-              </ul>
-            </li>
-            <li><strong>Brad Parkinson (Operations):</strong>
-              <ul>
-                <li>21 years in financial services, specializing in risk management</li>
-                <li>Expertise in translating complex strategies into reliable systems</li>
-                <li>Ensures operational excellence and regulatory compliance</li>
-              </ul>
-            </li>
+            <li><strong>Roger Parkinson (Technology):</strong> 25+ years in quantitative finance, with deep expertise in data-driven decision-making, engineering complex financial systems, and advancing machine learning strategies.</li>
+            <li><strong>Brad Parkinson (Operations):</strong> 21 years in financial services, specializing in risk management and building reliable, compliant systems that deliver results.</li>
           </ul>
           <div class="row row-cols-1 g-4">
             <!-- Roger Parkinson -->
@@ -200,7 +196,7 @@ title: EHP
               </div>
             </div>
           </div>
-          <p>Together, Roger and Brad form a dynamic duo, blending technological innovation with operational mastery to create a truly next-generation investment approach.</p>
+          <p>Our team thrives on iteration, scientific rigor, and a relentless drive for improvement. As we continue to push the boundaries of AI in trading, we’re expanding our team to fuel even greater innovation.</p>
         </div>
       </div>
     </div>  
@@ -208,22 +204,20 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrowthStrategy" aria-expanded="true" aria-controls="collapseGrowthStrategy">
-          2. Growth Strategy
+          5. Our Growth Strategy
         </button>
       </h2>
       <div id="collapseGrowthStrategy" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>We're seeking partners to help accelerate our development:</p>
           <ul>
-            <li>Current focus: Scaling to $1 Billion AUM</li>
+            <li>Event Horizon Partners is poised for significant growth. We are actively scaling our assets under management (AUM) to $1 Billion while continuing our commitment to research and technological advancement.</li>
             <div class="responsive-image-container">
               <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growthmarkets.png" alt="1 Billion AUM">
             </div>
-            <li>Future goal: Expanding to $30 Billion+ AUM in major global markets</li>
+            <li>We see opportunities to accelerate growth by expanding our model portfolio and refining our AI strategies. Our robust, AI-driven infrastructure supports rapid scaling, allowing us to capture more opportunities in the evolving financial markets.</li>
             <div class="responsive-image-container">
               <img src="{{ site.baseurl }}/assets/images/FAQ_img/5_growth_intl.png" alt="30 Billion AUM">
             </div>
-            <li>Ongoing commitment to research and technological advancement</li>
           </ul>
         </div>
       </div>
@@ -232,24 +226,30 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInvestmentOpportunity" aria-expanded="true" aria-controls="collapseInvestmentOpportunity">
-          3. Investment Opportunity
+          6. Your Investment Opportunity
         </button>
       </h2>
       <div id="collapseInvestmentOpportunity" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>We offer investors the chance to participate in the growth of our innovative approach:</p>
+          <p>Event Horizon Partners offers a unique chance to invest in the future of AI-powered quantitative trading. Our flexible structures are built for transparency and long-term wealth creation.</p>
+          <p><strong>Two Investment Options:</strong></p>
           <ul>
-            <li>Monthly liquidity</li>
-            <li>Transparent reporting: Daily updates, monthly newsletters, annual reviews</li>
-            <li>Fee structure: 2% management, 30% performance</li>
+            <li><strong>LLC:</strong> Ideal for those seeking long-term growth. The LLC offers future income from LP commissions, with significant upside as our assets grow.</li>
+            <li><strong>LP:</strong> Designed for investors who value liquidity. The LP provides monthly redemption, giving you regular access to your capital while reaping the benefits of our advanced trading strategies.</li>
           </ul>
-          <p>Our aim is to build long-term partnerships with investors who want to benefit from quantitative trading through scientific rigor and technological innovation.</p>
+          <p><strong>Why Invest with Us?</strong></p>
+          <ul>
+            <li><strong>Aligned Success:</strong> 2% management fee, 30% performance fee—our success is tied to yours.</li>
+            <li><strong>Monthly Liquidity:</strong> LP investors can redeem funds every month, offering control and flexibility.</li>
+            <li><strong>Full Transparency:</strong> Daily performance updates and comprehensive reporting give you clear visibility into your investment.</li>
+          </ul>
+          <p>We’re building long-term partnerships with investors who believe in AI-driven finance. Whether you want the steady income from LLC commissions or the flexibility and returns of the LP, we’re here to help you capitalize on cutting-edge innovation.</p>
         </div>
       </div>
     </div>
   </div>
   <div class="disclosures mt-4">
     <p><strong>Risk Disclosure:</strong> Futures and options trading contains substantial risk and is not for every investor. An investor could potentially lose all or more than the initial investment. Risk capital is money that can be lost without jeopardizing one's financial security or lifestyle. Only risk capital should be used for trading and only those with sufficient risk capital should consider trading. Past performance is not necessarily indicative of future results.</p>
-    <p><strong>Hypothetical Performance Disclosure:</strong> Hypothetical performance results have many inherent limitations, some of which are described below. No representation is being made that any account will or is likely to achieve profits or losses similar to those shown; in fact, there are frequently sharp differences between hypothetical performance results and the actual results subsequently achieved by any particular trading program. One of the limitations of hypothetical performance results is that they are generally prepared with the benefit of hindsight. In addition, hypothetical trading does not involve financial risk, and no hypothetical trading record can completely account for the impact of financial risk of actual trading. For example, the ability to withstand losses or to adhere to a particular trading program in spite of trading losses are material points which can also adversely affect actual trading results. There are numerous other factors related to the markets in general or to the implementation of any specific trading program which cannot be fully accounted for in the preparation of hypothetical performance results and all which can adversely affect trading results.</p>
+    <p><strong>Hypothetical Performance Disclosure:</strong> Hypothetical performance results have many inherent limitations, some of which are described below. No representation is being made that any account will or is likely to achieve profits or losses similar to those shown; in fact, there are frequently sharp differences between hypothetical performance results and the actual results subsequently achieved by any particular trading program.</p>
   </div>
 </div>
