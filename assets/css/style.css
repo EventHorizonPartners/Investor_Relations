@@ -620,6 +620,10 @@ img {
   line-height: 1.5;
 }
 
+.modal-text-content p:last-child {
+  margin-bottom: 0; /* Remove margin from the last paragraph */
+}
+
 .modal-body {
   background-color: #2b2b2b; /* Matching the body background */
 }
