@@ -15,7 +15,7 @@ title: EHP
   </div>
 <!-- FAQ section -->
 <div class="container faq-container mt-4">
-  <h1 class="text-center">Event Horizon Partners: Advancing Quantitative Trading Through Science</h1>
+  <h1 class="text-center">Event Horizon Partners: Quantitative Trading Through Science</h1>
   <div class="accordion" id="accordionPanelsStayOpenExample">
     <!-- Introduction Section -->
     <div class="accordion-item">
@@ -103,12 +103,12 @@ title: EHP
       </h2>
       <div id="collapseLeadership" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <div class="row row-cols-1 g-4">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
             <!-- Roger Parkinson -->
             <div class="col">
-              <div class="faq-card faq-card-horizontal bg-dark text-white shadow-lg">
+              <div class="faq-card bg-dark text-white shadow-lg h-100">
                 <div class="faq-card-img">
-                  <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson" style="width: 150px; height: 150px;">
+                  <img src="{{ site.baseurl }}/assets/images/people/roger_linkedin.jfif" alt="Roger Parkinson">
                   <div class="logos-container mt-3">
                     <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo">
                     <img src="{{ site.baseurl }}/assets/images/logos/specialforces_logo.png" alt="Special Forces Logo">
@@ -125,22 +125,12 @@ title: EHP
                   </ul>
                   <div class="contact-card">
                     <h6>Contact Information</h6>
-                    <p>
-                      Email: <a href="mailto:roger.parkinson@ehp.dev">roger.parkinson@ehp.dev</a>
-                    </p>
-                    <p>
-                      Phone: <a href="tel:+15035120333">(503) 512-0333</a>
-                    </p>
+                    <p>Email: <a href="mailto:roger.parkinson@ehp.dev">roger.parkinson@ehp.dev</a></p>
+                    <p>Phone: <a href="tel:+15035120333">(503) 512-0333</a></p>
                     <div class="contact-icons">
-                      <a href="mailto:roger.parkinson@ehp.dev">
-                        <img src="{{ site.baseurl }}/assets/images/email_icon.png" alt="Email">
-                      </a>
-                      <a href="tel:+15035120333">
-                        <img src="{{ site.baseurl }}/assets/images/phone_icon.png" alt="Phone">
-                      </a>
-                      <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank">
-                        <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn">
-                      </a>
+                      <a href="mailto:roger.parkinson@ehp.dev"><img src="{{ site.baseurl }}/assets/images/email_icon.png" alt="Email"></a>
+                      <a href="tel:+15035120333"><img src="{{ site.baseurl }}/assets/images/phone_icon.png" alt="Phone"></a>
+                      <a href="https://www.linkedin.com/in/roger-parkinson/" target="_blank"><img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn"></a>
                     </div>
                   </div>
                 </div>
@@ -148,9 +138,9 @@ title: EHP
             </div>
             <!-- Brad Parkinson -->
             <div class="col">
-              <div class="faq-card faq-card-horizontal bg-dark text-white shadow-lg">
+              <div class="faq-card bg-dark text-white shadow-lg h-100">
                 <div class="faq-card-img">
-                  <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson" style="width: 150px; height: 150px;">
+                  <img src="{{ site.baseurl }}/assets/images/people/brad.jfif" alt="Brad Parkinson">
                   <div class="logos-container mt-3">
                     <img src="{{ site.baseurl }}/assets/images/logos/ehp_logo.png" alt="EHP Logo">
                     <img src="{{ site.baseurl }}/assets/images/logos/wells_fargo_logo.png" alt="Wells Fargo Logo">
@@ -163,26 +153,7 @@ title: EHP
                   <ul class="faq-list-unstyled">
                     <li>21 years in financial services, specializing in risk management and building reliable, compliant systems that deliver results.</li>
                   </ul>
-                  <!-- <div class="contact-card">
-                    <h6>Contact Information</h6>
-                    <p>
-                      Email: <a href="mailto:brad.parkinson@ehp.dev">brad.parkinson@ehp.dev</a>
-                    </p>
-                    <p>
-                      Phone: <a href="tel:+15035120333">(503) 512-0333</a>
-                    </p>
-                    <div class="contact-icons">
-                      <a href="mailto:brad.parkinson@ehp.dev">
-                        <img src="{{ site.baseurl }}/assets/images/email_icon.png" alt="Email">
-                      </a>
-                      <a href="tel:+15035120333">
-                        <img src="{{ site.baseurl }}/assets/images/phone_icon.png" alt="Phone">
-                      </a>
-                      <a href="https://www.linkedin.com/in/brad-parkinson-b161031/" target="_blank">
-                        <img src="{{ site.baseurl }}/assets/images/linkedin_icon.png" alt="LinkedIn">
-                      </a>
-                    </div>
-                  </div> -->
+                  <!-- Brad's contact information is commented out in the original code -->
                 </div>
               </div>
             </div>
