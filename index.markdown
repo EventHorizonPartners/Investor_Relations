@@ -104,11 +104,6 @@ title: EHP
       </h2>
       <div id="collapseLeadership" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>Event Horizon Partners is led by seasoned experts in data science, quantitative finance, and AI:</p>
-          <ul>  
-            <li><strong>Roger Parkinson (Technology):</strong> 25+ years in quantitative finance, with deep expertise in data-driven decision-making, engineering complex financial systems, and advancing machine learning strategies.</li>
-            <li><strong>Brad Parkinson (Operations):</strong> 21 years in financial services, specializing in risk management and building reliable, compliant systems that deliver results.</li>
-          </ul>
           <div class="row row-cols-1 g-4">
             <!-- Roger Parkinson -->
             <div class="col">
@@ -196,6 +191,11 @@ title: EHP
               </div>
             </div>
           </div>
+          <p>Event Horizon Partners is led by seasoned experts in data science, quantitative finance, and AI:</p>
+          <ul>  
+            <li><strong>Roger Parkinson (Technology):</strong> 25+ years in quantitative finance, with deep expertise in data-driven decision-making, engineering complex financial systems, and advancing machine learning strategies.</li>
+            <li><strong>Brad Parkinson (Operations):</strong> 21 years in financial services, specializing in risk management and building reliable, compliant systems that deliver results.</li>
+          </ul>
           <p>Our team thrives on iteration, scientific rigor, and a relentless drive for improvement. As we continue to push the boundaries of AI in trading, we’re expanding our team to fuel even greater innovation.</p>
         </div>
       </div>
