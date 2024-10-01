@@ -162,8 +162,7 @@ title: EHP
                   <h5 class="faq-card-title">Brad Parkinson</h5>
                   <p class="faq-card-subtitle">Co-Founder and Operations Lead</p>
                   <ul class="faq-list-unstyled">
-                    <li>Co-Founder and Operations Lead with 21 years of experience at Wells Fargo and JP Morgan, focusing on system stability and innovative trading strategies.</li>
-                    <li>Brad's deep curiosity and relentless drive for innovation have shaped his career in financial services. He thrives on optimizing operations and ensuring that the systems we build are not only stable but also capable of adapting to new challenges.</li>
+                    <li>21 years in financial services, specializing in risk management and building reliable, compliant systems that deliver results.</li>
                   </ul>
                   <!-- <div class="contact-card">
                     <h6>Contact Information</h6>
@@ -189,11 +188,6 @@ title: EHP
               </div>
             </div>
           </div>
-          <p>Event Horizon Partners is led by seasoned experts in data science, quantitative finance, and AI:</p>
-          <ul>  
-            <li><strong>Roger Parkinson (Technology):</strong> 25+ years in quantitative finance, with deep expertise in data-driven decision-making, engineering complex financial systems, and advancing machine learning strategies.</li>
-            <li><strong>Brad Parkinson (Operations):</strong> 21 years in financial services, specializing in risk management and building reliable, compliant systems that deliver results.</li>
-          </ul>
           <p>Our team thrives on iteration, scientific rigor, and a relentless drive for improvement. As we continue to push the boundaries of AI in trading, we’re expanding our team to fuel even greater innovation.</p>
         </div>
       </div>
