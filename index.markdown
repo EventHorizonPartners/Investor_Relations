@@ -9,7 +9,7 @@ title: EHP
       <span class="event-horizon">EVENT HORIZON</span>
       <span class="partners">PARTNERS</span>
     </h1>
-    <p>Interested in how we use machine learning and AI to drive our automated trading systems? Browse our FAQ, and schedule a call with our founder to find out if we’re a good match for your portfolio</p>
+    <p>Welcome to Event Horizon Partners. We use AI, machine learning, and quantitative finance to outperform the market and seize new financial opportunities. Want to know how our cutting-edge tech drives returns? Explore our FAQ and schedule a call with our founder to see if we’re the right fit for your portfolio.</p>
     <!-- add part here to track some metrics on calendly clicking -->
     <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
   </div>
@@ -21,19 +21,19 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseApproach" aria-expanded="true" aria-controls="collapseApproach">
-          1. Our Approach
+          1. What We Do
         </button>
       </h2>
       <div id="collapseApproach" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>We apply advanced data science and machine learning to develop automated trading systems. Our focus is on:</p>
+          <p>At <strong>Event Horizon Partners</strong>, we use advanced data science and machine learning to build automated trading systems. Our mission? Four clear goals:</p>
           <ol>
-            <li>Consistent alpha generation</li>
-            <li>Precise beta management</li>
-            <li>Volatility control</li>
-            <li>Strategy diversification</li>
+            <li><strong>Generate Alpha:</strong> Beat the market consistently.</li>
+            <li><strong>Optimize Beta:</strong> Profit even when markets fall.</li>
+            <li><strong>Minimize Volatility:</strong> Keep returns stable.</li>
+            <li><strong>Diversify Algorithmically:</strong> Reduce risk with uncorrelated models.</li>
           </ol>
-          <p>Our goal is to create a robust, adaptive system that performs well across various market conditions.</p>
+          <p>Our technology-driven approach turns data into profit, creating trading portfolios built for performance.</p>
         </div>
       </div>
     </div>
@@ -91,7 +91,7 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeadership" aria-expanded="true" aria-controls="collapseLeadership">
-          4. Leadership
+          1. Leadership
         </button>
       </h2>
       <div id="collapseLeadership" class="accordion-collapse collapse show">
@@ -208,7 +208,7 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGrowthStrategy" aria-expanded="true" aria-controls="collapseGrowthStrategy">
-          5. Growth Strategy
+          2. Growth Strategy
         </button>
       </h2>
       <div id="collapseGrowthStrategy" class="accordion-collapse collapse show">
@@ -232,7 +232,7 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInvestmentOpportunity" aria-expanded="true" aria-controls="collapseInvestmentOpportunity">
-          6. Investment Opportunity
+          3. Investment Opportunity
         </button>
       </h2>
       <div id="collapseInvestmentOpportunity" class="accordion-collapse collapse show">
