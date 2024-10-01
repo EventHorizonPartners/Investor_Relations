@@ -72,7 +72,7 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuantFactory" aria-expanded="true" aria-controls="collapseQuantFactory">
-          3. <strong>Our AI-Driven Quant Factory: Powering Continuous Innovation</strong>
+          3. Our AI-Driven Quant Factory: Powering Continuous Innovation
         </button>
       </h2>
       <div id="collapseQuantFactory" class="accordion-collapse collapse show">
