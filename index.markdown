@@ -5,10 +5,10 @@ title: EHP
 <!-- Welcome Banner -->
 <div class="container mt-4">
   <div class="welcome-banner">
-    <!-- <h1 class="custom-font">
+    <h1 class="custom-font">
       <span class="event-horizon">EVENT HORIZON</span>
       <span class="partners">PARTNERS</span>
-    </h1> -->
+    </h1>
     <p>Welcome to Event Horizon Partners. We use AI, machine learning, and quantitative finance to outperform the market and seize new financial opportunities. Want to know how our cutting-edge tech drives returns? Explore our FAQ and schedule a call with our founder to see if we’re the right fit for your portfolio.</p>
     <!-- add part here to track some metrics on calendly clicking -->
     <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
