@@ -57,9 +57,8 @@ title: EHP
           </ul>
           <p><strong>Our technology delivers</strong>. We’ve beaten the benchmark across every key measure:</p>
           <ul>
-            <li>**July 2024:** 6%</li>
-            <li>**August 2024:** 4%</li>
-            <li>**September 2024:** 3% so far</li>
+            <li><strong>July 2024:</strong> 6%</li>
+            <li><strong>August 2024:</strong> 4%</li>
           </ul>
           <div class="responsive-image-container">
             <img src="{{ site.baseurl }}/assets/images/FAQ_img/2_performance.png" alt="performance">

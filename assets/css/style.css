@@ -21,7 +21,7 @@ header {
 }
 /* Navbar Logo */
 header img {
-  height: 60px; /* 50% larger */
+  height: 100px; /* 50% larger */
   width: auto;
   display: block;
   margin: 0 auto;
