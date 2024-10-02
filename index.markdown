@@ -9,13 +9,13 @@ title: EHP
       <span class="event-horizon">EVENT HORIZON</span>
       <span class="partners">PARTNERS</span>
     </h1>
-    <p>Welcome to Event Horizon Partners. We use AI, machine learning, and quantitative finance to outperform the market and seize new financial opportunities. Want to know how our cutting-edge tech drives returns? Explore our FAQ and schedule a call with our founder to see if we’re the right fit for your portfolio.</p>
+    <p>Welcome to Event Horizon Partners. We use AI, machine learning, and quantitative finance to outperform the market. Explore our FAQ and schedule a call with our founder to see if we’re the right fit for your portfolio.</p>
     <!-- add part here to track some metrics on calendly clicking -->
-    <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Meeting</a>
+    <a href="https://calendly.com/roger-parkinson-ehp/30min" class="btn btn-custom" id="calendly-welcome-btn">Schedule a Calendly Meeting</a>
   </div>
 <!-- FAQ section -->
 <div class="container faq-container mt-4">
-  <h1 class="text-center">Event Horizon Partners: Quantitative Trading Through Science</h1>
+  <h1 class="text-center">Event Horizon Partners: Creating Wealth with Algorithm and Science</h1>
   <div class="accordion" id="accordionPanelsStayOpenExample">
     <!-- Introduction Section -->
     <div class="accordion-item">
@@ -26,14 +26,14 @@ title: EHP
       </h2>
       <div id="collapseApproach" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>At <strong>Event Horizon Partners</strong>, we use advanced data science and machine learning to build automated trading systems. Our mission? Four clear goals:</p>
+          <p>At <strong>Event Horizon Partners</strong>, we use advanced data science and machine learning to build automated trading systems and portfolios that trade a fund. Our mission?</p>
           <ol>
             <li><strong>Generate Alpha:</strong> Beat the market consistently.</li>
             <li><strong>Optimize Beta:</strong> Profit even when markets fall.</li>
             <li><strong>Minimize Volatility:</strong> Keep returns stable.</li>
             <li><strong>Diversify Algorithmically:</strong> Reduce risk with uncorrelated models.</li>
           </ol>
-          <p>Our technology-driven approach turns data into profit, creating trading portfolios built for performance.</p>
+          <p>Our technology-driven approach turns market data into profit, creating trading portfolios built for performance.</p>
         </div>
       </div>
     </div>
@@ -50,19 +50,18 @@ title: EHP
           <ul>
             <li><strong>Total Return:</strong> 12.8% vs. the benchmark’s 1.6%.</li>
             <li><strong>Sharpe Ratio:</strong> 1.8, far above the benchmark’s 0.3. Superior returns with less risk.</li>
-            <li><strong>Maximum Drawdown:</strong> Capped at -3.5%, compared to the benchmark’s -8.5%.</li>
+            <li><strong>Maximum Drawdown:</strong> Limited to -3.5%, compared to the benchmark’s -8.5%.</li>
             <li><strong>Beta:</strong> 0.65, showing lower sensitivity to market swings.</li>
             <li><strong>Alpha:</strong> Generated 11.2% over the benchmark.</li>
             <li><strong>Downside Protection:</strong> Gained 6.3% during an 8.5% market drop.</li>
           </ul>
-          <p><strong>Our technology delivers</strong>. We’ve beaten the benchmark across every key measure:</p>
+          <div class="responsive-image-container">
+            <img src="{{ site.baseurl }}/assets/images/FAQ_img/2_performance.png" alt="performance">
+          </div>
           <ul>
             <li><strong>July 2024:</strong> 6%</li>
             <li><strong>August 2024:</strong> 4%</li>
           </ul>
-          <div class="responsive-image-container">
-            <img src="{{ site.baseurl }}/assets/images/FAQ_img/2_performance.png" alt="performance">
-          </div>
           <p>We’ve outperformed in 4 out of 5 market conditions, proving the strength and adaptability of our strategies.</p>
         </div>
       </div>
@@ -71,23 +70,23 @@ title: EHP
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQuantFactory" aria-expanded="true" aria-controls="collapseQuantFactory">
-          3. Our AI-Driven Quant Factory: Powering Continuous Innovation
+          3. Quant Factory Powering Continuous Innovation
         </button>
       </h2>
       <div id="collapseQuantFactory" class="accordion-collapse collapse show">
         <div class="accordion-body">
-          <p>Our AI-powered Quant Factory fuels the innovation and performance of our automated trading systems, continuously refining strategies through data-driven precision.</p>
+          <p>Our AI-powered Quant Factory fuels the innovation and performance of our automated trading systems, continuously refining models and creating new ones.</p>
           <ul>
             <li><strong>Distributed Computing:</strong> Speeds up model training, testing, and deployment.</li>
             <li><strong>Constant Innovation:</strong> New strategies are tested relentlessly, keeping us ahead.</li>
             <li><strong>Alpha Selection:</strong> Only the top-performing signals survive. </li>
-            <li><strong>Stringent Pipeline:</strong> Models progress through Candidate, Challenger, Champion, to Retirement—ensuring peak performance.</li>
-            <li><strong>Generalization Focus:</strong> Robust models that excel across diverse market conditions.</li>
-            <li><strong>Seamless Integration:</strong> Research and production work together, allowing for fast, stable deployment.</li>
+            <li><strong>Generative Pipeline:</strong> Models progress through Candidate, Challenger, Champion, to Retirement—ensuring peak performance.</li>
+            <li><strong>Generalization Focus:</strong> Robust models that excel across diverse market conditions in Production.</li>
+            <li><strong>Seamless Integration:</strong> Research and production blend perfectly, allowing for fast, stable deployment.</li>
             <li><strong>Adaptive AI:</strong> Our systems learn and evolve with the market, ensuring agility and resilience.</li>
-            <li><strong>Balanced Approach:</strong> We combine cutting-edge AI with reliable models for consistent real-world performance.</li>          
+            <li><strong>Balanced Approach:</strong> We compare cutting-edge AI with stable, highly transparency models for consistent real-world performance.</li>          
           </ul>
-          <p>This is how we stay at the forefront—continuously evolving to deliver results that matter.</p>
+          <p>This is how we stay at the forefront—continuously evolving to deliver results that matter. The market provides us with a very clear feedback loop and we use that to drive innovation</p>
           <div class="responsive-image-container">
             <img src="{{ site.baseurl }}/assets/images/FAQ_img/1.3_quantfactory.png" alt="quantfactory">
           </div>
@@ -119,9 +118,9 @@ title: EHP
                 </div>
                 <div class="faq-card-content">
                   <h5 class="faq-card-title">Roger Parkinson</h5>
-                  <p class="faq-card-subtitle">Co-Founder and Technology Lead</p>
+                  <p class="faq-card-subtitle">Co-Founder and CEO</p>
                   <ul class="faq-list-unstyled">
-                    <li>25+ years in quantitative finance, with deep expertise in data-driven decision-making, engineering complex financial systems, and advancing machine learning strategies.</li>
+                    <li>25+ years in quantitative finance, with deep expertise in data-driven decision-making, engineering complex financial systems and machine learning.</li>
                   </ul>
                   <div class="contact-card">
                     <h6>Contact Information</h6>
@@ -149,9 +148,9 @@ title: EHP
                 </div>
                 <div class="faq-card-content">
                   <h5 class="faq-card-title">Brad Parkinson</h5>
-                  <p class="faq-card-subtitle">Co-Founder and Operations Lead</p>
+                  <p class="faq-card-subtitle">Co-Founder</p>
                   <ul class="faq-list-unstyled">
-                    <li>21 years in financial services, specializing in risk management and building reliable, compliant systems that deliver results.</li>
+                    <li>21 years in financial services, specializing in risk management and building reliable models and systems that deliver results.</li>
                   </ul>
                   <!-- Brad's contact information is commented out in the original code -->
                 </div>
@@ -197,7 +196,7 @@ title: EHP
           <p><strong>Two Investment Options:</strong></p>
           <ul>
             <li><strong>LLC:</strong> Ideal for those seeking long-term growth. The LLC offers future income from LP commissions, with significant upside as our assets grow.</li>
-            <li><strong>LP:</strong> Designed for investors who value liquidity. The LP provides monthly redemption, giving you regular access to your capital while reaping the benefits of our advanced trading strategies.</li>
+            <li><strong>LP:</strong> Coming soon. Designed for investors who value liquidity. The LP provides monthly redemption, giving you regular access to your capital while reaping the benefits of our advanced trading strategies.</li>
           </ul>
           <p><strong>Why Invest with Us?</strong></p>
           <ul>
