@@ -21,7 +21,7 @@ header {
 }
 /* Navbar Logo */
 header img {
-  height: 60px; /* 50% larger */
+  height: 100px; /* 50% larger */
   width: auto;
   display: block;
   margin: 0 auto;
@@ -140,7 +140,7 @@ footer img.footer-logo  {
 }
 
 .welcome-banner .custom-font {
-  font-size: 2em; /* Decrease the base font size */
+  font-size: 1.5em; /* Decrease the base font size */
   line-height: 1.2;
 }
 
@@ -194,6 +194,25 @@ footer img.footer-logo  {
   }
 }
 
+.responsive-image-container {
+  width: 100%;
+  margin: 20px 0;
+  text-align: left; /* Ensures content inside is left-aligned */
+}
+
+.responsive-image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 800px; /* Adjust this value as needed */
+  display: inline-block; /* Changed from block to inline-block */
+  margin: 0; /* Removed auto margins */
+}
+
+@media (max-width: 768px) {
+  .responsive-image-container img {
+    max-width: 100%;
+  }
+}
 h1 {
   margin: 30px 0;
   font-size: 2em;
@@ -368,7 +387,7 @@ img {
 
 /* General FAQ Container Styles */
 .faq-container {
-  background: #333;
+  background: rgba(255, 255, 255, 0.1);
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
@@ -593,6 +612,16 @@ img {
 
 .modal-header .modal-title {
   color: #f5f5f5; /* Light text color for the title */
+}
+
+.modal-text-content p {
+  margin-bottom: 0.5rem; /* Reduced from the default */
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.modal-text-content p:last-child {
+  margin-bottom: 0; /* Remove margin from the last paragraph */
 }
 
 .modal-body {
